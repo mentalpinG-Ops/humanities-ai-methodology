@@ -68,7 +68,15 @@ Contribution is *ad-hoc*: an artefact yields methodology material when it does s
 
 ## 7. Status and maturity signals *[TBD — S5]*
 
-**Current status:** working draft. Codified in ADR-0009 (*Project-Identity + Two-Repo Methodology Architecture*, 18 May 2026, Status Accepted) and ADR-0014 (DTrans pivot to EN-first, 21 May 2026, Status Accepted). The cross-project baseline (Layer 1 of the reference implementation) embeds several β-candidate sections — source discipline, writing discipline, actant self-check, tool discipline. The first of these, **Source Discipline**, has been extracted into this repo as [`disciplines/source-discipline.md`](disciplines/source-discipline.md). The other three are pending.
+**Current status:** working draft. Codified in ADR-0009 (*Project-Identity + Two-Repo Methodology Architecture*, 18 May 2026, Status Accepted) and ADR-0014 (DTrans pivot to EN-first, 21 May 2026, Status Accepted). The cross-project baseline (Layer 1 of the reference implementation) embedded four β-candidate sections — source discipline, writing discipline, actant self-check, tool discipline — all of which have been extracted into this repo, with a fifth (interpretive-frame discipline) added 2026-05-21 after the AX-006 cascade audit distinguished class-one (composition-drift) from class-two (frame-imposition) failure modes:
+
+- [`disciplines/source-discipline.md`](disciplines/source-discipline.md) — source intake; the three patterns are *Snippets ≠ Primary*, *Secondary ≠ Primary*, *Search-Absence ≠ Proof-of-Absence*.
+- [`disciplines/interpretive-frame-discipline.md`](disciplines/interpretive-frame-discipline.md) — analytical stage between source intake and composition; the two patterns are *Lexicon Stability Across Analytical Stages* and *Frame Plurality Check at the Coding Step*.
+- [`disciplines/writing-discipline.md`](disciplines/writing-discipline.md) — composition stage; the two patterns are *Composition Drift* and *Descriptive Accuracy*.
+- [`disciplines/actant-self-check.md`](disciplines/actant-self-check.md) — author positionality in author-voiced texts; the three audits are *Verb Audit*, *Addressee Audit*, *Discrediting-Frame Inoculation*.
+- [`disciplines/tool-discipline.md`](disciplines/tool-discipline.md) — tool fidelity at the infrastructure layer; the three patterns are *Encoding Fidelity*, *Read Fidelity*, *Pre-Production Tool Validation*.
+
+The five modules are orthogonal layers covering the source → analysis → text → voice chain plus the tool-infrastructure substrate. Tool discipline is *upstream* of the other four (its failures invalidate them); the other four are mutually orthogonal and run sequentially along the source-to-publication pipeline (source intake → interpretive coding → composition → author voice).
 
 **Maturity signals for Q3 escalation** (peer-review-ready) are not yet operationalised. Candidates:
 
