@@ -1,123 +1,123 @@
-# Source-Disziplin
+# Source Discipline
 
-*β-Modul. Status: working-draft 2026-05-21. DE-first per DTrans (Translate-Last). Audience: humanities-scholar.*
+*β module. Status: working-draft 2026-05-21. Audience: humanities scholar. Repo language EN per ADR-0014.*
 
 ---
 
 ## 1. Position
 
-In AI-gestützter humanities-Forschung passiert der Großteil der Quellen-Begegnung über Such-Tools, die *Snippets*, *Abstracts*, *aggregierte Zusammenfassungen* oder *Such-Agent-Reports* liefern. Diese sind nicht Quellen — sie sind *Hinweise auf Quellen*. Eine Methodologie, die humanities-scholarly Standards einlösen soll, muss die Unterscheidung zwischen der durch Tool-Filterung produzierten Repräsentation und der Quelle selbst nicht als nachträgliches Gewissens-Korrektiv führen, sondern als arbeitswirksame Disziplin: erkennbar im Workflow, prüfbar im Output, Audit-fähig nach Publikation.
+In AI-assisted humanities research, most source encounters happen through tools that return *snippets*, *abstracts*, *aggregated summaries*, or *search-agent reports*. These are not sources. They are *pointers to sources*. A methodology that aims to meet humanities-scholarly standards cannot treat the distinction between the tool-filtered representation and the source itself as an after-the-fact conscience correction. It must operate as a working discipline — visible in the workflow, checkable in the output, auditable after publication.
 
-Drei Patterns sind empirisch wirksam genug, um eigenständig benannt zu werden. Sie bilden gemeinsam die Source-Disziplin.
+Three patterns are robust enough across documented failure modes to be named separately. Together they constitute the Source Discipline.
 
 ---
 
-## 2. Die drei Patterns
+## 2. The Three Patterns
 
 ### 2.1 Snippets ≠ Primary
 
-**Regel.** Such-Snippets — von Google, Consensus, Semantic Scholar, Perplexity, Claude-WebSearch, gleichartigen Tools — sind keine Primärquellen-Attestation. Bevor ein Snippet load-bearing wird (zitiert, in Argumente eingebaut, anderen vorgelegt), muss der Volltext geöffnet und die zitierte Passage verbatim verifiziert werden.
+**Rule.** Search snippets — from Google, Consensus, Semantic Scholar, Perplexity, an AI assistant's web-search tool, or any equivalent — are not primary-source attestations. Before a snippet becomes load-bearing (cited, used in an argument, presented to others), the full text must be opened and the quoted passage verified verbatim.
 
-**Begründung.** Such-Snippets werden algorithmisch generiert aus indexierten Repräsentationen. Sie können:
-- aus älteren / nicht-finalen Versionen stammen
-- aus Marketing-Material oder Sekundär-Beschreibungen statt aus dem Original
-- syntaktisch beschnitten sein, sodass die Aussagen-Polarität kippt
-- aus Cache-Snapshots stammen, die seit der Index-Erstellung obsolet wurden
+**Why.** Snippets are algorithmically generated from indexed representations. They can:
+- come from older or non-final versions
+- come from marketing material or secondary descriptions rather than the original
+- be syntactically truncated in ways that flip the polarity of the claim
+- come from cache snapshots that are stale relative to the live source
 
-Diese Failure-Modes treten in allen Tool-Generationen auf. Eine AI-agnostische Methodologie kann sich nicht darauf verlassen, dass bessere Modelle das Problem lösen — die Snippet-Schicht selbst ist die Ungenauigkeits-Quelle.
+These failure modes recur across tool generations. An AI-agnostic methodology cannot rely on better models to fix the problem — the snippet layer itself is the source of imprecision.
 
-**Operationalisierung.**
-- Vor Verwendung: Volltext-Quelle aufrufen (Paywall, Repository, Wayback-Machine).
-- Verbatim-Passage gegen Snippet abgleichen.
-- Wenn divergent: Snippet verwerfen, Volltext-Version als Anker setzen.
-- Wenn Volltext nicht erreichbar: Snippet als *„Hinweis, unverifizierbar"* tagen, nicht als Attestation behandeln.
+**How to apply.**
+- Before use, retrieve the full text (publisher, paywall, repository, Wayback Machine).
+- Compare the verbatim passage against the snippet.
+- If they diverge, discard the snippet and anchor on the full text.
+- If the full text is unreachable, tag the snippet as *"pointer, unverified"* — do not treat as attestation.
 
-### 2.2 Sekundärquelle ≠ Primärquelle
+### 2.2 Secondary ≠ Primary
 
-**Regel.** Eine Sekundärquelle (Beschreibung einer Primärquelle) ist nicht die Primärquelle. Beim Source-Tag muss die Ebene gekennzeichnet werden: Primär (das Original), Sekundär (eine Beschreibung), Tertiär (eine Beschreibung der Beschreibung).
+**Rule.** A secondary source (a description of a primary source) is not the primary source. Every source tag must declare the level: primary (the original), secondary (a description), tertiary (a description of a description).
 
-**Begründung.** Eine besondere Fehler-Klasse ist *Promoter-Amplifikation*: Marketing-, Promotion- oder Vermittler-Material zirkuliert eine modifizierte Version eines Original-Verbatim und stabilisiert die Modifikation durch Wiederholung. Wer auf den zirkulierten Sekundär-Text zugreift und ihn als Original-Attestation behandelt, übernimmt die Modifikation unsichtbar.
+**Why.** A specific failure class is *promoter amplification*: marketing, promotional, or intermediary material circulates a modified version of an original verbatim quote and stabilises the modification through repetition. A scholar who consumes the circulated secondary text and treats it as original attestation absorbs the modification invisibly — and, by citation, passes it on to others.
 
-Empirischer Fall: das Marketing einer Wander-Ausstellung in Polen attribuierte einer Vatikan-Tageszeitung den Satz *„wspaniały hymn" (großartiger Hymnus)*. Die Original-Tageszeitung schrieb *„hołd dla ciała" (Tribut an den Körper)*. *„Hymn"* ist die Promoter-Amplifikation; *„hołd"* ist der Originaltext. Wer den Promotion-Text als Quelle zitiert, ohne ihn als Sekundär zu markieren, gibt die Amplifikation als Original-Aussage weiter.
+Empirical case: marketing material for a travelling exhibition in Poland attributed to a Vatican daily the phrase *"wspaniały hymn" (great hymn)*. The original daily had written *"hołd dla ciała" (tribute to the body)*. *"Hymn"* is the promoter amplification; *"hołd"* is the original. A scholar who cites the promotional text as primary, without flagging it as secondary, propagates the amplification as if it were the original claim.
 
-**Operationalisierung.**
-- Source-Tag-Pflichtfeld: Ebene (Primär / Sekundär / Tertiär).
-- Bei Sekundär: was ist die behauptete Primärquelle, ist sie unabhängig zugänglich?
-- Bei Verdacht auf Promoter-Amplifikation: Original-Sprache, Original-Publikations-Organ, Original-Datum recherchieren.
-- Wenn Original nicht prüfbar ist: nicht als Primär-Attestation verwenden; den Sekundär-Status im Output explizit nennen.
+**How to apply.**
+- Make the source level (primary / secondary / tertiary) a required field of the source tag.
+- For secondary sources: what is the claimed primary, and is it independently accessible?
+- When promoter amplification is plausible: locate original language, original publication venue, original date.
+- If the original cannot be verified, do not use the text as primary attestation; mark the secondary status explicitly in the output.
 
-### 2.3 Search-Absence ≠ Beweis-für-Abwesenheit
+### 2.3 Search-Absence ≠ Proof-of-Absence
 
-**Regel.** Ein negatives Such-Ergebnis heißt nicht *„existiert nicht"*. Es heißt: *„in [Tool] mit [Query] [Datum] nicht gefunden"*. Diese Unterscheidung muss in Source-Tags wie in Argumentations-Strukturen sichtbar bleiben.
+**Rule.** A negative search result does not mean *"does not exist"*. It means *"not found in [tool] with [query] on [date]"*. This distinction must remain visible in source tags and in argument structures alike.
 
-**Begründung.** Such-Tools haben Indexierungslücken, Operator-Mismatches, Paywall-Schranken, Sprach-Korpus-Beschränkungen, Versions-Caches, regionale Filter. Eine erfolglose Suche kann jeden dieser Faktoren reflektieren. Aus „nicht gefunden" *„existiert nicht"* zu schließen ist eine Inferenz-Sprung, der das Such-Tool von einem Hinweis-Geber zu einem Voll-Index promoviert — Status, den kein verfügbares Tool legitim einlöst.
+**Why.** Search tools have indexing gaps, operator mismatches, paywall barriers, language-corpus limits, version caches, and regional filters. An unsuccessful search may reflect any of these. Inferring *"does not exist"* from *"not found"* promotes the search tool from a pointer-giver to a complete index — a status no available tool legitimately fulfils.
 
-**Operationalisierung.**
-- Negativ-Ergebnis verbatim festhalten: Tool, Query (vollständig, inkl. Operatoren), Datum, Anzahl Treffer.
-- Mögliche Gründe explizit machen: Indexierungslücke / Operator-Mismatch / Paywall / Sprach-Korpus / Cache-Staleness.
-- Bei load-bearing Verwendung: ≥ 2 unabhängige Such-Tools, idealerweise mit unterschiedlichem Korpus.
-- Bei verbleibender Unsicherheit: hedge-Sprache (*„in den verfügbaren Indices nicht nachweisbar"*, nicht *„existiert nicht"*).
+**How to apply.**
+- Record the negative result verbatim: tool, full query (operators included), date, hit count.
+- Make the possible reasons explicit: indexing gap / operator mismatch / paywall / language corpus / cache staleness.
+- For load-bearing use, run ≥ 2 independent search tools, ideally with different corpora.
+- For residual uncertainty, hedge: *"not demonstrable in the available indices"* rather than *"does not exist"*.
 
 ---
 
-## 3. Verbindung zu Verification-Levels
+## 3. Verification Levels
 
-Jede source-tagged Behauptung trägt zusätzlich einen *Verification-Level*. Dies ist keine separate Disziplin, sondern die operative Konsequenz der drei Patterns:
+Every source-tagged claim carries an additional *verification level*. This is not a separate discipline but the operational consequence of the three patterns:
 
-| Level | Bedeutung | Quellen-Vertrauen |
+| Level | Meaning | Source trust |
 |---|---|---|
-| **deep-read** | Volltext gelesen, relevante Passagen verbatim verifiziert | hoch |
-| **abstract** | Abstract / Zusammenfassung gelesen, Volltext nicht geöffnet | mittel |
-| **agent-reported** | AI/Agent-Synthese aus Volltext, nicht selbst gegengelesen | niedrig (provisional) |
-| **aggregator-only** | nur Snippet / Aggregator-Treffer, kein Volltext | nicht load-bearing |
+| **deep-read** | full text read; relevant passages verified verbatim | high |
+| **abstract** | abstract or summary read; full text not opened | medium |
+| **agent-reported** | AI/agent synthesis from the full text; not personally cross-read | low (provisional) |
+| **aggregator-only** | snippet or aggregator hit only; no full text | not load-bearing |
 
-Verification-Levels gelten **nicht nur** im Brief- oder Recherche-Stadium, sondern **auch bei späterer Synthese**: wenn ein Agent-Report später in eine Publikation eingeht, gilt weiter der `agent-reported`-Status, bis das Volltext-Gegenlesen erfolgt ist. Eine Synthese aus mehreren `agent-reported`-Befunden wird nicht durch Aggregation zu `deep-read`.
-
----
-
-## 4. Fehler-Modus-Galerie
-
-Failure-Modes, die diese Disziplin verhindert, lassen sich an drei dokumentierten Fällen demonstrieren:
-
-- **Snippet-Cascade Failure-Mode** (PKA-ANSAS Case Study). Such-Snippet einer Verwaltungs-Sekundär-Quelle wurde als Primär-Attestation behandelt; nachgelagerte Synthese stabilisierte die Inkorrektheit über mehrere Bearbeitungs-Stufen. Methodologie-Lift: M03 Cascade-Risk-Audit (β-Kandidat, ADR-0012).
-
-- **Promoter-Amplifikation LOR/hymn vs. hołd** (AX-006 Body-Worlds Wrocław). Marketing-Sekundär-Text als Original-Vatikan-Attestation behandelt. Methodologie-Lift: Pattern 2.2.
-
-- **Agent-Report-Synthesis-Drift** (knowledge-representation bi-methodology-Track). Aggregierte Agent-Suchen wurden ohne per-Source-Verification-Level synthetisiert; Synthese-Stadium muss Verification-Level erneut prüfen. Methodologie-Lift: Pattern 3 + eigene Memory-Regel `research-synthesis-verification`.
-
-Jeder Fall zeigt: Source-Disziplin ist nicht prophylaktisch oberflächlich, sondern adressiert dokumentierte Failure-Modes mit empirischer Last.
+Verification levels apply **not only** at the brief or research stage but **also at later synthesis stages**. When an agent report enters a publication later, its `agent-reported` status remains until full-text cross-reading occurs. A synthesis of multiple `agent-reported` findings does not aggregate into `deep-read`.
 
 ---
 
-## 5. Operationalisierung im Workflow
+## 4. Failure-Mode Gallery
 
-Source-Disziplin ist nicht nur Source-Tag-Sammlung. Sie ist eine Workflow-Position:
+The discipline is grounded in documented failure modes, not prophylactic abstraction. Three cases:
 
-- **Vor Recherche-Beginn:** Tool-Set ausweisen (Search-Engines, Aggregatoren, AI-Search-Agents), Verifikations-Plan deklarieren.
-- **Während Recherche:** jeden Treffer per Pattern 2.1 / 2.2 / 2.3 klassifizieren; Verification-Level taggen.
-- **Vor Synthese:** alle als `agent-reported` oder `aggregator-only` getaggten Treffer either upgraden (deep-read) oder aus load-bearing Argumenten entfernen.
-- **Vor Publikation:** Pre-Publication-Re-Check gegen Original-Source, nicht gegen spätere Composition-Stage (siehe `writing-discipline.md` §Composition-Drift).
-- **Nach Publikation:** Audit-Trail erhalten — welche Source-Tags wurden in welcher Stufe gesetzt, welche Verification-Levels waren load-bearing.
+- **Snippet-cascade failure** (PKA-ANSAS case study). A search snippet from an administrative secondary source was treated as primary attestation; downstream synthesis stabilised the inaccuracy through several editorial stages. Methodology lift: M03 Cascade-Risk Audit (β-candidate per ADR-0012).
+
+- **Promoter amplification *hymn* vs. *hołd*** (AX-006, Body-Worlds Wrocław). Promotional secondary text treated as original Vatican attestation. Direct lift to Pattern 2.2.
+
+- **Agent-report synthesis drift** (knowledge-representation, bi-methodology track). Aggregated agent searches were synthesised without per-source verification level; the synthesis stage must re-check verification level, not assume it carries through. Methodology lift: Pattern 3 plus a dedicated memory rule, `research-synthesis-verification`.
+
+Each case shows: source discipline addresses dated, observable failure modes — not generic best practice.
 
 ---
 
-## 6. Was diese Disziplin **nicht** leistet
+## 5. Operationalisation in the Workflow
 
-- Sie macht keine Aussage über die *intellektuelle Qualität* einer Primärquelle. Eine verbatim verifizierte Quelle kann trotzdem falsch, voreingenommen oder methodologisch problematisch sein. Source-Disziplin garantiert nur, dass die Quelle ist, was sie zu sein scheint — nicht, dass sie taugt.
+Source discipline is not a source-tag collection alone. It is a workflow position:
 
-- Sie ersetzt nicht **Schreib-Disziplin** (Descriptive-Accuracy beim Beschreiben von Artefakten, Composition-Drift während längerer Texte). Source-Disziplin schützt den Quellen-Eingang, Schreib-Disziplin den Text-Ausgang. Beide nötig.
+- **Before research starts:** declare the tool set (search engines, aggregators, AI search agents) and the verification plan.
+- **During research:** classify every hit per Pattern 2.1 / 2.2 / 2.3; tag the verification level.
+- **Before synthesis:** every hit tagged `agent-reported` or `aggregator-only` must either be upgraded (deep-read) or removed from load-bearing arguments.
+- **Before publication:** pre-publication re-check against the original source, not against a later composition stage (see `writing-discipline.md` §Composition Drift).
+- **After publication:** preserve the audit trail — which source tags were set at which stage, which verification levels were load-bearing.
 
-- Sie ersetzt nicht **Aktanten-Selbstcheck** (Positionalität der eigenen Subject-Position). Source-Disziplin macht *Quellen* prüfbar, nicht den eigenen *Lese-Akt*.
+---
+
+## 6. What This Discipline Does **Not** Provide
+
+- It makes no claim about the *intellectual quality* of a primary source. A verbatim-verified source can still be wrong, biased, or methodologically problematic. Source discipline guarantees only that the source is what it appears to be — not that it is fit for purpose.
+
+- It does not replace **writing discipline** (descriptive accuracy when describing artefacts, composition drift in longer texts). Source discipline protects the source intake; writing discipline protects the text output. Both are required.
+
+- It does not replace **actant self-check** (the analyst's own positionality in the reading act). Source discipline makes *sources* checkable, not the *reading act* itself.
 
 ---
 
 ## 7. Cross-Refs
 
-- [[writing-discipline]] — Schreib-Disziplin: Descriptive-Accuracy + Composition-Drift, beobachtungs-Treue im Text-Ausgang
-- [[actant-self-check]] — Aktanten-Selbstcheck: Positionalität des Analyse-Akts (Verb-Audit, Addressee-Audit, CMF-Inoculation)
-- [[tool-discipline]] — Tool-Disziplin: empirische Tool-Validation als Methodologie-Erweiterung
-- α-Reference: Memory `feedback_research_synthesis_verification` (Verification-Level-Rule, Operationalisierung in Claude-Code-Umgebung)
+- [[writing-discipline]] — descriptive accuracy plus composition drift; observation fidelity at text output.
+- [[actant-self-check]] — verb audit, addressee audit, CMF inoculation; positionality of the analytical act.
+- [[tool-discipline]] — empirical tool validation as a methodology extension.
+- α reference: memory `feedback_research_synthesis_verification` (verification-level rule, operationalised in a Claude-Code environment).
 
 ---
 
-*Versionierung: working-draft. Substantielle strukturelle Re-Articulation (z.B. nach Empirie-Lift durch weitere Case-Studies oder Reader-Feedback) → Status-Update. Patch-Edits inline, kein Versionsbump.*
+*Versioning: working-draft. Substantial structural re-articulation (e.g., after additional case-study evidence or reader feedback) triggers a status update. Inline patch edits do not trigger a version bump.*
