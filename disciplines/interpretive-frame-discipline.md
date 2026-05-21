@@ -16,19 +16,27 @@ A separate finding underwrites this distinction: descriptive errors in a publish
 
 ## 2. The Two Patterns
 
-### 2.1 Lexicon Stability Across Analytical Stages
+### 2.1 Lexicon Stability Across Stage Transitions
 
-**Rule.** When analysis moves between stages (intake → coding → categorisation → synthesis), the descriptive lexicon used to refer to source items must not drift silently from descriptive-actional terms to culturally-typological terms. A move from *what the figure is doing* to *what cultural category the figure belongs to* is a decision, not a translation, and requires an explicit marker with reasoning.
+**Rule.** When work moves between stages, the lexicon used to refer to source items must not drift silently. *Stage* here is a general term covering at least two distinct kinds of transition:
 
-**Why.** Each analytical stage tends to consolidate its preferred vocabulary. Early stages are often closer to direct description (the body is throwing a lasso; the figure is at a chess board). Later stages, working over coding tables and aggregated patterns, tend to substitute typological labels (cowboy, chess player) that read more naturally in prose. The substitution is rarely flagged because it feels like ordinary stylistic compression. But the substitution carries the analysis from observation-grounded language into culture-loaded language. By the time the typological label reaches the published text, the descriptive grounding has been forgotten and the typology appears self-evident.
+- **Analytical-stage transitions** (intake → coding → categorisation → synthesis), where the lexicon may drift from descriptive-actional terms toward culturally-typological terms — for instance, *what the figure is doing* gives way to *what cultural category the figure embodies*.
+- **Language-stage transitions** (source-language notes → target-language draft → published text), where the lexicon may drift through residual source-language tokens left in the target-language artefact, or through unmarked concept-imports treated as if they were target-language vocabulary.
 
-The cost is asymmetric. If the typology turns out to be defensible, the inter-stage shift cost nothing. If the typology turns out to be loaded, contestable, or out of register with the analytic claim being made, the shift has corrupted the analysis at a point that is hard to locate retrospectively, because no single stage performed the substitution — it was distributed across stages.
+Both kinds of transition are subject to the same rule: any change in lexicon between stages is a decision, not a translation, and requires an explicit marker with reasoning. The principle is direction-agnostic and language-pair-agnostic — the target language is whatever the artefact has been declared to be in (English in this repository per ADR-0014, German in the Layer-1 cross-project baseline, Polish in a translation target, etc.), and the discipline applies whichever direction the transition runs.
+
+**Why.** Each stage tends to consolidate its preferred vocabulary. Early stages are often closer to direct description or to the source language; later stages, working over coding tables, aggregated patterns, or target-language drafts, tend to substitute different terms — typological labels that read more naturally in prose, or partial translations that retain source-language residue. The substitution is rarely flagged because it feels like ordinary stylistic compression or like an obvious carry-over. But the substitution carries the work from one register or one language into another, and by the time it reaches publication the lexicon-shift has been forgotten and the new lexicon appears self-evident.
+
+The cost is asymmetric in both cases. For analytical-stage drift, if the typology turns out to be defensible, the inter-stage shift cost nothing; if not, the shift has corrupted the analysis at a point that is hard to locate retrospectively. For language-stage drift, if the residual source-language token is universally recognised, the reader may pass over it; if not, the token signals composition-drift to the reader and undermines confidence in the publication's care. A single token retained from the source language is typically small, but the cumulative effect of several across a document is significant: it makes the work look unfinished even when the substantive content is sound.
 
 **How to apply.**
-- Maintain an explicit lexicon for each analytical stage. When the lexicon changes between stages, document the change with a brief reason.
+- Maintain an explicit lexicon for each stage. When the lexicon changes between stages, document the change with a brief reason.
 - When a later stage uses a different term for the same source item, treat the term-change as a decision that needs justification. *"We move from 'lasso-thrower' (Stage 1) to 'cowboy' (Stage 2) because [reason]."*
 - If no reason can be articulated, the term-change is unjustified drift. Roll back to the earlier-stage term.
 - Be particularly cautious about descriptive-to-typological moves: *what the figure does* → *what category the figure embodies*. The typological move is high-yield rhetorically and high-risk analytically.
+- For each artefact, fix the **target language** before writing. Stage transitions must preserve target-language purity unless source-language terms are explicitly retained as Cassin-bracket source-quotations (target-language gloss primary, source-term italicised in parentheses).
+- Before publication or commit, perform a mechanical **target-language sweep**: pattern-detect residual source-language tokens (diacritics for German/Polish targets in English drafts; specific stopword sets for English residue in German targets; etc.). Single-coder self-check is bias-susceptible — a sweep that runs without authorial attention is the corrective.
+- Treat a residual source-language token in the target text exactly as a typological substitution: a decision that was made without being marked, requiring either explicit justification or rollback.
 
 ### 2.2 Frame Plurality Check at the Coding Step
 
@@ -61,11 +69,13 @@ The discipline does not require formal protocols. It requires that the analyst c
 
 ## 4. Failure-Mode Gallery
 
-Two documented cases from a single op-ed publication (AX-006, Body-Worlds exhibition advertisement, May 2026):
+Three documented cases — two from a single op-ed publication (AX-006, Body-Worlds exhibition advertisement, May 2026), one from this repository's own methodology files (language-stage transition, May 2026):
 
-- **Lexicon-drift from "lasso-thrower" to "cowboy".** Early-stage analysis (a methodological synthesis grounded in the exhibition catalogue's own pose-vocabulary) labelled a plastinated figure with raised arm a *lasso-thrower* — descriptive-actional, drawn from the catalogue. Mid-stage analysis (discourse analysis tables, semiotic coding) substituted *cowboy* — culturally-typological, Western-genre-loaded. The published op-ed inherited *cowboy*. The substitution was never flagged with a reason. *Lift: Pattern 2.1.*
+- **Lexicon-drift from "lasso-thrower" to "cowboy".** Early-stage analysis (a methodological synthesis grounded in the exhibition catalogue's own pose-vocabulary) labelled a plastinated figure with raised arm a *lasso-thrower* — descriptive-actional, drawn from the catalogue. Mid-stage analysis (discourse analysis tables, semiotic coding) substituted *cowboy* — culturally-typological, Western-genre-loaded. The published op-ed inherited *cowboy*. The substitution was never flagged with a reason. *Lift: Pattern 2.1 (analytical-stage form).*
 
 - **Default-frame imposition on the 🙏 emoji.** Mid-stage semiotic coding assigned the emoji the connotation *religiously-respectful gesture* (*religiös-respektvolle Geste*). Alternative readings (a thank-you gesture; a culturally-ambiguous folded-hands gesture; a marketing-tonal politeness marker; the South-Asian *namaste* reading; the East-Asian *please/thank-you* reading) were not enumerated. The op-ed and its accompanying paratexts inherited *prayer-emoji* as a fixed label, which the published version then carried into a reading partly about religious framing. The connotative reading was not wrong; it was partial without being marked as partial. *Lift: Pattern 2.2.*
+
+- **Residual source-language tokens in falsification-discipline draft (2026-05-21).** The Falsification Discipline file was composed in English (the repository's declared target language per ADR-0014) from a German-language audit source. Six source-language tokens survived the language-stage transition into the published commit: a German participial phrase, a Popper-translation concept-label, a German hyphenated compound noun, two section-label-style German compounds, and an adjective. Single-coder self-check at composition time caught none of them; a user post-push review on GitHub identified the cluster. The substantive content was sound; the lexicon-stability discipline at the language-stage transition was not enforced. *Lift: Pattern 2.1 (language-stage form). Corrective mechanism subsequently added to the How-to-apply protocol: pre-publication mechanical target-language sweep.*
 
 Both errors are upstream of writing discipline: they were already present in the analytical step that produced the coding tables. Re-inspecting the source against the published text — the writing-discipline corrective — would not have caught them, because the source was correctly described in descriptive terms. What was missing was an audit of the frame the coding step had silently imposed.
 
