@@ -1,168 +1,95 @@
-# Methodology-Development — Articulation-Pass v0
+# Humanities-AI Methodology — Articulation Pass v0.5
 
-*Working-Draft. DE-first per DTrans (Translate-Last). Status: draft
-2026-05-19. Source-of-Truth + Vor-README für Repo A. TBD-Marker sind
-explizit gekennzeichnet und betreffen Strategic Open Questions
-S1/S2/S3/S5, deren Resolution pending ist.*
+*Working draft. Status: draft 2026-05-21. Language: EN per [ADR-0014](https://github.com/mentalpinG-Ops/humanities-ai-methodology) (local workspace artefact). Repo source-of-truth README. TBD markers are explicit and concern Strategic Open Questions S1 / S2 / S3 / S5, whose resolution is pending.*
 
 ---
 
 ## 1. Statement
 
-**methodology-development** ist ein Meta-Projekt zur Entwicklung einer
-**AI-agnostischen Methodologie** für **humanities-students und
-humanities-scholars**, die **verantwortliches AI-Arbeiten mit
-publizierbaren outcomes** ermöglicht. Es transzendiert einzelne
-Disziplinen und konkrete AI-Tools; die Methodologie soll portabel sein
-über die jeweils verfügbare AI-Generation.
+**humanities-ai-methodology** is a meta-project developing an **AI-agnostic methodology** for **humanities students and humanities scholars** working with AI tools toward **responsible, publishable outcomes**. It transcends individual fields and specific AI tools; the methodology aims to be portable across AI generations.
 
-Audience-Schärfung (early-career vs. etabliert vs. Mix) pending S1.
+Audience specification (early-career vs. established vs. mixed) pending S1.
 
 ## 2. Motivation
 
-Auslöser war kein theoretisches Bedürfnis, sondern eine empirische
-Diagnose. Bei der Publikation eines analytischen Op-Eds (AX-006,
-Body-Worlds-Wrocław, 2026-05-17) traten *descriptive-accuracy*-Fehler
-auf, die post-publication manuell korrigiert werden mussten. Die
-methodologische Re-Konstruktion ergab: die Disziplinen, die solche
-Fehler verhindert hätten, existierten zwar fragmentiert in einzelnen
-Projekt-Checklisten, aber nicht als kohärenter Workflow. Die Frage
-*„haben wir einen konsistenten Workflow oder Stückwerk?"* musste mit
-*Stückwerk* beantwortet werden.
+The trigger was not a theoretical need but an empirical diagnosis. During the publication of an analytical op-ed (case AX-006, Body-Worlds Wrocław, May 2026), *descriptive-accuracy* errors appeared that required manual post-publication correction. The methodological reconstruction yielded a finding: the disciplines that would have prevented such errors did exist fragmentarily in individual project checklists, but not as a coherent workflow. The question *"do we have a consistent workflow, or piecework?"* had to be answered with *piecework*.
 
-Daraus emergierte das Reframing: **Methodologie ist nicht Side-Effect
-der Projekt-Arbeit, sondern primäres Forschungsobjekt**. Konkrete
-Projekte (Ideologiekritik, Studium, Rosenkranz, knowledge-
-representation, aXIOM) sind ad-hoc Test-Cases, an denen sich die
-Methodologie entwickelt und stresstesten lässt — nicht ihr Telos.
+From this emerged the reframing: **methodology is not a side effect of project work; it is a primary research object**. Concrete projects (Ideologiekritik, Studium, Rosenkranz, knowledge-representation, aXIOM) are ad-hoc test cases against which the methodology develops and is stress-tested — not its telos.
 
-## 3. Was geliefert wird
+## 3. What is delivered
 
-Die Methodologie wird in **γ-shape** geliefert: zwei gekoppelte
-Schichten.
+The methodology is delivered in **γ-shape**: two coupled layers.
 
-- **β** — die abstrakte Methodologie, tool-portabel. Beschreibt, was
-  eine humanities-scholar-AI-Arbeitsumgebung enthalten soll:
-  Positionalität, Material-Boundaries, Source-Disziplin, Memory-
-  Disziplin, Attribution-Hygiene. Sitz: **Repo A** (public,
-  CC BY-SA 4.0, EN).
+- **β** — the abstract methodology, tool-portable. Describes what a humanities-scholar AI-working environment should contain: positionality, material boundaries, source discipline, memory discipline, attribution hygiene. Resides in **this repository (Repo A)** — private initially per [ADR-0013](https://github.com/mentalpinG-Ops/humanities-ai-methodology) (workspace), public-flip trigger TBD; intended licence CC BY-SA 4.0 on public flip; EN.
 
-- **α** — eine konkrete Reference-Implementation, Claude-Code-
-  spezifisch, aber architektonisch übertragbar: CLAUDE.md-Layering,
-  auto-memory, workspace-Struktur, Skills, Hooks. Demonstriert, dass
-  β implementierbar ist. Reference-Dokumentation in Repo A; das
-  laufende α ist die Arbeitsumgebung selbst.
+- **α** — a concrete reference implementation, Claude-Code-specific but architecturally portable: CLAUDE.md layering, auto-memory, workspace structure, skills, hooks. Demonstrates that β is implementable. Reference documentation lives in this repo; the running α is the working environment itself.
 
-Project-internes Material, projekt-spezifische runbooks und research-
-internal Notizen liegen in **Repo B** (private, DE), strukturell
-getrennt von der publishable Schicht. Diese Two-Repo-Architektur macht
-die Material-Boundary by construction sauber.
+Project-internal material, project-specific runbooks, and research-internal notes live in **Repo B** (`humanities-ai-methodology-runbooks`, private always, DE), structurally separated from the publishable layer. This two-repo architecture makes the material boundary clean by construction. Repo B will be created on first project-convergence-sync trigger; it does not yet exist.
 
-**Publikations-Strategie** ist *phased*: working-draft (Repo A +
-Substack-Companion) ohne Peer-Review-Gate als initiale Form;
-methodisch zitierbar von Tag 1. Eskalation zu Peer-Review (Methods-
-Paper für β, Tools-Paper / Workshop für α) wenn ein Reifegrad
-erreicht ist — Reifezeichen TBD (siehe §7).
+**Publication strategy** is *phased*: working draft (this repo + a companion blog format) without peer-review gate as the initial form; methodologically citable from day one. Escalation to peer review (a methods paper for β, a tools paper or workshop submission for α) when a maturity threshold is reached — maturity criteria pending S5.
 
-## 4. Theoretische Grundlage *[TBD — S2]*
+## 4. Normative grounding *[TBD — S2]*
 
-Die normative Grundlage von *„verantwortlich"* ist noch nicht
-festgelegt. Kandidaten auf dem Tisch:
+The normative grounding of *"responsible"* is not yet fixed. Candidates on the table:
 
-- **Frankfurter Schule / Kritische Theorie** — konsistent mit der
-  ideologiekritischen Verortung der Op-Ed-Arbeit.
-- **Diskurs-Ethik (Habermas)** — verfahrensorientiert; gut zu
-  working-draft + Community-Feedback-Modus.
-- **Care-Ethik** — relational; fit für die Reader-Audience-Beziehung.
-- **Pragmatismus (Dewey, Peirce)** — Hypothese-Test-Revision-Cycle
-  natürlich zu phased publication.
-- **Bewusste Eklektik** — Methoden-Pluralismus statt single-tradition-
-  Commitment.
+- **Frankfurt School / Critical Theory** — consistent with the ideology-critical orientation of the op-ed work that triggered the meta-project.
+- **Discourse ethics (Habermas)** — procedural; well-matched to a working-draft plus community-feedback mode.
+- **Care ethics** — relational; fits the reader-audience relation.
+- **Pragmatism (Dewey, Peirce)** — a hypothesis-test-revision cycle that is naturally compatible with phased publication.
+- **Deliberate eclecticism** — methodological pluralism rather than single-tradition commitment.
 
-Entscheidung pending. Rekursiv gekoppelt an die Backlog-Frage „welche
-Methodologie für das Meta-Projekt selbst" (LEAN vs. Action Research
-vs. TQM/PDCA vs. Pragmatist Inquiry vs. Reflective Practice). Beide
-Fragen müssen vermutlich gemeinsam entschieden werden, damit
-methodologische Konsistenz zwischen Norm und Norm-Entwicklung
-gewahrt bleibt.
+Decision pending. Recursively coupled to the backlog question *"which methodology for the meta-project itself"* (LEAN vs. Action Research vs. TQM/PDCA vs. Pragmatist Inquiry vs. Reflective Practice). Both questions likely require joint resolution so that methodological consistency is preserved between norm and norm-development.
 
-## 5. Position in existierender Literatur *[TBD — S3]*
+## 5. Position in existing literature *[TBD — S3]*
 
-Verortung zu prüfen in folgenden Feldern:
+Positioning to be checked against:
 
-- **Digital Humanities** (Methoden-Reflexion, Tool-Kritik, Workflow-
-  Dokumentation).
-- **Critical Algorithm Studies** (AI als Untersuchungsgegenstand,
-  nicht nur Werkzeug).
-- **AI Ethics** (responsible-AI-Diskurs, Disclosure-Standards).
-- **Reflective Practice / Action Research** (selbst-dokumentierende
-  Methodik-Entwicklung).
-- **Methods Papers in Humanities-Journals** (formaler Sitz im
-  publishing-Ökosystem).
+- **Digital Humanities** (method reflection, tool critique, workflow documentation).
+- **Critical Algorithm Studies** (AI as object of investigation, not only as tool).
+- **AI Ethics** (responsible-AI discourse, disclosure standards).
+- **Reflective Practice / Action Research** (self-documenting methodology development).
+- **Methods Papers in Humanities Journals** (formal home in the publishing ecosystem).
 
-Pending: Literatur-Survey, ob bereits etablierte Standards / best
-practices existieren, die das Meta-Projekt *extending* /
-*critiquing* / *complementing* / *replacing* kann. Ohne diese
-Verortung bleibt die Contribution-Behauptung unscharf.
+Pending: a literature survey to determine whether established standards or best practices exist that the meta-project can be *extending*, *critiquing*, *complementing*, or *replacing*. Without this positioning, the contribution claim remains underspecified.
 
-## 6. Case-Studies und Skin-in-the-Game
+## 6. Case studies and skin in the game
 
-Die fünf aktiven Projekte sind Test-Cases, in denen sich die
-Methodologie bewährt oder Failure-Modes produziert:
+The five active projects are test cases in which the methodology either holds up or produces failure modes:
 
-- **Ideologiekritik** — Op-Ed-Pipeline + Multimodal-Artefakt-Analyse;
-  AX-006 ist der erste empirische Failure-zu-Methodik-Lift (pre-
-  publication-checklist als erstes β-Material).
-- **Studium** — Bibliographie-Management + cross-disciplinary
-  Methoden-Inventar.
-- **Rosenkranz** — Übersetzungs-Workflow Deutsch → Polnisch mit
-  Glossar-Disziplin.
-- **knowledge-representation** — Retrieval-Tooling über Library-
-  Korpus; Evaluations-Methodik.
-- **aXIOM** — DFS-IP-Track, methodische Selbst-Beschreibung.
+- **Ideologiekritik** — op-ed pipeline and multimodal artefact analysis; AX-006 is the first empirical failure-to-methodology lift (pre-publication checklist as the first β-material).
+- **Studium** — bibliography management and cross-disciplinary methods inventory.
+- **Rosenkranz** — translation workflow German → Polish with glossary discipline.
+- **knowledge-representation** — retrieval tooling over a library corpus; evaluation methodology.
+- **aXIOM** — DFS-IP track; methodological self-description.
 
-Beitrag *ad-hoc*: ein Artefakt liefert dann Methodologie-Material,
-wenn es sich natürlich ergibt — nicht prophylaktisch pro Projekt.
+Contribution is *ad-hoc*: an artefact yields methodology material when it does so naturally, not prophylactically per project.
 
-**Skin-in-the-Game-Prinzip:** die Methodologie testet sich an realen
-Publikations-Vorgängen. AX-006-Fehler sind kein Argument gegen,
-sondern für sie — sie machen Lücken sichtbar, die corrected werden
-können. Eine Methodologie, die nie im Live-Vorgang versagt, hat noch
-nicht genug Last getragen.
+**Skin-in-the-game principle:** the methodology tests itself in real publication events. AX-006 errors are not an argument against the methodology but an argument for it — they make gaps visible that can be corrected. A methodology that never fails under live load has not yet carried enough weight.
 
-## 7. Status und Reifezeichen *[TBD — S5]*
+## 7. Status and maturity signals *[TBD — S5]*
 
-**Aktueller Status:** working-draft. Codifiziert in **ADR-0009**
-(*Project-Identity + Two-Repo Methodology Architecture*, 2026-05-18,
-Status Proposed). Layer-1 §Meta-Projekt und mehrere β-Kandidat-
-Sektionen (Research-Disziplin, Writing-Disziplin, Aktanten-Selbst-
-check, Tool-Fußnoten) sind in der Reference-Implementation eingebettet,
-aber noch nicht zu Repo A extrahiert.
+**Current status:** working draft. Codified in ADR-0009 (*Project-Identity + Two-Repo Methodology Architecture*, 18 May 2026, Status Accepted) and ADR-0014 (DTrans pivot to EN-first, 21 May 2026, Status Accepted). The cross-project baseline (Layer 1 of the reference implementation) embeds several β-candidate sections — source discipline, writing discipline, actant self-check, tool discipline. The first of these, **Source Discipline**, has been extracted into this repo as [`disciplines/source-discipline.md`](disciplines/source-discipline.md). The other three are pending.
 
-**Reifezeichen für Q3-Eskalation** (peer-review-ready) sind noch nicht
-operationalisiert. Kandidaten:
+**Maturity signals for Q3 escalation** (peer-review-ready) are not yet operationalised. Candidates:
 
-- ≥ N Case-Studies, in denen die Methodologie *vor* dem Failure
-  intervenierte (nicht nur retrospective Lift).
-- Externe Lese-Tests durch ≥ M humanities-scholars mit substantieller
-  Rückmeldung.
-- β stabil über ≥ X Monate ohne strukturelle Re-Articulation.
+- ≥ N case studies in which the methodology intervened *before* the failure (not only retrospective lift).
+- External read-tests by ≥ M humanities scholars with substantive feedback.
+- β stable across ≥ X months without structural re-articulation.
 
-Operationalisierung von N / M / X pending.
+Operationalisation of N / M / X pending.
 
 ---
 
 ## Frozen Anchors
 
-- **ADR-0009:** `D:\Claude\workspace\decisions\0009-project-identity-two-repo-methodology-architecture.md`
-- **Session-1-State** (frozen pre-clarification Snapshot):
-  `D:\Claude\workspace\methodology-development\2026-05-18-session-1-state.md`
-- **State-Anchor Memory:**
-  `~/.claude/projects/D--/memory/project_methodology_development.md`
-- **Glossar (DE/PL/EN):**
-  `D:\Claude\workspace\methodology-development\glossary-de-pl-en.md`
+- **ADR-0009** — project-identity + two-repo methodology architecture (local workspace).
+- **ADR-0011** — repo-split conventions (local workspace).
+- **ADR-0013** — Repo A naming, visibility, organisational placement (local workspace).
+- **ADR-0014** — DTrans pivot, EN-first for Repo A (local workspace).
+- **DE source record** (pre-pivot Articulation Pass v0): `workspace/methodology-development/2026-05-19-articulation-pass-v0.md` — superseded by this README per ADR-0014; preserved as a translation source-record for any future bilingual edition.
+- **State-anchor memory:** `project_methodology_development.md` (local).
+- **Trilingual glossary (DE/PL/EN):** `workspace/methodology-development/glossary-de-pl-en.md` (local; PL native review pending).
 
 ---
 
-*Versionierung:* v0 = working-draft, lebend. Substantielle
-strukturelle Änderungen (z.B. nach S2-Resolution) → v1.
+*Versioning: v0.5 — intermediate working draft post-DTrans-pivot, after the DE Articulation Pass v0 (workspace) was superseded by this EN rewrite. v1 follows after S2 / S3 resolution. Substantial structural changes trigger a version bump; inline patch edits do not.*
