@@ -34,21 +34,21 @@ Falsifiability as criterion; method as anti-ad-hoc selection pressure; methodolo
 
 **How to apply.**
 - For each load-bearing claim, answer one of: *what would falsify this?* / *this is normative, grounded in [X]* / *this is definitional, grounded in [Y]*.
-- Universal-form claims (*all X are Y*) are reframed as *bislang in N geprüften Fällen; falsifizierbar durch [Bedingung Z]* — tested-in-N-cases, falsifiable by Z.
+- Universal-form claims (*all X are Y*) are reframed as *tested in N cases so far; falsifiable by condition Z* — making the inductive scope explicit and the falsifier specifiable.
 - When the falsifier cannot be specified, that is itself a finding: the claim is not yet in test-form, and downstream reasoning must mark it as such.
 
 ### 2.2 Methodology as Pile-Driver Work, Not Foundation Work
 
 **Rule.** Disciplines, methodological rules, and analytical practices are treated as pilings driven into ground that does not bottom out — they hold provisionally, under specifiable load. They are not foundations; no claim of finality, completeness, or self-evidence is made for them. The status vocabulary of the methodology must reflect this. Labels like *stable*, *canonical*, *final*, or *settled* are admissible only when paired with an explicit falsifier specification (*stable under the following conditions; would be revised upon [...]*); otherwise they overclaim.
 
-**Why.** A methodology that styles itself as foundational invites the failure mode it was meant to prevent. If a discipline is presented as settled, deviations from it look like errors-of-application rather than evidence-against-the-discipline; the methodology then collects only confirming cases. Popper's anti-foundationalist treatment of basic statements (Anker 13, *Pfähle-im-Sumpf*) and his anti-ad-hoc rules together imply: every methodological commitment must remain testable against its own application history.
+**Why.** A methodology that styles itself as foundational invites the failure mode it was meant to prevent. If a discipline is presented as settled, deviations from it look like errors-of-application rather than evidence-against-the-discipline; the methodology then collects only confirming cases. Popper's anti-foundationalist treatment of basic statements (Anchor 13, the piles-driven-into-a-swamp image of § 30) and his anti-ad-hoc rules together imply: every methodological commitment must remain testable against its own application history.
 
 A concrete instance from this repository's own short history: a workspace schema file carried `status: stable` in its frontmatter while the title said `_proposal` and the corresponding ADR was still in *Proposed* state. The label overstated the actual status; the catch was post-hoc, and the correction was a manual edit. The failure was small and recoverable, but the failure-mode is structural. Status labels that exceed their supporting evidence will recur unless the discipline names the pattern.
 
 **How to apply.**
-- Status-Vokabular-Audit: for every artefact labelled *stable / canonical / final / settled*, require a paired clause naming the falsifier (*"stable subject to revision if [...]"* / *"canonical against the alternatives [...]"*).
-- Discipline-Addition-Audit (per Popper's auxiliary-hypothesis rule § 20): a new discipline or pattern is admissible only if it increases the methodology's *Verbotsgehalt* — what the methodology now forbids that it did not forbid before. If the addition does not sharpen any constraint, it is decoration, not improvement. (This discipline itself was added under that test: it forbids unfalsifiable claim-treatment, undisciplined methodology-additions, and overstated status-labels — three additions to the forbidden set.)
-- Theorie-vs-Basissatz separation: methodology rules (the disciplines) are at the *theory level* and are not arbitrarily revisable; specific applications (user corrections, individual cases) are at the *basic-statement level* and are revisable by rule-governed convention. Confusing the two — treating a discipline as if it were a single case, or treating a single case as if it were a discipline-revision — is the same error in opposite directions.
+- Status-vocabulary audit: for every artefact labelled *stable / canonical / final / settled*, require a paired clause naming the falsifier (*"stable subject to revision if [...]"* / *"canonical against the alternatives [...]"*).
+- Discipline-addition audit (per Popper's auxiliary-hypothesis rule § 20): a new discipline or pattern is admissible only if it increases what the methodology forbids — what is now excluded that was not excluded before. If the addition does not sharpen any constraint, it is decoration, not improvement. (This discipline itself was added under that test: it forbids unfalsifiable claim-treatment, undisciplined methodology-additions, and overstated status-labels — three additions to the forbidden set.)
+- Theory-vs-basic-statement separation: methodology rules (the disciplines) are at the *theory level* and are not arbitrarily revisable; specific applications (user corrections, individual cases) are at the *basic-statement level* and are revisable by rule-governed convention. Confusing the two — treating a discipline as if it were a single case, or treating a single case as if it were a discipline-revision — is the same error in opposite directions.
 
 ### 2.3 Test Mode over Defense Mode
 
@@ -83,7 +83,7 @@ The seven tests trace directly to the audit-source anchors and op-tests in `D:\C
 
 ## 4. Current-Practice Table — Summary
 
-Falsification discipline does not replace the existing five disciplines; it sharpens what each already does and identifies the gaps. Three patterns from existing disciplines are already Popper-anschlussfähig in their existing form and require no rewrite:
+Falsification discipline does not replace the existing five disciplines; it sharpens what each already does and identifies the gaps. Three patterns from existing disciplines are already Popper-aligned in their existing form and require no rewrite:
 
 | Existing pattern | Discipline | Popper-anchor (already aligned) |
 |---|---|---|
@@ -140,4 +140,4 @@ In all three cases the failure was caught and absorbed as methodology-evidence r
 
 ---
 
-*Versioning: working-draft. The discipline emerged from Task #7 / #8 of the methodology-development meta-project (Popper-Falsifikations-Track). Anchored in three verbatim Popper passages from Niklas 1977 (§§ 6 + 30), a cross-mapping against the other five disciplines, and seven operational tests for AI-assisted humanities work. Substantial structural re-articulation triggers a status update. Inline patch edits do not.*
+*Versioning: working-draft. The discipline emerged from Task #7 / #8 of the methodology-development meta-project (Popper-Falsification-Track). Anchored in three verbatim Popper passages from Niklas 1977 (§§ 6 + 30), a cross-mapping against the other five disciplines, and seven operational tests for AI-assisted humanities work. Substantial structural re-articulation triggers a status update. Inline patch edits do not.*
