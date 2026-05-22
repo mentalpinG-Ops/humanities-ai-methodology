@@ -20,7 +20,7 @@ From this emerged the reframing: **methodology is not a side effect of project w
 
 The methodology is delivered in **γ-shape**: two coupled layers.
 
-- **β** — the abstract methodology, tool-portable. Describes what a humanities-scholar AI-working environment should contain: positionality, material boundaries, source discipline, memory discipline, attribution hygiene. Resides in **this repository** — private initially, public-flip trigger TBD; intended licence CC BY-SA 4.0 on public flip; English.
+- **β** — the abstract methodology, tool-portable. Describes what a humanities-scholar AI-working environment should contain: positionality, material boundaries, source discipline, memory discipline, attribution hygiene. Resides in **this repository** — private initially, public-flip trigger TBD; licence terms in §8 below; English.
 
 - **α** — a concrete reference implementation, Claude-Code-specific but architecturally portable: CLAUDE.md layering, auto-memory, workspace structure, skills, hooks. Demonstrates that β is implementable. Reference documentation lives in this repo; the running α is the working environment itself.
 
@@ -87,6 +87,15 @@ The seven modules are orthogonal layers. Tool discipline is *infrastructure-upst
 - β stable across ≥ X months without structural re-articulation.
 
 Operationalisation of N / M / X pending.
+
+## 8. License
+
+This repository is **dual-licensed**:
+
+- **CC BY-SA 4.0** (default) — applies to all open, academic, research, and practitioner use. Attribution is required; derivatives must be shared under the same licence. See [`LICENSE`](LICENSE) for the full text.
+- **Commercial Licence** (by arrangement) — available for proprietary products, commercial SaaS, and any use where the ShareAlike requirement cannot be satisfied. The commercial licence waives the ShareAlike obligation. See [`LICENSE-COMMERCIAL.md`](LICENSE-COMMERCIAL.md) for terms and contact details.
+
+Practitioner (in-house / employer) use of CC BY-SA 4.0 material is permissible without dual licensing. To obtain a Commercial Licence, see [`LICENSE-COMMERCIAL.md`](LICENSE-COMMERCIAL.md) §6.
 
 ---
 
