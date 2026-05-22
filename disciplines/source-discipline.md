@@ -1,6 +1,6 @@
 # Source Discipline
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar. Repo language EN per ADR-0014.*
+*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 
@@ -79,11 +79,11 @@ Verification levels apply **not only** at the brief or research stage but **also
 
 The discipline is grounded in documented failure modes, not prophylactic abstraction. Three cases:
 
-- **Snippet-cascade failure** (PKA-ANSAS case study). A search snippet from an administrative secondary source was treated as primary attestation; downstream synthesis stabilised the inaccuracy through several editorial stages. Methodology lift: M03 Cascade-Risk Audit (β-candidate per ADR-0012).
+- **Snippet-cascade failure** (administrative-document forensic-analysis case study). A search snippet from an administrative secondary source was treated as primary attestation; downstream synthesis stabilised the inaccuracy through several editorial stages. Methodology lift: an explicit cascade-risk audit step (separately codified).
 
-- **Promoter amplification *hymn* vs. *hołd*** (AX-006, Body-Worlds Wrocław). Promotional secondary text treated as original Vatican attestation. Direct lift to Pattern 2.2.
+- **Promoter amplification *hymn* vs. *hołd*** (Body-Worlds Wrocław travelling exhibition). Promotional secondary text treated as original Vatican attestation. Direct lift to Pattern 2.2.
 
-- **Agent-report synthesis drift** (knowledge-representation, bi-methodology track). Aggregated agent searches were synthesised without per-source verification level; the synthesis stage must re-check verification level, not assume it carries through. Methodology lift: Pattern 3 plus a dedicated memory rule, `research-synthesis-verification`.
+- **Agent-report synthesis drift** (knowledge-representation lab). Aggregated agent searches were synthesised without per-source verification level; the synthesis stage must re-check verification level, not assume it carries through. Methodology lift: Pattern 3 plus a dedicated verification-level rule.
 
 Each case shows: source discipline addresses dated, observable failure modes — not generic best practice.
 
@@ -116,7 +116,6 @@ Source discipline is not a source-tag collection alone. It is a workflow positio
 - [[writing-discipline]] — descriptive accuracy plus composition drift; observation fidelity at text output.
 - [[actant-self-check]] — verb audit, addressee audit, CMF inoculation; positionality of the analytical act.
 - [[tool-discipline]] — empirical tool validation as a methodology extension.
-- α reference: memory `feedback_research_synthesis_verification` (verification-level rule, operationalised in a Claude-Code environment).
 
 ---
 

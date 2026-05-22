@@ -1,18 +1,18 @@
 # Falsification Discipline
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar. Repo language EN per ADR-0014.*
+*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 
 ## 1. Position
 
-The other five disciplines in this repository each address one layer of the source-to-publication chain — source intake, interpretive frames, composition, authorial voice, and tool infrastructure. They make individual practices answerable to particular failure modes. What they do not address is the meta-question that runs across all five: *under what conditions can any of these practices, or the methodology as a whole, be shown to be wrong*?
+The other five pipeline-stage disciplines in this repository each address one layer of the source-to-publication chain — source intake, interpretive frames, composition, authorial voice, and tool infrastructure. They make individual practices answerable to particular failure modes. What they do not address is the meta-question that runs across all five: *under what conditions can any of these practices, or the methodology as a whole, be shown to be wrong*?
 
 A methodology that names its rules but does not specify how its rules could fail is a closed system. It can be applied, but it cannot be tested. Failures in such a system are absorbed as application-errors rather than surfaced as methodology-evidence. The result is a discipline-set that drifts further from what it was meant to constrain, with no visible mechanism for self-correction.
 
 Falsification discipline addresses this gap. Its source is Karl Popper's *Logik der Forschung* (1934), specifically the demarcation argument, the anti-ad-hoc methodological rules, and the anti-foundationalist treatment of basic statements. Its purpose in this methodology is not to reproduce Popper's philosophy of natural science but to operationalise its testable-rules core for a humanities-AI-working environment in which the analyst's own methodology is itself an object of failure-mode tracking.
 
-Three Popper-anchors are load-bearing for what follows, given here verbatim from the Polish edition (Niklas 1977; full Popper-translation-provenance in the audit source-file referenced in §7):
+Three Popper-anchors are load-bearing for what follows, given here verbatim from the Polish edition (Niklas 1977; full Popper-translation-provenance held in the project's audit notes):
 
 > „Naturalnie tylko wówczas traktuję pewien system jako empiryczny lub naukowy, gdy poddaje się on sprawdzeniu w doświadczeniu. Z rozważań tych wynika, że za kryterium demarkacji należy przyjąć **nie weryfikowalność, lecz falsyfikowalność systemu**." (§ 6)
 
@@ -30,7 +30,7 @@ Falsifiability as criterion; method as anti-ad-hoc selection pressure; methodolo
 
 **Rule.** Before any load-bearing claim is treated as empirical or test-grounded, it must pass a demarcation question: *what observation, finding, or counter-instance would, if it occurred, lead this claim to be revised or withdrawn?* If no such answer can be given, the claim is not empirical, and treating it as if it were is a category error. The claim may still be legitimate (it may be normative, definitional, or methodological), but it must be classified accordingly so that downstream reasoning is calibrated to its actual status.
 
-**Why.** A common failure in humanities-AI work is the implicit treatment of methodologically-grounded claims as if they were empirically tested, and vice versa. A normative claim about how a text *should* be read is not falsified by reading the text differently. A definitional claim about what counts as evidence is not falsified by producing different evidence. Conflating the registers makes the methodology appear empirical when it is not, and lets unfalsifiable claims accumulate authority by association with the falsifiable ones. The Popper-trace is direct: A2 in the audit registers verification/falsification asymmetry (modus tollens), and the source-discipline pattern *Search-Absence ≠ Proof-of-Absence* is already its single explicit instance in this repository. The discipline generalises it across all claim-types.
+**Why.** A common failure in humanities-AI work is the implicit treatment of methodologically-grounded claims as if they were empirically tested, and vice versa. A normative claim about how a text *should* be read is not falsified by reading the text differently. A definitional claim about what counts as evidence is not falsified by producing different evidence. Conflating the registers makes the methodology appear empirical when it is not, and lets unfalsifiable claims accumulate authority by association with the falsifiable ones. The Popper-trace is direct: verification/falsification asymmetry (modus tollens, § 6) is the load-bearing anchor, and the source-discipline pattern *Search-Absence ≠ Proof-of-Absence* is already its single explicit instance in this repository. The discipline generalises it across all claim-types.
 
 **How to apply.**
 - For each load-bearing claim, answer one of: *what would falsify this?* / *this is normative, grounded in [X]* / *this is definitional, grounded in [Y]*.
@@ -41,7 +41,7 @@ Falsifiability as criterion; method as anti-ad-hoc selection pressure; methodolo
 
 **Rule.** Disciplines, methodological rules, and analytical practices are treated as pilings driven into ground that does not bottom out — they hold provisionally, under specifiable load. They are not foundations; no claim of finality, completeness, or self-evidence is made for them. The status vocabulary of the methodology must reflect this. Labels like *stable*, *canonical*, *final*, or *settled* are admissible only when paired with an explicit falsifier specification (*stable under the following conditions; would be revised upon [...]*); otherwise they overclaim.
 
-**Why.** A methodology that styles itself as foundational invites the failure mode it was meant to prevent. If a discipline is presented as settled, deviations from it look like errors-of-application rather than evidence-against-the-discipline; the methodology then collects only confirming cases. Popper's anti-foundationalist treatment of basic statements (Anchor 13, the piles-driven-into-a-swamp image of § 30) and his anti-ad-hoc rules together imply: every methodological commitment must remain testable against its own application history.
+**Why.** A methodology that styles itself as foundational invites the failure mode it was meant to prevent. If a discipline is presented as settled, deviations from it look like errors-of-application rather than evidence-against-the-discipline; the methodology then collects only confirming cases. Popper's anti-foundationalist treatment of basic statements (the piles-driven-into-a-swamp image of § 30) and his anti-ad-hoc rules together imply: every methodological commitment must remain testable against its own application history.
 
 A concrete instance from this repository's own short history: a workspace schema file carried `status: stable` in its frontmatter while the title said `_proposal` and the corresponding ADR was still in *Proposed* state. The label overstated the actual status; the catch was post-hoc, and the correction was a manual edit. The failure was small and recoverable, but the failure-mode is structural. Status labels that exceed their supporting evidence will recur unless the discipline names the pattern.
 
@@ -59,7 +59,7 @@ A concrete instance from this repository's own short history: a workspace schema
 **How to apply.**
 - For methodological commitments captured in ADRs, the decision record should contain a *Falsifier* section alongside *Context*, *Decision*, *Consequences* — naming what would have to change for the decision to be revisited. Without this, the ADR is justification-only.
 - For empirical claims in published outputs, the writing-discipline source-recheck is already a test-mode step. Falsification discipline generalises: every load-bearing claim should be paired with a sentence answering *this would be wrong if [...]*.
-- For methodology revisions: a single failure-instance is not sufficient evidence for discipline-change (per Popper § 22, Anker 5: *single conflicting basic statement* ≠ *falsification*). A reproducible failure-mode pattern (≥ 2 instances, or 1 instance with constructive generalisation path) is required before a discipline is revised. This guards against ad-hoc discipline-churn under one-off pressure.
+- For methodology revisions: a single failure-instance is not sufficient evidence for discipline-change (per Popper § 22: *single conflicting basic statement* ≠ *falsification*). A reproducible failure-mode pattern (≥ 2 instances, or 1 instance with constructive generalisation path) is required before a discipline is revised. This guards against ad-hoc discipline-churn under one-off pressure.
 
 ---
 
@@ -77,7 +77,7 @@ The discipline's patterns translate to seven operational tests applicable to hum
 | OT-6 | Test-mode reframing | For each load-bearing claim or decision, has the test-mode question (*how is this tested?*) been answered, not only the justification question (*how is this grounded?*)? | Justification given, no falsifier paired |
 | OT-7 | Status-vocabulary audit | Are *stable / canonical / final*-labels paired with explicit falsifier specifications? | Labels carry implicit foundationalism (the *Pile-driver* failure mode) |
 
-The seven tests trace directly to the audit-source anchors and op-tests in `D:\Claude\workspace\methodology-development\popper-notes\current-practice-audit.md` §1 (OT-1 ↔ A1; OT-2 ↔ A2; OT-3 ↔ OT1; OT-4 ↔ OT2; OT-5 ↔ A5/OT3; OT-6 ↔ A9/OT5; OT-7 ↔ OT7). The mapping is preserved so that revisions to either side propagate via cross-reference rather than requiring re-derivation.
+The seven tests trace directly to anchors and operational tests in the project's Popper-notes; the per-anchor mapping is preserved internally so that revisions to either side propagate via cross-reference rather than requiring re-derivation.
 
 ---
 
@@ -87,19 +87,19 @@ Falsification discipline does not replace the existing five disciplines; it shar
 
 | Existing pattern | Discipline | Popper-anchor (already aligned) |
 |---|---|---|
-| *Search-Absence ≠ Proof-of-Absence* | source-discipline §2.3 | A2 (verification/falsification asymmetry, direct verbatim) |
-| *Lexicon Stability* | interpretive-frame-discipline §2.1 | A3 + Popper § 20 Regel 3 (verbatim) |
-| *Composition Drift* + *Descriptive Accuracy* | writing-discipline §2.1 / §2.2 | A13 (pile-driver: prior acceptance does not survive re-load) + A14 (psychological certainty ≠ justification) |
+| *Search-Absence ≠ Proof-of-Absence* | source-discipline §2.3 | verification/falsification asymmetry (Popper § 6, verbatim) |
+| *Lexicon Stability* | interpretive-frame-discipline §2.1 | methodological rule as irrevocable decision (Popper § 20 Regel 3, verbatim) |
+| *Composition Drift* + *Descriptive Accuracy* | writing-discipline §2.1 / §2.2 | pile-driver image, § 30 (prior acceptance does not survive re-load) + psychological certainty ≠ justification |
 
 Three patterns carry Popper-anchor *claims* but exhibit *fit-gaps* that this discipline names so they can be addressed:
 
 | Existing pattern | Claimed anchor | Mismatch |
 |---|---|---|
-| *Discrediting-Frame Inoculation* (formerly CMF-Inoculation) | A9 (test-mode) | Functionally a defense move (preemptive acknowledgment), not test-mode reframing |
-| *Actant Self-Check* (all three audits) | implicit reproducibility | Single-coder by design; AX-006 empirical evidence that self-check alone is bias-susceptible |
-| *Tool Discipline §Pre-Production Validation* | A4 (falsifier-set bipartition) | No explicit falsifier-set per tool; tests are present but the set of conditions that would identify the tool as broken is not enumerated |
+| *Discrediting-Frame Inoculation* | test-mode (Popper § 30, 1959 footnote) | Functionally a defense move (preemptive acknowledgment), not test-mode reframing |
+| *Actant Self-Check* (all three audits) | implicit reproducibility | Single-coder by design; empirical evidence from the museum-exhibition-op-ed case that self-check alone is bias-susceptible |
+| *Tool Discipline §Pre-Production Validation* | falsifier-set bipartition (Popper) | No explicit falsifier-set per tool; tests are present but the set of conditions that would identify the tool as broken is not enumerated |
 
-The full Cross-Mapping including the eight gaps (A1, A2-cross-practice, A5, A7, A12, OT1, OT5, OT7) which this discipline now covers is in `D:\Claude\workspace\methodology-development\popper-notes\current-practice-audit.md` §2–§4.
+The full gap-analysis covering the eight identified gaps that this discipline now closes is held internally in the project's audit notes (preserved for revision tracing).
 
 ---
 
@@ -107,11 +107,11 @@ The full Cross-Mapping including the eight gaps (A1, A2-cross-practice, A5, A7, 
 
 Three documented failure-modes from this methodology's own short history serve as concrete tests of the discipline:
 
-- **The *status: stable* mislabelling (2026-05-21).** A workspace draft of the DFS schema carried `status: stable` in its YAML frontmatter while its filename declared *_proposal* and the corresponding ADR was *Proposed*. Treated as stable by downstream tools, the draft was correctable only by user-initiated catch. *Lift: Pattern 2.2 (OT-7 status-vocabulary audit).*
+- **The *status: stable* mislabelling (2026-05-21).** A workspace draft schema file carried `status: stable` in its YAML frontmatter while its filename declared *_proposal* and the corresponding architecture-decision record was still in *Proposed* state. Treated as stable by downstream tools, the draft was correctable only by user-initiated catch. *Lift: Pattern 2.2 (OT-7 status-vocabulary audit).*
 
 - **The interpretive-frame-discipline addition (2026-05-21).** A new discipline was added on the same day. Before integration, it was implicitly tested against the OT-3 question: does it add to what the methodology forbids? It does (frame-imposition is now a marked failure mode, lexicon-drift between stages is now disallowed). Had the addition not increased the forbidden set, it would have been decoration. *Lift: Pattern 2.2 (OT-3 auxiliary-hypothesis admissibility).*
 
-- **The AX-006 actant-self-check survival (2026-05-17).** The actant self-check was performed on the AX-006 op-ed pipeline as designed. Descriptive-accuracy errors and frame-imposition still passed through. The single-coder design exhibited the predicted A5/OT-5 weakness: a one-off check by the same author cannot substitute for reproducible test. *Lift: Pattern 2.3 (OT-5 reproducibility before methodology-revision); also fed the addition of interpretive-frame-discipline.*
+- **The actant-self-check survival in the museum-exhibition op-ed (2026-05-17).** The actant self-check was performed on the op-ed pipeline as designed. Descriptive-accuracy errors and frame-imposition still passed through. The single-coder design exhibited the predicted OT-5 weakness: a one-off check by the same author cannot substitute for reproducible test. *Lift: Pattern 2.3 (OT-5 reproducibility before methodology-revision); also fed the addition of interpretive-frame-discipline.*
 
 In all three cases the failure was caught and absorbed as methodology-evidence rather than as application-error. That absorption pathway — Failure → Methodology-Lift → Discipline-Addition — is itself the operative mechanism this discipline names.
 
@@ -120,7 +120,7 @@ In all three cases the failure was caught and absorbed as methodology-evidence r
 ## 6. What This Discipline Does **Not** Provide
 
 - It does not specify *which* humanities-tradition the methodology should align with. Falsification discipline operates within whatever theoretical framework the analyst commits to; it tests the framework's claim-handling, not the framework's content.
-- It does not displace the other five disciplines. Source / interpretive-frame / writing / actant-self-check / tool disciplines each cover a distinct failure surface; falsification discipline tests the methodology containing them.
+- It does not displace the other five pipeline-stage disciplines. Source / interpretive-frame / writing / actant-self-check / tool disciplines each cover a distinct failure surface; falsification discipline tests the methodology containing them.
 - It does not provide a procedure for resolving normative disagreement. When two analysts disagree on a normative claim, falsification discipline says nothing about which is right; it requires only that both claims be marked as normative rather than empirical and reasoned accordingly.
 - It does not guarantee that absorbed failures will produce better disciplines. The Failure → Methodology-Lift pathway is one mechanism among others; it can in principle generate over-specified disciplines that forbid too much. The auxiliary-hypothesis test (OT-3) is the guard against that, but it is a guard, not a proof.
 
@@ -131,13 +131,10 @@ In all three cases the failure was caught and absorbed as methodology-evidence r
 - [[source-discipline]] — source intake; *Search-Absence* pattern shares A2.
 - [[interpretive-frame-discipline]] — analytical stage; *Lexicon Stability* shares A3 + § 20 Regel 3.
 - [[writing-discipline]] — composition stage; *Composition Drift* shares A13.
-- [[actant-self-check]] — voice positionality; mismatch flagged (single-coder vs A5/OT-5).
-- [[tool-discipline]] — infrastructure layer; mismatch flagged (no explicit falsifier-set per A4).
-- Audit source-file: `D:\Claude\workspace\methodology-development\popper-notes\current-practice-audit.md` — full Cross-Mapping table + Gap-Analyse + Mismatch-Analyse.
-- Popper verbatim source: `D:\Claude\workspace\methodology-development\popper-notes\ldf-falsifikations-kapitel.md` — 14 anchors + 7 op-tests, Polish-source verified.
-- α reference: AX-006 case material (`D:\Claude\ideologiekritik\artefacts\AX-006\`) — the failure-mode gallery's empirical anchor.
-- LTC paradigm: `~/.claude/projects/D--/memory/feedback_long_term_consistency_paradigm.md` — structurally related to A11 + A13 + OT-7.
+- [[actant-self-check]] — voice positionality; mismatch flagged (single-coder vs OT-5).
+- [[tool-discipline]] — infrastructure layer; mismatch flagged (no explicit falsifier-set per Popper § 21).
+- [[intellectual-hygiene-discipline]] — meta-level companion on the provenance axis.
 
 ---
 
-*Versioning: working-draft. The discipline emerged from Task #7 / #8 of the methodology-development meta-project (Popper-Falsification-Track). Anchored in three verbatim Popper passages from Niklas 1977 (§§ 6 + 30), a cross-mapping against the other five disciplines, and seven operational tests for AI-assisted humanities work. Substantial structural re-articulation triggers a status update. Inline patch edits do not.*
+*Versioning: working-draft. The discipline emerged as the meta-level Popper-falsification module of the methodology. Anchored in three verbatim Popper passages from Niklas 1977 (§§ 6 + 30), a cross-mapping against the other six disciplines, and seven operational tests for AI-assisted humanities work. Substantial structural re-articulation triggers a status update. Inline patch edits do not.*

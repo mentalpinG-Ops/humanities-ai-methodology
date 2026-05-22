@@ -1,6 +1,6 @@
 # Tool Discipline
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar. Repo language EN per ADR-0014.*
+*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 
@@ -53,7 +53,7 @@ Empirical case: a coding assistant's file-reader summarised an image artefact in
 - Define a *test content packet* containing the edge cases that matter for the work: representative diacritics for the relevant languages, special symbols used in citations, multi-line content with the relevant formatting, sample non-Latin script (Polish, Cyrillic, Greek, etc., per the actual corpus).
 - Run the test packet through any new tool or new tool-chain configuration before integrating it.
 - Compare output to source byte-for-byte where possible; visually where not.
-- Document tool-specific findings in a runbook (in Repo B, per the README §3) so the next iteration of the same tool-chain does not require rediscovery.
+- Document tool-specific findings in a runbook (in the companion runbook repository, per the README §3) so the next iteration of the same tool-chain does not require rediscovery.
 
 ---
 
@@ -71,8 +71,8 @@ This is why tool discipline cannot be deferred to "engineering concerns". For hu
 
 Documented failures grounding the discipline:
 
-- **UTF-8 corruption through PowerShell HTTP body** (AX-006 publication pipeline). German umlauts and the section sign reduced to replacement characters in the published op-ed. Root cause: ISO-8859-1 default in PowerShell's `Invoke-RestMethod` string-body handling. Lift to Pattern 2.1.
-- **Read-tool emoji and position misrender** (AX-006 composition stage). The file-reader's representation of an image artefact diverged from the source image; the author composed against the divergent view. Lift to Pattern 2.2.
+- **UTF-8 corruption through PowerShell HTTP body** (museum-exhibition op-ed publication pipeline). German umlauts and the section sign reduced to replacement characters in the published op-ed. Root cause: ISO-8859-1 default in PowerShell's `Invoke-RestMethod` string-body handling. Lift to Pattern 2.1.
+- **Read-tool emoji and position misrender** (same publication, composition stage). The file-reader's representation of an image artefact diverged from the source image; the author composed against the divergent view. Lift to Pattern 2.2.
 - **AI-assistant content-approximation drift** (general pattern across multiple sessions). AI assistants reading and summarising files may report content that is plausibly but not actually present. Pattern 2.2 generalises here: assume the assistant's view is approximate; verify against the source for any load-bearing claim.
 
 ---
@@ -86,7 +86,7 @@ Tool discipline runs as a separate workflow track, not as a final-stage check:
 - **Routine use:** when content passes through a tool, treat the tool's output as approximate until verified at the next boundary. For load-bearing content, verify explicitly.
 - **Failure response:** when a tool failure is discovered post-publication, document it as a failure-mode entry; update the validation packet to catch the same class of failure earlier next time.
 
-The runbook layer (Repo B) holds the specific tool fixes — encoding flags, configuration files, code workarounds. The methodology layer (this document) holds the discipline that produces those runbooks.
+The runbook layer (the companion runbook repository) holds the specific tool fixes — encoding flags, configuration files, code workarounds. The methodology layer (this document) holds the discipline that produces those runbooks.
 
 ---
 
@@ -104,7 +104,6 @@ The runbook layer (Repo B) holds the specific tool fixes — encoding flags, con
 - [[source-discipline]] — source intake; tool-discipline failures invalidate source verification.
 - [[writing-discipline]] — descriptive accuracy; tool-discipline failures upstream of descriptive errors.
 - [[actant-self-check]] — positional voice; orthogonal layer.
-- α reference: AX-006 PowerShell-UTF-8 incident in the reference-implementation tool-footnotes record.
 
 ---
 

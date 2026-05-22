@@ -1,6 +1,6 @@
 # Writing Discipline
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar. Repo language EN per ADR-0014.*
+*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 
@@ -61,7 +61,7 @@ The third component (composition self-read) catches errors of formatting, struct
 
 ## 4. Failure-Mode Gallery
 
-The discipline is grounded in documented errors, not prophylaxis. Two cases from the same op-ed publication (AX-006):
+The discipline is grounded in documented errors, not prophylaxis. Two cases from the same op-ed publication:
 
 - **Chess-player misattribution.** Op-ed described a photograph as showing "a chess player with a hat". The hat belonged to a different figure (a cowboy plastinate). The error survived multiple drafts because every revision was checked against the prior draft, not against the original image. Lift: Pattern 2.2.
 
@@ -96,7 +96,6 @@ Writing discipline is a workflow stage, not a final-read habit:
 - [[source-discipline]] — source intake; verification before composition.
 - [[actant-self-check]] — positionality of the asserting voice; orthogonal layer.
 - [[tool-discipline]] — tool fidelity at the infrastructure layer; complementary.
-- α reference: AX-006 case material in the reference implementation; pre-publication checklist as a worked example of these patterns.
 
 ---
 

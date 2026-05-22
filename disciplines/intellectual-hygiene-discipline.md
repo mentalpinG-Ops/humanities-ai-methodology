@@ -1,6 +1,6 @@
 # Intellectual-Hygiene Discipline
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar. Repo language EN per ADR-0014.*
+*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 
@@ -127,7 +127,7 @@ Intellectual-hygiene discipline is a *meta-level* discipline, operating across t
 - [[actant-self-check]] — voice-positionality (closely related, distinct scope).
 - [[tool-discipline]] — infrastructure upstream of provenance-recording.
 - [[falsification-discipline]] — meta-level companion (validity-axis; this discipline is provenance-axis).
-- Layer-1 §Attribution-Hygiene (in the cross-project baseline file `~/.claude/CLAUDE.md`, in German) — the baseline rule from which this discipline expands. The Layer-1 rule states (in English paraphrase): strict separation between the researcher's own knowledge or intuitions and AI-introduced sources; AI-introduced material must be explicitly marked and not retroactively attributed as prior knowledge.
+- Project-baseline attribution-hygiene rule (held in the project's cross-project instructions, in German) — the baseline rule from which this discipline expands. In English paraphrase: strict separation between the researcher's own knowledge or intuitions and AI-introduced sources; AI-introduced material must be explicitly marked and not retroactively attributed as prior knowledge.
 
 ---
 

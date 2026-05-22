@@ -1,6 +1,6 @@
 # Actant Self-Check
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar. Repo language EN per ADR-0014.*
+*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 
@@ -8,7 +8,7 @@
 
 When a humanities scholar writes a text with positional voice — an op-ed, an essay, a critical commentary, a public-repository document, a thread — the writing acts on the reader: it includes, excludes, asks, normates, demands. The author is an *actant* in the text, not just an observer of the artefact under analysis. The actant self-check is a discipline of bringing the author's own positional acts into view before publication, so that they can be revised deliberately rather than smuggled in.
 
-The discipline is *scoped*: it applies to author-voiced texts. It does not apply to purely descriptive-operational outputs — code edits, repository listings, memory writes, audit logs. These have no positional voice in the relevant sense; subjecting them to actant self-check is a mis-scoped LEAN violation.
+The discipline is *scoped*: it applies to author-voiced texts. It does not apply to purely descriptive-operational outputs — code edits, repository listings, memory writes, audit logs. These have no positional voice in the relevant sense; subjecting them to actant self-check is a mis-scoped over-application.
 
 Three audits, executed before publication.
 
@@ -78,9 +78,9 @@ The boundary is positional voice. A text that asserts how things should be read,
 
 The discipline was lifted from concrete patterns in published material:
 
-- **Verb-audit deferred** (AX-006). Op-ed contained constructions like *"the exhibit has not yet been recognised as ..."* — a deferred-recognition framing that smuggled the author's normative measure as a temporal claim. Recognised post-publication; lift to methodology yielded Pattern 2.1.
-- **Addressee-coalition smuggle** (AX-006 drafts pre-revision). Inclusive *we* references did not match the actual readership of the publication venue. Caught in pre-publication revision, but only because reader feedback flagged it; the author had not registered the choice. Lift to Pattern 2.2.
-- **Discrediting-Frame exposure** (AX-006, anticipatory). The text engaged Critical Theory without explicit citation; the discrediting frame could plausibly have been applied. Preemptive citation discipline added before publication as a prophylactic; lift to Pattern 2.3 as a generalised pattern.
+- **Verb-audit deferred.** Op-ed contained constructions like *"the exhibit has not yet been recognised as ..."* — a deferred-recognition framing that smuggled the author's normative measure as a temporal claim. Recognised post-publication; lift to methodology yielded Pattern 2.1.
+- **Addressee-coalition smuggle** (op-ed drafts, pre-revision). Inclusive *we* references did not match the actual readership of the publication venue. Caught in pre-publication revision, but only because reader feedback flagged it; the author had not registered the choice. Lift to Pattern 2.2.
+- **Discrediting-Frame exposure** (op-ed, anticipatory). The text engaged Critical Theory without explicit citation; the discrediting frame could plausibly have been applied. Preemptive citation discipline added before publication as a prophylactic; lift to Pattern 2.3 as a generalised pattern.
 
 The discipline is the methodology lift from these cases. It is not a stylistic preference.
 
@@ -101,7 +101,7 @@ Actant self-check is a discrete pre-publication stage:
 
 - It does not address whether the *claims* in the text are correct (see [[source-discipline]] for source intake; [[writing-discipline]] for descriptive accuracy).
 - It does not police the author's politics or normative commitments. The audits make the commitments *visible* and *declarable*, not different.
-- It does not apply to purely descriptive-operational outputs (per §3 scoping). Applying it there is a mis-scoped LEAN violation.
+- It does not apply to purely descriptive-operational outputs (per §3 scoping). Applying it there is a mis-scoped over-application.
 - It does not provide a guarantee against being misread; it provides a guarantee against being unfairly misread on grounds the author could have anticipated.
 
 ---
@@ -111,7 +111,6 @@ Actant self-check is a discrete pre-publication stage:
 - [[source-discipline]] — source intake; orthogonal layer.
 - [[writing-discipline]] — descriptive accuracy; orthogonal layer.
 - [[tool-discipline]] — tool fidelity; unrelated layer.
-- α reference: pre-publication checklist in the reference implementation; AX-006 as worked-example case.
 
 ---
 
