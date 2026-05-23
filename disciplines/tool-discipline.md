@@ -1,6 +1,6 @@
 # Tool Discipline
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
+*Methodology module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 
@@ -59,7 +59,7 @@ Empirical case: a coding assistant's file-reader summarised an image artefact in
 
 ## 3. Tool Discipline as an Upstream Layer
 
-Tool discipline operates at a different layer than the other three β modules. Source discipline checks what enters the workflow; writing discipline checks what the author says about it; actant self-check checks the author's positional voice. Tool discipline checks the infrastructure on which all three depend.
+Tool discipline operates at a different layer than the other three Methodology modules. Source discipline checks what enters the workflow; writing discipline checks what the author says about it; actant self-check checks the author's positional voice. Tool discipline checks the infrastructure on which all three depend.
 
 The relationship is *upstream*: tool-discipline failures invalidate the work of all three other disciplines. A source verified verbatim through a tool that silently re-encoded the text is not actually verified verbatim — what was checked was the tool's representation of the source. The same source-discipline pattern (Snippets ≠ Primary) reappears at the tool layer: *tool views ≠ artefacts*.
 

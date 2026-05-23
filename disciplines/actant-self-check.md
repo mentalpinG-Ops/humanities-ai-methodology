@@ -1,6 +1,6 @@
 # Actant Self-Check
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
+*Methodology module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 

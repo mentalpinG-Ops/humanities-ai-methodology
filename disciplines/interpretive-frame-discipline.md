@@ -1,6 +1,6 @@
 # Interpretive-Frame Discipline
 
-*β module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
+*Methodology module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
 
 ---
 
@@ -117,4 +117,4 @@ Practical implication: when a publication review surfaces *both* a class-one and
 
 ---
 
-*Versioning: working-draft. The discipline was added 2026-05-21 as the fifth pipeline-stage β module, after a cascade audit of the museum-exhibition op-ed distinguished class-one and class-two failure modes; falsification- and intellectual-hygiene-disciplines were added later the same day as meta-level modules. Substantial structural re-articulation triggers a status update. Inline patch edits do not trigger a version bump.*
+*Versioning: working-draft. The discipline was added 2026-05-21 as the fifth pipeline-stage Methodology module, after a cascade audit of the museum-exhibition op-ed distinguished class-one and class-two failure modes; falsification- and intellectual-hygiene-disciplines were added later the same day as meta-level modules. Substantial structural re-articulation triggers a status update. Inline patch edits do not trigger a version bump.*

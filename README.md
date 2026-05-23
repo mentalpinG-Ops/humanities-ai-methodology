@@ -18,15 +18,15 @@ From this emerged the reframing: **methodology is not a side effect of project w
 
 ## 3. What is delivered
 
-The methodology is delivered in **γ-shape**: two coupled layers.
+The methodology is delivered as a **Y-Architecture**: two coupled levels.
 
-- **β** — the abstract methodology, tool-portable. Describes what a humanities-scholar AI-working environment should contain: positionality, material boundaries, source discipline, memory discipline, attribution hygiene. Resides in **this repository** — private initially, public-flip trigger TBD; licence terms in §8 below; English.
+- **Methodology (Level I)** — the abstract methodology, tool-portable. Describes what a humanities-scholar AI-working environment should contain: positionality, material boundaries, source discipline, memory discipline, attribution hygiene. Resides in **this repository** — private initially, public-flip trigger TBD; licence terms in §8 below; English.
 
-- **α** — a concrete reference implementation, Claude-Code-specific but architecturally portable: CLAUDE.md layering, auto-memory, workspace structure, skills, hooks. Demonstrates that β is implementable. Reference documentation lives in this repo; the running α is the working environment itself.
+- **Practice (Level II)** — a concrete reference implementation, Claude-Code-specific but architecturally portable: CLAUDE.md layering, auto-memory, workspace structure, skills, hooks. Demonstrates that the Methodology is implementable. Reference documentation lives in this repo; the running Practice is the working environment itself.
 
 Project-internal material, project-specific runbooks, and research-internal notes live in **a companion runbook repository** (`humanities-ai-methodology-runbooks`, private always, German), structurally separated from the publishable layer. This two-repo architecture makes the material boundary clean by construction. The runbook repository will be created on first project-convergence-sync trigger; it does not yet exist.
 
-**Publication strategy** is *phased*: working draft (this repo + a companion blog format) without peer-review gate as the initial form; methodologically citable from day one. Escalation to peer review (a methods paper for β, a tools paper or workshop submission for α) when a maturity threshold is reached — maturity criteria pending S5.
+**Publication strategy** is *phased*: working draft (this repo + a companion blog format) without peer-review gate as the initial form; methodologically citable from day one. Escalation to peer review (a methods paper for Methodology, a tools paper or workshop submission for Practice) when a maturity threshold is reached — maturity criteria pending S5.
 
 ## 4. Normative grounding *[TBD — S2]*
 
@@ -56,7 +56,7 @@ Pending: a literature survey to determine whether established standards or best 
 
 The five active projects are test cases in which the methodology either holds up or produces failure modes:
 
-- **Ideologiekritik** — op-ed pipeline and multimodal artefact analysis; the Body-Worlds-Wrocław op-ed is the first empirical failure-to-methodology lift (pre-publication checklist as the first β-material).
+- **Ideologiekritik** — op-ed pipeline and multimodal artefact analysis; the Body-Worlds-Wrocław op-ed is the first empirical failure-to-methodology lift (pre-publication checklist as the first Methodology-material).
 - **Studium** — bibliography management and cross-disciplinary methods inventory.
 - **Rosenkranz** — translation workflow German → Polish with glossary discipline.
 - **knowledge-representation** — retrieval tooling over a library corpus; evaluation methodology.
@@ -70,7 +70,7 @@ Contribution is *ad-hoc*: an artefact yields methodology material when it does s
 
 ## 7. Status and maturity signals *[TBD — S5]*
 
-**Current status:** working draft. The reference implementation's cross-project instruction baseline embedded four β-candidate sections — source discipline, writing discipline, actant self-check, tool discipline — all of which have since been extracted into this repo (the corresponding Layer-1 sections now serve as operational hooks pointing back to the disciplines below), with a fifth (interpretive-frame discipline) added 2026-05-21 after a cascade audit of the first published case distinguished class-one (composition-drift) from class-two (frame-imposition) failure modes, a sixth (falsification discipline) added 2026-05-21 as the meta-level discipline operationalising Popper-falsifiability across the methodology itself, and a seventh (intellectual-hygiene discipline) added 2026-05-21 covering human-vs-AI provenance tracking across the project span:
+**Current status:** working draft. The reference implementation's cross-project instruction baseline embedded four promotion-candidate sections (formerly labelled β-candidates) — source discipline, writing discipline, actant self-check, tool discipline — all of which have since been extracted into this repo (the corresponding Layer-1 sections now serve as operational hooks pointing back to the disciplines below), with a fifth (interpretive-frame discipline) added 2026-05-21 after a cascade audit of the first published case distinguished class-one (composition-drift) from class-two (frame-imposition) failure modes, a sixth (falsification discipline) added 2026-05-21 as the meta-level discipline operationalising Popper-falsifiability across the methodology itself, and a seventh (intellectual-hygiene discipline) added 2026-05-21 covering human-vs-AI provenance tracking across the project span:
 
 - [`disciplines/source-discipline.md`](disciplines/source-discipline.md) — source intake; the three patterns are *Snippets ≠ Primary*, *Secondary ≠ Primary*, *Search-Absence ≠ Proof-of-Absence*.
 - [`disciplines/interpretive-frame-discipline.md`](disciplines/interpretive-frame-discipline.md) — analytical stage between source intake and composition; the two patterns are *Lexicon Stability Across Stage Transitions* (covering both analytical-stage and language-stage drift) and *Frame Plurality Check at the Coding Step*.
@@ -86,7 +86,7 @@ The seven modules are orthogonal layers. Tool discipline is *infrastructure-upst
 
 - ≥ N case studies in which the methodology intervened *before* the failure (not only retrospective lift).
 - External read-tests by ≥ M humanities scholars with substantive feedback.
-- β stable across ≥ X months without structural re-articulation.
+- Methodology stable across ≥ X months without structural re-articulation.
 
 Operationalisation of N / M / X pending.
 
