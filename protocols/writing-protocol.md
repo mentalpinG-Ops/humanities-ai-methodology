@@ -1,14 +1,21 @@
-# Writing Discipline
+---
+name: Writing Protocol
+version: 0.1.0
+status: draft
+last_changed: 2026-06-17
+---
 
-*Methodology module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
+# Writing Protocol
+
+*Methodology module. Audience: humanities scholar.*
 
 ---
 
 ## 1. Position
 
-Once a source has been verified (see [[source-discipline]]), the work is not done. Between source intake and publication sits the *composition stage* — drafting, revising, illustrating, citing — and this stage is itself an error surface that source discipline does not cover. The author's memory of the source drifts over long composition windows; tools that mediate the author's view of the source (file readers, image-display systems, OCR, AI assistants) silently misrender; the original artefact begins to recede behind the author's developing argument about it. Writing discipline addresses the gap between the source as verified and the text as published.
+Once a source has been verified (see [source protocol](source-protocol.md)), the work is not done. Between source intake and publication sits the *composition stage* — drafting, revising, illustrating, citing — and this stage is itself an error surface that source protocol does not cover. The author's memory of the source drifts over long composition windows; tools that mediate the author's view of the source (file readers, image-display systems, OCR, AI assistants) silently misrender; the original artefact begins to recede behind the author's developing argument about it. Writing protocol addresses the gap between the source as verified and the text as published.
 
-Two patterns are empirically robust enough to be named separately. Together they constitute Writing Discipline.
+Two patterns are empirically robust enough to be named separately. Together they constitute Writing Protocol.
 
 ---
 
@@ -61,19 +68,19 @@ The third component (composition self-read) catches errors of formatting, struct
 
 ## 4. Failure-Mode Gallery
 
-The discipline is grounded in documented errors, not prophylaxis. Two cases from the same op-ed publication:
+The protocol is grounded in documented errors, not prophylaxis. Two cases from the same op-ed publication:
 
 - **Chess-player misattribution.** Op-ed described a photograph as showing "a chess player with a hat". The hat belonged to a different figure (a cowboy plastinate). The error survived multiple drafts because every revision was checked against the prior draft, not against the original image. Lift: Pattern 2.2.
 
 - **🙏-emoji misidentification.** The op-ed treated an emoji as a prayer gesture; closer inspection showed the gesture was different. Same drift mechanism: composition built on an early impression, not re-verified against the source. Lift: Pattern 2.2.
 
-Both errors required manual post-publication correction. Both were preventable by a pre-publication artefact re-check; neither was prevented by source discipline alone, because the sources had been correctly cited — the failure was in the author's descriptive claim about them.
+Both errors required manual post-publication correction. Both were preventable by a pre-publication artefact re-check; neither was prevented by source protocol alone, because the sources had been correctly cited — the failure was in the author's descriptive claim about them.
 
 ---
 
 ## 5. Operationalisation in the Workflow
 
-Writing discipline is a workflow stage, not a final-read habit:
+Writing protocol is a workflow stage, not a final-read habit:
 
 - **During composition:** tag every "this artefact shows X" claim with a re-check flag. The flag persists until the artefact has been re-inspected.
 - **At ~2-hour intervals:** pause; note compositional drift risk; refresh source-anchored claims if the composition has moved far from the last source consultation.
@@ -82,20 +89,20 @@ Writing discipline is a workflow stage, not a final-read habit:
 
 ---
 
-## 6. What This Discipline Does **Not** Provide
+## 6. What This Protocol Does **Not** Provide
 
-- It does not address source intake — the source must already have been verified (see [[source-discipline]]).
-- It does not address authorial positionality — the question of *who is asserting what about whom* (see [[actant-self-check]]).
-- It does not address tool-infrastructure failures at the system level — that is the scope of [[tool-discipline]]. Writing discipline expects tool mediation to be present and treats verification against the source as the corrective; tool discipline addresses the tools themselves.
+- It does not address source intake — the source must already have been verified (see [source protocol](source-protocol.md)).
+- It does not address authorial positionality — the question of *who is asserting what about whom* (see [actant self-check](actant-self-check.md)).
+- It does not address tool-infrastructure failures at the system level — that is the scope of [tool protocol](tool-protocol.md). Writing protocol expects tool mediation to be present and treats verification against the source as the corrective; tool protocol addresses the tools themselves.
 - It does not guarantee that what the author *means* to assert is well-formed; it guarantees only that *what the author asserts about the artefact* matches the artefact.
 
 ---
 
 ## 7. Cross-Refs
 
-- [[source-discipline]] — source intake; verification before composition.
-- [[actant-self-check]] — positionality of the asserting voice; orthogonal layer.
-- [[tool-discipline]] — tool fidelity at the infrastructure layer; complementary.
+- [source protocol](source-protocol.md) — source intake; verification before composition.
+- [actant self-check](actant-self-check.md) — positionality of the asserting voice; orthogonal layer.
+- [tool protocol](tool-protocol.md) — tool fidelity at the infrastructure layer; complementary.
 
 ---
 

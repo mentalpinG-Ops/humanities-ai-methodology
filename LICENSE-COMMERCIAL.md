@@ -36,7 +36,7 @@ Subject to payment of any agreed fee and compliance with the terms below, the co
 - **Non-transferable**
 - **Non-sublicensable**
 
-licence to use, reproduce, adapt, and deploy the Licensed Material (methodology disciplines, reference documentation, and related content from this repository) in proprietary commercial products and services.
+licence to use, reproduce, adapt, and deploy the Licensed Material (methodology protocols, reference documentation, and related content from this repository) in proprietary commercial products and services.
 
 The key benefit over CC BY-SA 4.0 is that **the ShareAlike obligation is waived**: derivatives and adaptations produced under this Commercial Licence do not need to be released under CC BY-SA 4.0 or any other open licence.
 

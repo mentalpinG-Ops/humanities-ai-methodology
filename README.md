@@ -12,7 +12,7 @@ Audience specification (early-career vs. established vs. mixed) pending S1.
 
 ## 2. Motivation
 
-The trigger was not a theoretical need but an empirical diagnosis. During the publication of an analytical op-ed on the Body-Worlds Wrocław travelling exhibition (May 2026), *descriptive-accuracy* errors appeared that required manual post-publication correction. The methodological reconstruction yielded a finding: the disciplines that would have prevented such errors did exist fragmentarily in individual project checklists, but not as a coherent workflow. The question *"do we have a consistent workflow, or piecework?"* had to be answered with *piecework*.
+The trigger was not a theoretical need but an empirical diagnosis. During the publication of an analytical op-ed on the Body-Worlds Wrocław travelling exhibition (May 2026), *descriptive-accuracy* errors appeared that required manual post-publication correction. The methodological reconstruction yielded a finding: the protocols that would have prevented such errors did exist fragmentarily in individual project checklists, but not as a coherent workflow. The question *"do we have a consistent workflow, or piecework?"* had to be answered with *piecework*.
 
 From this emerged the reframing: **methodology is not a side effect of project work; it is a primary research object**. Concrete projects (Ideologiekritik, Studium, Rosenkranz, knowledge-representation, aXIOM) are ad-hoc test cases against which the methodology develops and is stress-tested — not its telos.
 
@@ -20,7 +20,7 @@ From this emerged the reframing: **methodology is not a side effect of project w
 
 The methodology is delivered as a **Y-Architecture**: two coupled levels.
 
-- **Methodology (Level I)** — the abstract methodology, tool-portable. Describes what a humanities-scholar AI-working environment should contain: positionality, material boundaries, source discipline, memory discipline, attribution hygiene. Resides in **this repository** — private initially, public-flip trigger TBD; licence terms in §8 below; English.
+- **Methodology (Level I)** — the abstract methodology, tool-portable. Describes what a humanities-scholar AI-working environment should contain: positionality, material boundaries, source protocol, memory protocol, attribution hygiene. Resides in **this repository** — private initially, public-flip trigger TBD; licence terms in §8 below; English.
 
 - **Practice (Level II)** — a concrete reference implementation, Claude-Code-specific but architecturally portable: CLAUDE.md layering, auto-memory, workspace structure, skills, hooks. Demonstrates that the Methodology is implementable. Reference documentation lives in this repo; the running Practice is the working environment itself.
 
@@ -58,7 +58,7 @@ The five active projects are test cases in which the methodology either holds up
 
 - **Ideologiekritik** — op-ed pipeline and multimodal artefact analysis; the Body-Worlds-Wrocław op-ed is the first empirical failure-to-methodology lift (pre-publication checklist as the first Methodology-material).
 - **Studium** — bibliography management and cross-disciplinary methods inventory.
-- **Rosenkranz** — translation workflow German → Polish with glossary discipline.
+- **Rosenkranz** — translation workflow German → Polish with glossary protocol.
 - **knowledge-representation** — retrieval tooling over a library corpus; evaluation methodology.
 - **aXIOM** — schema-development track (Declarative Frame Schema for analytical prompts); methodological self-description.
 
@@ -70,17 +70,17 @@ Contribution is *ad-hoc*: an artefact yields methodology material when it does s
 
 ## 7. Status and maturity signals *[TBD — S5]*
 
-**Current status:** working draft. The reference implementation's cross-project instruction baseline embedded four promotion-candidate sections (formerly labelled β-candidates) — source discipline, writing discipline, actant self-check, tool discipline — all of which have since been extracted into this repo (the corresponding Layer-1 sections now serve as operational hooks pointing back to the disciplines below), with a fifth (interpretive-frame discipline) added 2026-05-21 after a cascade audit of the first published case distinguished class-one (composition-drift) from class-two (frame-imposition) failure modes, a sixth (falsification discipline) added 2026-05-21 as the meta-level discipline operationalising Popper-falsifiability across the methodology itself, and a seventh (intellectual-hygiene discipline) added 2026-05-21 covering human-vs-AI provenance tracking across the project span:
+**Current status:** working draft. The reference implementation's cross-project instruction baseline embedded four promotion-candidate sections (formerly labelled β-candidates) — source protocol, writing protocol, actant self-check, tool protocol — all of which have since been extracted into this repo (the corresponding Layer-1 sections now serve as operational hooks pointing back to the protocols below), with a fifth (interpretive-frame protocol) added 2026-05-21 after a cascade audit of the first published case distinguished class-one (composition-drift) from class-two (frame-imposition) failure modes, a sixth (falsification protocol) added 2026-05-21 as the meta-level protocol operationalising Popper-falsifiability across the methodology itself, and a seventh (provenance protocol) added 2026-05-21 covering human-vs-AI provenance tracking across the project span:
 
-- [`disciplines/source-discipline.md`](disciplines/source-discipline.md) — source intake; the three patterns are *Snippets ≠ Primary*, *Secondary ≠ Primary*, *Search-Absence ≠ Proof-of-Absence*.
-- [`disciplines/interpretive-frame-discipline.md`](disciplines/interpretive-frame-discipline.md) — analytical stage between source intake and composition; the two patterns are *Lexicon Stability Across Stage Transitions* (covering both analytical-stage and language-stage drift) and *Frame Plurality Check at the Coding Step*.
-- [`disciplines/writing-discipline.md`](disciplines/writing-discipline.md) — composition stage; the two patterns are *Composition Drift* and *Descriptive Accuracy*.
-- [`disciplines/actant-self-check.md`](disciplines/actant-self-check.md) — author positionality in author-voiced texts; the three audits are *Verb Audit*, *Addressee Audit*, *Discrediting-Frame Inoculation*.
-- [`disciplines/tool-discipline.md`](disciplines/tool-discipline.md) — tool fidelity at the infrastructure layer; the three patterns are *Encoding Fidelity*, *Read Fidelity*, *Pre-Production Tool Validation*.
-- [`disciplines/falsification-discipline.md`](disciplines/falsification-discipline.md) — meta-level claim-status discipline (validity-axis); the three patterns are *Demarcation at the Claim Level*, *Methodology as Pile-Driver Work*, *Test Mode over Defense Mode*. Provides seven operational tests usable as a methodology self-audit pass.
-- [`disciplines/intellectual-hygiene-discipline.md`](disciplines/intellectual-hygiene-discipline.md) — meta-level human-vs-AI provenance discipline (provenance-axis); the three patterns are *Provenance Marking at Introduction-Time*, *Audit-Trail Across Project-Span*, *Learning-Progress Verifiability*. Supports IP-clarity, audit-traceability, and verification of scaffolded-vs-internalised use.
+- [`protocols/source-protocol.md`](protocols/source-protocol.md) — source intake; the three patterns are *Snippets ≠ Primary*, *Secondary ≠ Primary*, *Search-Absence ≠ Proof-of-Absence*.
+- [`protocols/interpretive-frame-protocol.md`](protocols/interpretive-frame-protocol.md) — analytical stage between source intake and composition; the two patterns are *Lexicon Stability Across Stage Transitions* (covering both analytical-stage and language-stage drift) and *Frame Plurality Check at the Coding Step*.
+- [`protocols/writing-protocol.md`](protocols/writing-protocol.md) — composition stage; the two patterns are *Composition Drift* and *Descriptive Accuracy*.
+- [`protocols/actant-self-check.md`](protocols/actant-self-check.md) — author positionality in author-voiced texts; the three audits are *Verb Audit*, *Addressee Audit*, *Discrediting-Frame Inoculation*.
+- [`protocols/tool-protocol.md`](protocols/tool-protocol.md) — tool fidelity at the infrastructure layer; the three patterns are *Encoding Fidelity*, *Read Fidelity*, *Pre-Production Tool Validation*.
+- [`protocols/falsification-protocol.md`](protocols/falsification-protocol.md) — meta-level claim-status protocol (validity-axis); the three patterns are *Demarcation at the Claim Level*, *Methodology as Pile-Driver Work*, *Test Mode over Defense Mode*. Provides seven operational tests usable as a methodology self-audit pass.
+- [`protocols/provenance-protocol.md`](protocols/provenance-protocol.md) — meta-level human-vs-AI provenance protocol (provenance-axis); the three patterns are *Provenance Marking at Introduction-Time*, *Audit-Trail Across Project-Span*, *Learning-Progress Verifiability*. Supports IP-clarity, audit-traceability, and verification of scaffolded-vs-internalised use.
 
-The seven modules are orthogonal layers. Tool discipline is *infrastructure-upstream* of the other six (its failures invalidate them); falsification and intellectual-hygiene disciplines are *meta-level* across the other five along two distinct axes (validity vs. provenance — falsification asks *"could this be wrong?"*, intellectual-hygiene asks *"where did this come from?"*). The remaining four run sequentially along the source-to-publication pipeline (source intake → interpretive coding → composition → author voice).
+The seven modules are orthogonal layers. Tool protocol is *infrastructure-upstream* of the other six (its failures invalidate them); falsification and provenance protocols are *meta-level* across the other five along two distinct axes (validity vs. provenance — falsification asks *"could this be wrong?"*, provenance asks *"where did this come from?"*). The remaining four run sequentially along the source-to-publication pipeline (source intake → interpretive coding → composition → author voice).
 
 **Maturity signals for peer-review escalation** are not yet operationalised. Candidates:
 

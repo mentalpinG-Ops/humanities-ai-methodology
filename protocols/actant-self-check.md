@@ -1,14 +1,21 @@
+---
+name: Actant Self-Check
+version: 0.1.0
+status: draft
+last_changed: 2026-06-17
+---
+
 # Actant Self-Check
 
-*Methodology module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
+*Methodology module. Audience: humanities scholar.*
 
 ---
 
 ## 1. Position
 
-When a humanities scholar writes a text with positional voice — an op-ed, an essay, a critical commentary, a public-repository document, a thread — the writing acts on the reader: it includes, excludes, asks, normates, demands. The author is an *actant* in the text, not just an observer of the artefact under analysis. The actant self-check is a discipline of bringing the author's own positional acts into view before publication, so that they can be revised deliberately rather than smuggled in.
+When a humanities scholar writes a text with positional voice — an op-ed, an essay, a critical commentary, a public-repository document, a thread — the writing acts on the reader: it includes, excludes, asks, normates, demands. The author is an *actant* in the text, not just an observer of the artefact under analysis. The actant self-check is a protocol of bringing the author's own positional acts into view before publication, so that they can be revised deliberately rather than smuggled in.
 
-The discipline is *scoped*: it applies to author-voiced texts. It does not apply to purely descriptive-operational outputs — code edits, repository listings, memory writes, audit logs. These have no positional voice in the relevant sense; subjecting them to actant self-check is a mis-scoped over-application.
+The protocol is *scoped*: it applies to author-voiced texts. It does not apply to purely descriptive-operational outputs — code edits, repository listings, memory writes, audit logs. These have no positional voice in the relevant sense; subjecting them to actant self-check is a mis-scoped over-application.
 
 Three audits, executed before publication.
 
@@ -58,7 +65,7 @@ This pattern is named *Discrediting-Frame Inoculation* because the dynamic gener
 
 ## 3. When Actant Self-Check Applies
 
-Scope discipline is part of the discipline:
+Scoping is part of the protocol:
 
 | Text type | Actant self-check | Why |
 |---|---|---|
@@ -76,13 +83,13 @@ The boundary is positional voice. A text that asserts how things should be read,
 
 ## 4. Failure-Mode Gallery
 
-The discipline was lifted from concrete patterns in published material:
+The protocol was lifted from concrete patterns in published material:
 
 - **Verb-audit deferred.** Op-ed contained constructions like *"the exhibit has not yet been recognised as ..."* — a deferred-recognition framing that smuggled the author's normative measure as a temporal claim. Recognised post-publication; lift to methodology yielded Pattern 2.1.
 - **Addressee-coalition smuggle** (op-ed drafts, pre-revision). Inclusive *we* references did not match the actual readership of the publication venue. Caught in pre-publication revision, but only because reader feedback flagged it; the author had not registered the choice. Lift to Pattern 2.2.
-- **Discrediting-Frame exposure** (op-ed, anticipatory). The text engaged Critical Theory without explicit citation; the discrediting frame could plausibly have been applied. Preemptive citation discipline added before publication as a prophylactic; lift to Pattern 2.3 as a generalised pattern.
+- **Discrediting-Frame exposure** (op-ed, anticipatory). The text engaged Critical Theory without explicit citation; the discrediting frame could plausibly have been applied. Preemptive citation protocol added before publication as a prophylactic; lift to Pattern 2.3 as a generalised pattern.
 
-The discipline is the methodology lift from these cases. It is not a stylistic preference.
+The protocol is the methodology lift from these cases. It is not a stylistic preference.
 
 ---
 
@@ -97,9 +104,9 @@ Actant self-check is a discrete pre-publication stage:
 
 ---
 
-## 6. What This Discipline Does **Not** Provide
+## 6. What This Protocol Does **Not** Provide
 
-- It does not address whether the *claims* in the text are correct (see [[source-discipline]] for source intake; [[writing-discipline]] for descriptive accuracy).
+- It does not address whether the *claims* in the text are correct (see [source protocol](source-protocol.md) for source intake; [writing protocol](writing-protocol.md) for descriptive accuracy).
 - It does not police the author's politics or normative commitments. The audits make the commitments *visible* and *declarable*, not different.
 - It does not apply to purely descriptive-operational outputs (per §3 scoping). Applying it there is a mis-scoped over-application.
 - It does not provide a guarantee against being misread; it provides a guarantee against being unfairly misread on grounds the author could have anticipated.
@@ -108,9 +115,9 @@ Actant self-check is a discrete pre-publication stage:
 
 ## 7. Cross-Refs
 
-- [[source-discipline]] — source intake; orthogonal layer.
-- [[writing-discipline]] — descriptive accuracy; orthogonal layer.
-- [[tool-discipline]] — tool fidelity; unrelated layer.
+- [source protocol](source-protocol.md) — source intake; orthogonal layer.
+- [writing protocol](writing-protocol.md) — descriptive accuracy; orthogonal layer.
+- [tool protocol](tool-protocol.md) — tool fidelity; unrelated layer.
 
 ---
 

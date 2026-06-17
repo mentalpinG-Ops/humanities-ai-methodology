@@ -1,14 +1,21 @@
-# Source Discipline
+---
+name: Source Protocol
+version: 0.1.0
+status: draft
+last_changed: 2026-06-17
+---
 
-*Methodology module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
+# Source Protocol
+
+*Methodology module. Audience: humanities scholar.*
 
 ---
 
 ## 1. Position
 
-In AI-assisted humanities research, most source encounters happen through tools that return *snippets*, *abstracts*, *aggregated summaries*, or *search-agent reports*. These are not sources. They are *pointers to sources*. A methodology that aims to meet humanities-scholarly standards cannot treat the distinction between the tool-filtered representation and the source itself as an after-the-fact conscience correction. It must operate as a working discipline — visible in the workflow, checkable in the output, auditable after publication.
+In AI-assisted humanities research, most source encounters happen through tools that return *snippets*, *abstracts*, *aggregated summaries*, or *search-agent reports*. These are not sources. They are *pointers to sources*. A methodology that aims to meet humanities-scholarly standards cannot treat the distinction between the tool-filtered representation and the source itself as an after-the-fact conscience correction. It must operate as a working protocol — visible in the workflow, checkable in the output, auditable after publication.
 
-Three patterns are robust enough across documented failure modes to be named separately. Together they constitute the Source Discipline.
+Three patterns are robust enough across documented failure modes to be named separately. Together they constitute the Source Protocol.
 
 ---
 
@@ -62,7 +69,7 @@ Empirical case: marketing material for a travelling exhibition in Poland attribu
 
 ## 3. Verification Levels
 
-Every source-tagged claim carries an additional *verification level*. This is not a separate discipline but the operational consequence of the three patterns:
+Every source-tagged claim carries an additional *verification level*. This is not a separate protocol but the operational consequence of the three patterns:
 
 | Level | Meaning | Source trust |
 |---|---|---|
@@ -77,7 +84,7 @@ Verification levels apply **not only** at the brief or research stage but **also
 
 ## 4. Failure-Mode Gallery
 
-The discipline is grounded in documented failure modes, not prophylactic abstraction. Three cases:
+The protocol is grounded in documented failure modes, not prophylactic abstraction. Three cases:
 
 - **Snippet-cascade failure** (administrative-document forensic-analysis case study). A search snippet from an administrative secondary source was treated as primary attestation; downstream synthesis stabilised the inaccuracy through several editorial stages. Methodology lift: an explicit cascade-risk audit step (separately codified).
 
@@ -85,37 +92,37 @@ The discipline is grounded in documented failure modes, not prophylactic abstrac
 
 - **Agent-report synthesis drift** (knowledge-representation lab). Aggregated agent searches were synthesised without per-source verification level; the synthesis stage must re-check verification level, not assume it carries through. Methodology lift: Pattern 3 plus a dedicated verification-level rule.
 
-Each case shows: source discipline addresses dated, observable failure modes — not generic best practice.
+Each case shows: source protocol addresses dated, observable failure modes — not generic best practice.
 
 ---
 
 ## 5. Operationalisation in the Workflow
 
-Source discipline is not a source-tag collection alone. It is a workflow position:
+Source protocol is not a source-tag collection alone. It is a workflow position:
 
 - **Before research starts:** declare the tool set (search engines, aggregators, AI search agents) and the verification plan.
 - **During research:** classify every hit per Pattern 2.1 / 2.2 / 2.3; tag the verification level.
 - **Before synthesis:** every hit tagged `agent-reported` or `aggregator-only` must either be upgraded (deep-read) or removed from load-bearing arguments.
-- **Before publication:** pre-publication re-check against the original source, not against a later composition stage (see `writing-discipline.md` §Composition Drift).
+- **Before publication:** pre-publication re-check against the original source, not against a later composition stage (see `writing-protocol.md` §Composition Drift).
 - **After publication:** preserve the audit trail — which source tags were set at which stage, which verification levels were load-bearing.
 
 ---
 
-## 6. What This Discipline Does **Not** Provide
+## 6. What This Protocol Does **Not** Provide
 
-- It makes no claim about the *intellectual quality* of a primary source. A verbatim-verified source can still be wrong, biased, or methodologically problematic. Source discipline guarantees only that the source is what it appears to be — not that it is fit for purpose.
+- It makes no claim about the *intellectual quality* of a primary source. A verbatim-verified source can still be wrong, biased, or methodologically problematic. Source protocol guarantees only that the source is what it appears to be — not that it is fit for purpose.
 
-- It does not replace **writing discipline** (descriptive accuracy when describing artefacts, composition drift in longer texts). Source discipline protects the source intake; writing discipline protects the text output. Both are required.
+- It does not replace **writing protocol** (descriptive accuracy when describing artefacts, composition drift in longer texts). Source protocol protects the source intake; writing protocol protects the text output. Both are required.
 
-- It does not replace **actant self-check** (the analyst's own positionality in the reading act). Source discipline makes *sources* checkable, not the *reading act* itself.
+- It does not replace **actant self-check** (the analyst's own positionality in the reading act). Source protocol makes *sources* checkable, not the *reading act* itself.
 
 ---
 
 ## 7. Cross-Refs
 
-- [[writing-discipline]] — descriptive accuracy plus composition drift; observation fidelity at text output.
-- [[actant-self-check]] — verb audit, addressee audit, CMF inoculation; positionality of the analytical act.
-- [[tool-discipline]] — empirical tool validation as a methodology extension.
+- [writing protocol](writing-protocol.md) — descriptive accuracy plus composition drift; observation fidelity at text output.
+- [actant self-check](actant-self-check.md) — verb audit, addressee audit, CMF inoculation; positionality of the analytical act.
+- [tool protocol](tool-protocol.md) — empirical tool validation as a methodology extension.
 
 ---
 

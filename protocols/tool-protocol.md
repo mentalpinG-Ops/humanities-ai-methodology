@@ -1,16 +1,23 @@
-# Tool Discipline
+---
+name: Tool Protocol
+version: 0.1.0
+status: draft
+last_changed: 2026-06-17
+---
 
-*Methodology module. Status: working-draft 2026-05-21. Audience: humanities scholar.*
+# Tool Protocol
+
+*Methodology module. Audience: humanities scholar.*
 
 ---
 
 ## 1. Position
 
-Tools mediate. Between the author and the artefact, between the source and the citation, between the draft and the publication, tools intervene — search engines, file readers, AI assistants, encoding pipelines, image renderers, OCR, web APIs. Each tool has its own assumptions, defaults, failure modes. None is a neutral conduit. A methodology that takes tools as transparent infrastructure inherits whatever distortions the tools introduce. A methodology that treats tools as objects of empirical validation gains a layer of corrective discipline that source discipline, writing discipline, and actant self-check cannot supply alone.
+Tools mediate. Between the author and the artefact, between the source and the citation, between the draft and the publication, tools intervene — search engines, file readers, AI assistants, encoding pipelines, image renderers, OCR, web APIs. Each tool has its own assumptions, defaults, failure modes. None is a neutral conduit. A methodology that takes tools as transparent infrastructure inherits whatever distortions the tools introduce. A methodology that treats tools as objects of empirical validation gains a layer of corrective protocol that source protocol, writing protocol, and actant self-check cannot supply alone.
 
-Tool discipline is *infrastructure-facing*: it does not check what the author says about the artefact (writing discipline) or what the author says as a positioned voice (actant self-check); it checks what the *tool* says about the artefact before either of those concerns arise.
+Tool protocol is *infrastructure-facing*: it does not check what the author says about the artefact (writing protocol) or what the author says as a positioned voice (actant self-check); it checks what the *tool* says about the artefact before either of those concerns arise.
 
-Three patterns are robust enough across documented failures to be named separately. Together they constitute Tool Discipline.
+Three patterns are robust enough across documented failures to be named separately. Together they constitute Tool Protocol.
 
 ---
 
@@ -36,7 +43,7 @@ Empirical case: an op-ed publication pipeline routed text through a PowerShell H
 
 **Why.** File readers may misrender Unicode, mis-align indentation, drop trailing whitespace, normalise line endings, substitute visually-similar characters, or summarise binary data in ways that omit detail. Image-display tools may compress, transcode, crop, or scale. OCR may misread similar characters (*1* vs. *l*, *O* vs. *0*). AI assistants summarising a file may report what they expect to be there alongside what is actually there. The author working with the tool view forms confident empirical impressions that are wrong in ways the tool does not signal.
 
-Empirical case: a coding assistant's file-reader summarised an image artefact in a way that the author treated as direct view. The author's later text described the artefact as showing *"a chess player with a hat"*. The hat belonged to a different figure in the image; the chess player was bareheaded. The misdescription survived multiple drafts because the author continued to verify against the tool-mediated view rather than against the source image at native resolution. See also [[writing-discipline]] §2.2 for the descriptive-accuracy aspect.
+Empirical case: a coding assistant's file-reader summarised an image artefact in a way that the author treated as direct view. The author's later text described the artefact as showing *"a chess player with a hat"*. The hat belonged to a different figure in the image; the chess player was bareheaded. The misdescription survived multiple drafts because the author continued to verify against the tool-mediated view rather than against the source image at native resolution. See also [writing protocol](writing-protocol.md) §2.2 for the descriptive-accuracy aspect.
 
 **How to apply.**
 - Identify which artefacts in the workflow are tool-mediated.
@@ -47,7 +54,7 @@ Empirical case: a coding assistant's file-reader summarised an image artefact in
 
 **Rule.** Before a tool is used in a publication pipeline, validate it empirically with edge-case content — diacritics, special symbols, mixed scripts, long lines, embedded markup. A tool that handles standard ASCII English content reliably may fail silently on the content that matters.
 
-**Why.** Tool defaults are optimised for the most common content their authors anticipated. Humanities-scholar content is often *not* that — multi-script, citation-heavy, character-rich, mark-up-bearing. Discovering a tool's failure mode by publishing a corrupted output is expensive; discovering it during a pre-production test is cheap. The cost asymmetry is the reason this pattern is a discipline rather than a habit.
+**Why.** Tool defaults are optimised for the most common content their authors anticipated. Humanities-scholar content is often *not* that — multi-script, citation-heavy, character-rich, mark-up-bearing. Discovering a tool's failure mode by publishing a corrupted output is expensive; discovering it during a pre-production test is cheap. The cost asymmetry is the reason this pattern is a protocol rather than a habit.
 
 **How to apply.**
 - Define a *test content packet* containing the edge cases that matter for the work: representative diacritics for the relevant languages, special symbols used in citations, multi-line content with the relevant formatting, sample non-Latin script (Polish, Cyrillic, Greek, etc., per the actual corpus).
@@ -57,19 +64,19 @@ Empirical case: a coding assistant's file-reader summarised an image artefact in
 
 ---
 
-## 3. Tool Discipline as an Upstream Layer
+## 3. Tool Protocol as an Upstream Layer
 
-Tool discipline operates at a different layer than the other three Methodology modules. Source discipline checks what enters the workflow; writing discipline checks what the author says about it; actant self-check checks the author's positional voice. Tool discipline checks the infrastructure on which all three depend.
+Tool protocol operates at a different layer than the other three Methodology modules. Source protocol checks what enters the workflow; writing protocol checks what the author says about it; actant self-check checks the author's positional voice. Tool protocol checks the infrastructure on which all three depend.
 
-The relationship is *upstream*: tool-discipline failures invalidate the work of all three other disciplines. A source verified verbatim through a tool that silently re-encoded the text is not actually verified verbatim — what was checked was the tool's representation of the source. The same source-discipline pattern (Snippets ≠ Primary) reappears at the tool layer: *tool views ≠ artefacts*.
+The relationship is *upstream*: tool-protocol failures invalidate the work of all three other protocols. A source verified verbatim through a tool that silently re-encoded the text is not actually verified verbatim — what was checked was the tool's representation of the source. The same source-protocol pattern (Snippets ≠ Primary) reappears at the tool layer: *tool views ≠ artefacts*.
 
-This is why tool discipline cannot be deferred to "engineering concerns". For humanities-scholar work where the artefact is the primary research object, infidelity at the tool layer is infidelity at the research layer.
+This is why tool protocol cannot be deferred to "engineering concerns". For humanities-scholar work where the artefact is the primary research object, infidelity at the tool layer is infidelity at the research layer.
 
 ---
 
 ## 4. Failure-Mode Gallery
 
-Documented failures grounding the discipline:
+Documented failures grounding the protocol:
 
 - **UTF-8 corruption through PowerShell HTTP body** (museum-exhibition op-ed publication pipeline). German umlauts and the section sign reduced to replacement characters in the published op-ed. Root cause: ISO-8859-1 default in PowerShell's `Invoke-RestMethod` string-body handling. Lift to Pattern 2.1.
 - **Read-tool emoji and position misrender** (same publication, composition stage). The file-reader's representation of an image artefact diverged from the source image; the author composed against the divergent view. Lift to Pattern 2.2.
@@ -79,31 +86,31 @@ Documented failures grounding the discipline:
 
 ## 5. Operationalisation in the Workflow
 
-Tool discipline runs as a separate workflow track, not as a final-stage check:
+Tool protocol runs as a separate workflow track, not as a final-stage check:
 
 - **Workflow design:** identify every tool in the publication pipeline. Document its known failure modes.
 - **Tool onboarding:** before adding a new tool to the pipeline, run the pre-production validation packet (Pattern 2.3).
 - **Routine use:** when content passes through a tool, treat the tool's output as approximate until verified at the next boundary. For load-bearing content, verify explicitly.
 - **Failure response:** when a tool failure is discovered post-publication, document it as a failure-mode entry; update the validation packet to catch the same class of failure earlier next time.
 
-The runbook layer (the companion runbook repository) holds the specific tool fixes — encoding flags, configuration files, code workarounds. The methodology layer (this document) holds the discipline that produces those runbooks.
+The runbook layer (the companion runbook repository) holds the specific tool fixes — encoding flags, configuration files, code workarounds. The methodology layer (this document) holds the protocol that produces those runbooks.
 
 ---
 
-## 6. What This Discipline Does **Not** Provide
+## 6. What This Protocol Does **Not** Provide
 
-- It does not address whether a verified source is intellectually valid (see [[source-discipline]]).
-- It does not address whether the author's claims about an artefact are accurate (see [[writing-discipline]]).
-- It does not address whether the author's positional voice is well-calibrated (see [[actant-self-check]]).
-- It does not solve general software engineering. Tool discipline is the minimum infrastructure-validation that humanities-scholar work needs to keep its source-, writing-, and actant-disciplines load-bearing. Engineers may have stronger requirements; this discipline is the floor, not the ceiling.
+- It does not address whether a verified source is intellectually valid (see [source protocol](source-protocol.md)).
+- It does not address whether the author's claims about an artefact are accurate (see [writing protocol](writing-protocol.md)).
+- It does not address whether the author's positional voice is well-calibrated (see [actant self-check](actant-self-check.md)).
+- It does not solve general software engineering. Tool protocol is the minimum infrastructure-validation that humanities-scholar work needs to keep its source-, writing-, and actant-protocols load-bearing. Engineers may have stronger requirements; this protocol is the floor, not the ceiling.
 
 ---
 
 ## 7. Cross-Refs
 
-- [[source-discipline]] — source intake; tool-discipline failures invalidate source verification.
-- [[writing-discipline]] — descriptive accuracy; tool-discipline failures upstream of descriptive errors.
-- [[actant-self-check]] — positional voice; orthogonal layer.
+- [source protocol](source-protocol.md) — source intake; tool-protocol failures invalidate source verification.
+- [writing protocol](writing-protocol.md) — descriptive accuracy; tool-protocol failures upstream of descriptive errors.
+- [actant self-check](actant-self-check.md) — positional voice; orthogonal layer.
 
 ---
 
