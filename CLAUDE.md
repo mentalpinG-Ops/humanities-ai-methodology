@@ -8,7 +8,7 @@ This file provides context for Claude (and other AI assistants) working in this 
 
 ## Repository Purpose
 
-`humanities-ai-methodology` develops an **AI-agnostic methodology** for humanities students and scholars working with AI tools toward responsible, publishable outcomes. It is the **Level-I Methodology** layer of a two-level Y-Architecture (see [`README.md`](README.md) §3): the abstract, tool-portable methodology, expressed as a stack of composable **protocols** under `protocols/`. The Level-II Practice — a concrete reference implementation — is documented per `README.md` §3; this repository holds the methodology, not a running system.
+`humanities-ai-methodology` develops an **AI-agnostic methodology** for humanities students and scholars working with AI tools toward responsible, publishable outcomes. It holds the methodology itself: an abstract, tool-portable stack of composable **protocols** under `protocols/`. Each protocol is promoted here from documented practice after empirical grounding — not authored in isolation. This repository documents no running system.
 
 **License:** dual-licensed — Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) by default, with a Commercial Licence by arrangement. See [`LICENSE`](LICENSE) and [`LICENSE-COMMERCIAL.md`](LICENSE-COMMERCIAL.md).
 
@@ -28,9 +28,9 @@ When assisting in this repository, do not include, suggest, or infer any employe
 This public repository carries its own **public decision-records** (`decisions/`) for design decisions about the methodology itself. What stays *out*:
 
 - Session logs, transcript audits, usage tracking, and cross-project operational decision-records that reference private working context (session identifiers, project-internal material, the maintainer's other projects) live in the maintainer's **private workspace**, not here. They cannot be published; the public `decisions/` records the methodology-facing rationale without that context.
-- Project-internal runbooks and the running Level-II Practice environment live in their own separate repositories per the two-repo architecture (`README.md` §3).
+- The canonical practice documentation (private — the empirical anchor protocols are promoted from) and the maintainer's private working context live outside this repository.
 
-Keep this repository focused on the Level-I Methodology: the protocol stack and its public governance.
+Keep this repository focused on the methodology: the protocol stack and its public governance. Protocols are promoted here after empirical grounding, not authored in isolation.
 
 ## Repository Structure
 
@@ -40,7 +40,7 @@ Keep this repository focused on the Level-I Methodology: the protocol stack and 
 - `decisions/` — public decision-records for the methodology's design (e.g. the protocol-naming decision)
 - `CONTRIBUTING.md` — contribution guidelines
 - `CHANGELOG.md` — release notes (Keep a Changelog format)
-- `README.md` — statement, motivation, Y-Architecture, status, license
+- `README.md` — statement, motivation, two-repo architecture, status, license
 
 ## Protocols and Versioning
 

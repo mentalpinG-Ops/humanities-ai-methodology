@@ -4,7 +4,7 @@ status: living
 
 # Governance — humanities-ai-methodology
 
-This document is the single source for how this repository is versioned, how its documents declare their currency, and what may enter it.
+This document is the single source for how this repository is versioned, how its documents declare their currency, and what content may enter it. (What may enter the *methodology* — which protocols, and how — is governed by the constitutive rule; see [`CONTRIBUTING.md`](CONTRIBUTING.md).)
 
 ## License
 
@@ -105,7 +105,7 @@ This boundary exists to protect privacy, prevent IP leakage, and maintain legal 
 ## Reference
 
 - The protocol stack: [`METHODOLOGY_SPEC.md`](METHODOLOGY_SPEC.md)
-- Statement, motivation, Y-Architecture, status, license: [`README.md`](README.md)
+- Statement, motivation, two-repo architecture, status, license: [`README.md`](README.md)
 - Contribution guidelines (incl. material boundaries): [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - AI assistant context: [`CLAUDE.md`](CLAUDE.md)
 - Copilot instructions: [`.github/copilot-instructions.md`](.github/copilot-instructions.md)

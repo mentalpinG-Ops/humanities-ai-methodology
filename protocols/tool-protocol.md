@@ -60,7 +60,7 @@ Empirical case: a coding assistant's file-reader summarised an image artefact in
 - Define a *test content packet* containing the edge cases that matter for the work: representative diacritics for the relevant languages, special symbols used in citations, multi-line content with the relevant formatting, sample non-Latin script (Polish, Cyrillic, Greek, etc., per the actual corpus).
 - Run the test packet through any new tool or new tool-chain configuration before integrating it.
 - Compare output to source byte-for-byte where possible; visually where not.
-- Document tool-specific findings in a runbook (in the companion runbook repository, per the README §3) so the next iteration of the same tool-chain does not require rediscovery.
+- Document tool-specific findings in the project's own working materials (outside this repository) so the next iteration of the same tool-chain does not require rediscovery.
 
 ---
 
@@ -93,7 +93,7 @@ Tool protocol runs as a separate workflow track, not as a final-stage check:
 - **Routine use:** when content passes through a tool, treat the tool's output as approximate until verified at the next boundary. For load-bearing content, verify explicitly.
 - **Failure response:** when a tool failure is discovered post-publication, document it as a failure-mode entry; update the validation packet to catch the same class of failure earlier next time.
 
-The runbook layer (the companion runbook repository) holds the specific tool fixes — encoding flags, configuration files, code workarounds. The methodology layer (this document) holds the protocol that produces those runbooks.
+Implementation-specific tool fixes — encoding flags, configuration files, code workarounds — live in project-level working materials outside this repository. The methodology layer (this document) holds the protocol that guides their creation; it does not itself hold instance-specific configurations.
 
 ---
 
@@ -114,4 +114,4 @@ The runbook layer (the companion runbook repository) holds the specific tool fix
 
 ---
 
-*Versioning: working-draft. As the reference implementation accumulates more tool-failure incidents, additional patterns may emerge. Inline patch edits do not trigger a version bump; new patterns trigger a status update.*
+*Versioning: working-draft. As the canonical practice accumulates more tool-failure incidents, additional patterns may emerge. Inline patch edits do not trigger a version bump; new patterns trigger a status update.*

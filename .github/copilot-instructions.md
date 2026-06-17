@@ -6,7 +6,7 @@ status: living
 
 ## Purpose
 
-This repository (`humanities-ai-methodology`) develops an AI-agnostic methodology for humanities students and scholars working with AI tools toward responsible, publishable outcomes. It holds the **Level-I Methodology**: a stack of composable **protocols** under `protocols/`. It is dual-licensed (**CC BY-SA 4.0** by default; Commercial by arrangement).
+This repository (`humanities-ai-methodology`) develops an AI-agnostic methodology for humanities students and scholars working with AI tools toward responsible, publishable outcomes. It holds the methodology: a stack of composable **protocols** under `protocols/`, promoted from documented practice after empirical grounding — not authored here. It is dual-licensed (**CC BY-SA 4.0** by default; Commercial by arrangement).
 
 ## Material Boundaries
 

@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Changed
 
+- **Governance corrected to the real two-repo architecture.** README §3 was rewritten from the obsolete three-tier framing (an in-repo "Level-II Practice" reference implementation + a never-finalised companion "runbooks" repository) to a two-layer model in plain, universal language: the methodology is distilled one-way from a separate, private practice repository, under the constitutive rule that no protocol enters without an empirical anchor in documented practice. `CONTRIBUTING.md` switched from an open-authoring model to a **curated-derivation** model (protocols are promoted, not authored here). Internal layer-numbering was removed from the public files. No protocol content changed.
+
 - **Terminology rename: `-discipline` → `-protocol`; `intellectual-hygiene` → `provenance`.** The module directory `disciplines/` became `protocols/`; the six `-discipline.md` modules became `-protocol.md`; `intellectual-hygiene-discipline.md` became `provenance-protocol.md` (with *intellectual hygiene* → *provenance* throughout). `actant-self-check.md` kept its name (path moved only). All renames via `git mv` (history preserved). Internal `[[wiki]]` cross-references converted to standard Markdown links. The `README.md` §7 module list and prose, and all cross-references, were updated. Rationale recorded in [`decisions/0001-discipline-to-protocol-rename.md`](decisions/0001-discipline-to-protocol-rename.md). De-Germanises the module naming and names the provenance protocol for what it does.
 
 ### Added

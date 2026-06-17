@@ -18,15 +18,15 @@ From this emerged the reframing: **methodology is not a side effect of project w
 
 ## 3. What is delivered
 
-The methodology is delivered as a **Y-Architecture**: two coupled levels.
+This repository holds the methodology itself — an abstract, reusable stack of protocols describing what a responsible humanities-scholar AI-working environment contains: positionality, material boundaries, source intake, interpretive framing, composition, author voice, tool fidelity, falsification, and provenance. It is public-bound (private initially; the public-flip is a separate decision); licence terms are in §8 below; the language is English.
 
-- **Methodology (Level I)** — the abstract methodology, tool-portable. Describes what a humanities-scholar AI-working environment should contain: positionality, material boundaries, source protocol, memory protocol, attribution hygiene. Resides in **this repository** — private initially, public-flip trigger TBD; licence terms in §8 below; English.
+The methodology is not invented here in the abstract. It is **distilled from documented practice**, kept separately in a private working repository. The relationship runs one way: the methodology is derived from practice; practice is never derived from the methodology.
 
-- **Practice (Level II)** — a concrete reference implementation, Claude-Code-specific but architecturally portable: CLAUDE.md layering, auto-memory, workspace structure, skills, hooks. Demonstrates that the Methodology is implementable. Reference documentation lives in this repo; the running Practice is the working environment itself.
+This is enforced by one rule: **no protocol enters the methodology without an empirical anchor in at least one documented practice sequence.** A protocol earns its place here once it has proven itself in real work — it is not written from imagination. Generalisation without a practical source is the failure mode this design exists to prevent. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for what that means for contributions.
 
-Project-internal material, project-specific runbooks, and research-internal notes live in **a companion runbook repository** (`humanities-ai-methodology-runbooks`, private always, German), structurally separated from the publishable layer. This two-repo architecture makes the material boundary clean by construction. The runbook repository will be created on first project-convergence-sync trigger; it does not yet exist.
+This repository therefore documents no running system and holds no project-internal material or case data; those remain in the private practice repository and the maintainer's working context, structurally separated so the material boundary in §8 holds by construction.
 
-**Publication strategy** is *phased*: working draft (this repo + a companion blog format) without peer-review gate as the initial form; methodologically citable from day one. Escalation to peer review (a methods paper for Methodology, a tools paper or workshop submission for Practice) when a maturity threshold is reached — maturity criteria pending S5.
+**Publication strategy** is *phased*: working draft (this repo + a companion blog format) without peer-review gate as the initial form; methodologically citable from day one. Escalation to peer review (a methods paper) when a maturity threshold is reached — maturity criteria pending S5.
 
 ## 4. Normative grounding *[TBD — S2]*
 
@@ -70,7 +70,7 @@ Contribution is *ad-hoc*: an artefact yields methodology material when it does s
 
 ## 7. Status and maturity signals *[TBD — S5]*
 
-**Current status:** working draft. The reference implementation's cross-project instruction baseline embedded four promotion-candidate sections (formerly labelled β-candidates) — source protocol, writing protocol, actant self-check, tool protocol — all of which have since been extracted into this repo (the corresponding Layer-1 sections now serve as operational hooks pointing back to the protocols below), with a fifth (interpretive-frame protocol) added 2026-05-21 after a cascade audit of the first published case distinguished class-one (composition-drift) from class-two (frame-imposition) failure modes, a sixth (falsification protocol) added 2026-05-21 as the meta-level protocol operationalising Popper-falsifiability across the methodology itself, and a seventh (provenance protocol) added 2026-05-21 covering human-vs-AI provenance tracking across the project span:
+**Current status:** working draft. Four of the protocols — source, writing, actant self-check, and tool — were the methodology's first distillations from documented practice, with a fifth (interpretive-frame protocol) added 2026-05-21 after a cascade audit of the first published case distinguished class-one (composition-drift) from class-two (frame-imposition) failure modes, a sixth (falsification protocol) added 2026-05-21 as the meta-level protocol operationalising Popper-falsifiability across the methodology itself, and a seventh (provenance protocol) added 2026-05-21 covering human-vs-AI provenance tracking across a project's span:
 
 - [`protocols/source-protocol.md`](protocols/source-protocol.md) — source intake; the three patterns are *Snippets ≠ Primary*, *Secondary ≠ Primary*, *Search-Absence ≠ Proof-of-Absence*.
 - [`protocols/interpretive-frame-protocol.md`](protocols/interpretive-frame-protocol.md) — analytical stage between source intake and composition; the two patterns are *Lexicon Stability Across Stage Transitions* (covering both analytical-stage and language-stage drift) and *Frame Plurality Check at the Coding Step*.

@@ -22,16 +22,15 @@ If in doubt, do not include it. Generalise first, then contribute.
 
 ## How to Contribute
 
-1. Fork the repository and create a feature branch.
-2. For a **new protocol**:
-   - Create a Markdown file in `protocols/`, named `<topic>-protocol.md` (or keep an established name where the suffix would be redundant, as `actant-self-check.md` does).
-   - Follow the existing protocol structure: **Position → The Patterns (or Audits) → Operationalisation → Failure-Mode Gallery → What This Protocol Does Not Provide → Cross-Refs**.
-   - Add the four-field **frontmatter** at the top (`name`, `version`, `status`, `last_changed`). See the *Versioning* section in [`GOVERNANCE.md`](GOVERNANCE.md).
-   - Cross-reference the related protocols with standard Markdown links (`[text](other-protocol.md)`), and add the protocol to the module list in [`README.md`](README.md) §7 and to the table in [`METHODOLOGY_SPEC.md`](METHODOLOGY_SPEC.md).
-3. For **edits to an existing protocol**:
-   - **Bump the file's `version`** per the patch/minor/major rules in `GOVERNANCE.md`, and update `last_changed` to the current date.
-4. For a **design decision** about the methodology (a rename, a new layer, a scope change): add a numbered record in `decisions/` (see [`decisions/0001-discipline-to-protocol-rename.md`](decisions/0001-discipline-to-protocol-rename.md) for the format).
-5. Open a pull request with a clear description of the change and its rationale, and add a `CHANGELOG.md` entry under `[Unreleased]`.
+Protocols are **not authored here.** Each one is *promoted* into this repository only after it has earned its place in documented practice — the constitutive rule: **no protocol enters the methodology without an empirical anchor in at least one real practice sequence.** Generalisation without a practical source is *methodology-from-imagination*, the failure mode this design exists to block. So this repository does **not** accept pull requests that add a new protocol directly.
+
+External contributions are welcome in three forms:
+
+1. **Report a gap** — open an issue describing a failure mode, blind spot, or use-case the current protocols miss. A well-grounded gap is candidate material for a future promotion.
+2. **Offer a case study** — provide a **de-identified** reference case (a real working sequence, stripped of any employer/client/personal material per *Material Boundaries* above) that the maintainer can evaluate as promotion material.
+3. **Propose a structure change** — a rename, a new layer, or a scope change, submitted as a numbered record in `decisions/` (see [`decisions/0001-discipline-to-protocol-rename.md`](decisions/0001-discipline-to-protocol-rename.md) for the format). Structure proposals are reviewed against the falsification protocol's auxiliary-hypothesis test: a new layer is admissible only if it increases what the methodology *forbids*.
+
+For **edits to an existing protocol** (wording, a new pattern, a failure-mode entry): bump the file's `version` per the patch/minor/major rules in [`GOVERNANCE.md`](GOVERNANCE.md), update `last_changed`, open a pull request describing the change and its rationale, and add a `CHANGELOG.md` entry under `[Unreleased]`.
 
 ## Versioning
 

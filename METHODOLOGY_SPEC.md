@@ -49,4 +49,4 @@ A protocol also carries the four-field frontmatter (`name`, `version`, `status`,
 
 ## 5. Adding a protocol
 
-A new protocol enters via [`CONTRIBUTING.md`](CONTRIBUTING.md): a file in `protocols/`, the six required sections, four-field frontmatter, Markdown cross-references, an entry in this spec's table (§1) and in `README.md` §7, and a `CHANGELOG.md` entry. A structural change of this kind is also recorded in `decisions/`.
+A new protocol is **promoted** into the stack from documented practice (see [`CONTRIBUTING.md`](CONTRIBUTING.md)) — not authored here. Once grounded, it is added as a file in `protocols/` with the six required sections, four-field frontmatter, Markdown cross-references, an entry in this spec's table (§1) and in `README.md` §7, and a `CHANGELOG.md` entry. A structural change of this kind is also recorded in `decisions/`.
