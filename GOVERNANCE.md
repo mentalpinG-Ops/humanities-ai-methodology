@@ -59,6 +59,14 @@ Each protocol in `protocols/` carries a four-field YAML frontmatter block. Four 
 - Promotion to `stable` requires external read-tests and a period without structural re-articulation (the maturity signals in [`README.md`](repos/humanities-ai-methodology/README.md) §7). A protocol may not be labelled `stable` without naming the conditions under which it would be revised — the status-vocabulary audit of [`protocols/falsification-protocol.md`](protocols/falsification-protocol.md).
 - `deprecated` retires a protocol without removing it from history.
 
+### Repository version tags
+
+A repository-level git tag (`version-0.1`, `version-0.2`, …) freezes a named, immutable reference point for the stack as a whole:
+
+- **What a tag certifies:** the set of protocols named in its annotation went through a stability window (no major edits for at least two weeks) before tagging. External references to the methodology should cite a tag, not the moving `main` branch.
+- **What a tag does not do:** it publishes nothing, and it promotes no protocol's `status`. Distribution of any tagged state is a separate, deliberate act.
+- **Scope:** a tag may certify fewer modules than the tree contains — modules added after the stability window opened stay outside the certified set and mature toward a later tag. The tag annotation names the certified set.
+
 ---
 
 ## Document Classes and Currency

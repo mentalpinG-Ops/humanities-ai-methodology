@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+*(nothing yet)*
+
+## [0.1.0] — 2026-07-05
+
+**First version freeze — tag `version-0.1`.** Certifies the seven original protocols (source, writing, tool, interpretive-frame, actant-self-check, falsification, provenance) after a stability window of no major edits since 2026-06-17. The eighth module (read-write-boundary) is present in this tree as `draft`; it is not part of the certified set and matures toward a later tag. Per [`GOVERNANCE.md`](GOVERNANCE.md) §Versioning, a version tag is a fixed reference point: it publishes nothing and changes no protocol's status.
+
 ### Changed
 
 - **Governance corrected to the real two-repo architecture.** README §3 was rewritten from the obsolete three-tier framing (an in-repo "Level-II Practice" reference implementation + a never-finalised companion "runbooks" repository) to a two-layer model in plain, universal language: the methodology is distilled one-way from a separate, private practice repository, under the constitutive rule that no protocol enters without an empirical anchor in documented practice. `CONTRIBUTING.md` switched from an open-authoring model to a **curated-derivation** model (protocols are promoted, not authored here). Internal layer-numbering was removed from the public files. No protocol content changed.
