@@ -34,7 +34,7 @@ Keep this repository focused on the methodology: the protocol stack and its publ
 
 ## Repository Structure
 
-- `protocols/` — the methodology protocol stack (seven modules; see `METHODOLOGY_SPEC.md`)
+- `protocols/` — the methodology protocol stack (eight modules; see `METHODOLOGY_SPEC.md`)
 - `METHODOLOGY_SPEC.md` — the protocol stack: orthogonal layers, per-protocol required sections, composition rules
 - `GOVERNANCE.md` — versioning, status pipeline, document classes, material boundaries
 - `decisions/` — public decision-records for the methodology's design (e.g. the protocol-naming decision)

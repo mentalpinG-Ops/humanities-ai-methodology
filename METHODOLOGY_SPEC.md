@@ -1,13 +1,13 @@
 ---
 status: current
-last_changed: 2026-06-17
+last_changed: 2026-06-29
 ---
 
 # Methodology Specification — the protocol stack
 
-This document specifies the methodology's protocol stack: the seven protocols under `protocols/`, how they layer, the sections each one declares, and the rules for composing them. It is the structural companion to [`README.md`](README.md) (statement, motivation, status) and [`GOVERNANCE.md`](GOVERNANCE.md) (versioning, document classes).
+This document specifies the methodology's protocol stack: the eight protocols under `protocols/`, how they layer, the sections each one declares, and the rules for composing them. It is the structural companion to [`README.md`](repos/humanities-ai-methodology/README.md) (statement, motivation, status) and [`GOVERNANCE.md`](GOVERNANCE.md) (versioning, document classes).
 
-## 1. The seven protocols
+## 1. The eight protocols
 
 | Protocol | File | Layer | Covers |
 |---|---|---|---|
@@ -18,14 +18,15 @@ This document specifies the methodology's protocol stack: the seven protocols un
 | Tool | [`protocols/tool-protocol.md`](protocols/tool-protocol.md) | infrastructure (upstream) | tool fidelity: *Encoding Fidelity*, *Read Fidelity*, *Pre-Production Tool Validation* |
 | Falsification | [`protocols/falsification-protocol.md`](protocols/falsification-protocol.md) | meta (validity axis) | claim-status: *Demarcation at the Claim Level*, *Methodology as Pile-Driver Work*, *Test Mode over Defense Mode* (+ seven operational tests) |
 | Provenance | [`protocols/provenance-protocol.md`](protocols/provenance-protocol.md) | meta (provenance axis) | human-vs-AI provenance: *Provenance Marking at Introduction-Time*, *Audit-Trail Across Project-Span*, *Learning-Progress Verifiability* |
+| Read-Write Boundary | [`protocols/read-write-boundary-protocol.md`](protocols/read-write-boundary-protocol.md) | meta (authority/currency axis) | field-class write-contract + premise-bound invalidation: *The Four Field-Classes*, *Invalidate, Never Author*, *A Hand-Maintained Derived Field Is a Drift Bug* |
 
 ## 2. How the layers relate
 
-The seven protocols are **orthogonal layers**, not a single sequence:
+The eight protocols are **orthogonal layers**, not a single sequence:
 
 - **Infrastructure-upstream — Tool.** Tool fidelity sits beneath the others: a source "verified" through a tool that silently re-encoded it is not verified. Tool failures invalidate the work of every other protocol, so it is checked first.
 - **Pipeline (sequential) — Source → Interpretive-Frame → Writing → Actant Self-Check.** These run along the source-to-publication chain: intake, then the coding step, then composition, then the author's positional voice.
-- **Meta (across all of the above) — Falsification and Provenance.** Two audit axes over the whole methodology: Falsification asks *"could this be wrong?"* (validity); Provenance asks *"where did this come from?"* (origin). They are complementary, not redundant.
+- **Meta (across all of the above) — Falsification, Provenance, and Read-Write Boundary.** Three audit axes over the whole methodology: Falsification asks *"could this be wrong?"* (validity); Provenance asks *"where did this come from?"* (origin); Read-Write Boundary asks *"who may write this field, and has it outlived its premises?"* (authority/currency). They are complementary, not redundant.
 
 ## 3. Per-protocol required sections
 
