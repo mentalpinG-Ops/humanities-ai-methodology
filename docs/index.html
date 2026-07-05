@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humanities-AI Methodology — Get Started</title>
+<style>
+  :root {
+    --bg: #faf9f6; --fg: #1e2228; --muted: #5b6470; --line: #d9d5cc;
+    --accent: #2f6b4f; --accent-fg: #ffffff; --card-bg: #ffffff;
+    --mono-bg: #f1efe9; --tag-human: #8a4b2f; --tag-both: #2f5b8a;
+    --step: #e8e4da; --step-built: #dcebe2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181c; --fg: #e6e4de; --muted: #9aa3ad; --line: #333a42;
+      --accent: #6fb392; --accent-fg: #10201a; --card-bg: #1c2127;
+      --mono-bg: #21262d; --tag-human: #d99a76; --tag-both: #7fa8d9;
+      --step: #232931; --step-built: #21332a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.65 Georgia, 'Times New Roman', serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+  h1, h2, h3 { line-height: 1.25; font-weight: 700; }
+  h1 { font-size: 1.9rem; margin: 0 0 .4rem; }
+  h2 { font-size: 1.4rem; margin: 3rem 0 .8rem; border-top: 1px solid var(--line); padding-top: 2rem; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 .5rem; }
+  p, li { max-width: 44rem; }
+  .lede { font-size: 1.1rem; color: var(--muted); margin-top: 0; }
+  .note {
+    border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    padding: .7rem 1rem; border-radius: 6px; font-size: .92rem; background: var(--card-bg);
+  }
+  .tag { font: 700 .78rem/1.6 ui-monospace, Consolas, monospace; padding: 0 .45em; border-radius: 4px; white-space: nowrap; }
+  .tag.human { color: var(--tag-human); border: 1px solid var(--tag-human); }
+  .tag.both  { color: var(--tag-both);  border: 1px solid var(--tag-both); }
+  /* Ladder */
+  .ladder { display: grid; gap: .6rem; margin: 1.5rem 0; padding: 0; list-style: none; }
+  .rung {
+    background: var(--step); border: 1px solid var(--line); border-radius: 8px;
+    padding: .9rem 1.1rem; display: grid; gap: .15rem;
+  }
+  .rung.built { background: var(--step-built); border-color: var(--accent); }
+  .rung .name { font-weight: 700; font-size: 1.05rem; }
+  .rung .cap  { color: var(--muted); font-size: .92rem; }
+  .rung .status { font: 700 .75rem/1.8 ui-monospace, Consolas, monospace; }
+  .rung.built .status { color: var(--accent); }
+  .rung:not(.built) .status { color: var(--muted); }
+  @media (min-width: 40rem) {
+    .rung { margin-left: calc(var(--i) * 2.2rem); }
+  }
+  /* Quiz */
+  .quiz { background: var(--card-bg); border: 1px solid var(--line); border-radius: 10px; padding: 1.2rem 1.3rem; }
+  .quiz p.q { font-weight: 700; margin: .2rem 0 .8rem; }
+  .quiz button {
+    font: inherit; font-size: .95rem; margin: 0 .5rem .5rem 0; padding: .45rem 1rem;
+    border-radius: 7px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer;
+  }
+  .quiz button:hover, .quiz button:focus-visible { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 1px; }
+  .quiz .result { display: none; border-top: 1px dashed var(--line); margin-top: 1rem; padding-top: 1rem; }
+  .quiz .result.show { display: block; }
+  .quiz .again { font-size: .85rem; color: var(--muted); background: none; border: none; text-decoration: underline; cursor: pointer; padding: 0; }
+  /* Code / paste blocks */
+  pre {
+    background: var(--mono-bg); border: 1px solid var(--line); border-radius: 8px;
+    padding: 1rem; overflow-x: auto; font: .82rem/1.55 ui-monospace, Consolas, 'Courier New', monospace;
+    white-space: pre-wrap; overflow-wrap: anywhere;
+  }
+  .copywrap { position: relative; }
+  .copybtn {
+    position: absolute; top: .6rem; right: .6rem; font: 700 .78rem/1 ui-monospace, Consolas, monospace;
+    padding: .45rem .7rem; border-radius: 6px; border: 1px solid var(--accent);
+    background: var(--accent); color: var(--accent-fg); cursor: pointer;
+  }
+  .copybtn:focus-visible { outline: 2px solid var(--fg); }
+  .cardbox { max-height: 24rem; }
+  table { border-collapse: collapse; font-size: .92rem; width: 100%; }
+  .tablewrap { overflow-x: auto; }
+  th, td { border: 1px solid var(--line); padding: .5rem .65rem; text-align: left; vertical-align: top; }
+  th { background: var(--mono-bg); }
+  .workflow li { margin-bottom: .8rem; }
+  .who { font-weight: 700; }
+  footer { margin-top: 4rem; border-top: 1px solid var(--line); padding-top: 1.2rem; font-size: .88rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Work responsibly with AI — protocols you can take into <em>your</em> setup</h1>
+<p class="lede">A methodology for humanities students and scholars: eight practice-grounded protocols
+(rule + reasoning + documented failure cases) covering source intake, interpretive coding,
+composition, authorial voice, tool fidelity, and self-audit. This page helps you integrate
+them into the AI environment you already use — from a free web chat to a full command-line agent.</p>
+
+<p class="note"><strong>Honest status:</strong> the methodology is a working draft (v0.5).
+Its protocols are distilled from documented practice and versioned (<code>version-0.1</code>
+certifies the seven original protocols); its normative grounding and literature positioning
+are explicitly open questions. Nothing here claims more maturity than that.</p>
+
+<h2 id="ladder">The four integration levels</h2>
+<p>The levels are named by <strong>activated capability</strong> — what you have switched on —
+not by which app or plan you use. (A free account can sit on level 2 or 3; a paid one may still
+work best at level 1.)</p>
+
+<ol class="ladder">
+  <li class="rung built" style="--i:0">
+    <span class="name">1 · Paste</span>
+    <span class="cap">Nothing set up. You paste one card into each session; the AI carries its share from there.</span>
+    <span class="status">BUILT — the Paste-Card below</span>
+  </li>
+  <li class="rung" style="--i:1">
+    <span class="name">2 · Configure</span>
+    <span class="cap">You have persistent instructions and a project/space with files (Projects, custom GPTs, Gems). The protocols live there and apply to every chat.</span>
+    <span class="status">RECIPE COMING — until then, the Paste-Card works here too</span>
+  </li>
+  <li class="rung" style="--i:2">
+    <span class="name">3 · Connect</span>
+    <span class="cap">Your AI reads the protocol files on demand through a connector (works in web, desktop and mobile apps that support connectors).</span>
+    <span class="status">COMING — until then, the Paste-Card works here too</span>
+  </li>
+  <li class="rung" style="--i:3">
+    <span class="name">4 · Automate</span>
+    <span class="cap">A command-line / coding agent runs the protocols as active machinery: skills, hooks, sub-agent audits, mechanical sweeps.</span>
+    <span class="status">COMING — a preview of what it looks like is below</span>
+  </li>
+</ol>
+
+<p><strong>When to climb:</strong> when pasting the card every session starts to feel like
+friction, that is the signal for level 2. When you keep pointing your AI at protocol files
+manually, that is the signal for level 3. When you find yourself wanting the checks to run
+without being asked, that is level 4.</p>
+
+<h2 id="test">Which level fits you? (½ minute)</h2>
+
+<div class="quiz" id="quiz">
+  <div class="step" data-step="1">
+    <p class="q">Are you working with an AI in a terminal / command line right now — a coding
+    or CLI agent that can read and write files on your computer?</p>
+    <button type="button" data-next="automate">Yes</button>
+    <button type="button" data-next="2">No</button>
+    <button type="button" data-next="2">Not sure what that means</button>
+  </div>
+  <div class="step" data-step="2" hidden>
+    <p class="q">In your AI app, have you ever set up a project or space of your own that
+    keeps instructions and uploaded files across chats (called <em>Projects</em>, <em>GPTs</em>
+    or <em>Gems</em> depending on the app)?</p>
+    <button type="button" data-next="configure">Yes</button>
+    <button type="button" data-next="paste">No</button>
+    <button type="button" data-next="paste">Not sure</button>
+  </div>
+  <div class="result" data-result="paste">
+    <p><strong>Start at level 1 — Paste.</strong> It needs nothing but a chat window.
+    Copy the Paste-Card below into your next session and you are working with the method
+    immediately. Climb later when pasting becomes friction.</p>
+    <button type="button" class="again">start over</button>
+  </div>
+  <div class="result" data-result="configure">
+    <p><strong>You are ready for level 2 — Configure.</strong> The step-by-step recipe for
+    persistent setups is still being prepared (this page is honest about that). Until it
+    ships: <strong>use the Paste-Card below</strong> — you can already paste it into your
+    project's instructions today, which gets you most of the benefit.</p>
+    <button type="button" class="again">start over</button>
+  </div>
+  <div class="result" data-result="automate">
+    <p><strong>You are set up for level 4 — Automate.</strong> The packaged bundle (skills,
+    hooks, audit sub-agents) is still being prepared. A preview of what it will do: the
+    falsification protocol ships seven operational tests that run as a self-audit pass over
+    a project; the mechanical language sweep runs pre-commit without being asked.
+    <strong>Until the bundle ships, the Paste-Card below works in your agent's context
+    file too</strong> (e.g. as part of the project instructions your agent reads).</p>
+    <button type="button" class="again">start over</button>
+  </div>
+</div>
+
+<h3>Prefer to ask your AI? (illustrative, not authoritative)</h3>
+<p>You can also paste this <em>method-declared</em> diagnostic prompt into your AI — it
+demonstrates the methodology's own style: the frame, the limits and the output format are
+declared instead of implied. Treat the answer as <strong>one possible recommendation</strong>,
+not a verdict: your AI may not reliably know which plan or connectors your account has, and
+the prompt tells it to say so rather than guess.</p>
+
+<div class="copywrap">
+<button type="button" class="copybtn" data-copy="prompt">Copy prompt</button>
+<pre id="prompt">I want to integrate a set of protocols for responsible AI-assisted humanities
+work into my setup. They ship at four integration levels, named by activated
+capability:
+1 Paste (paste a card into each session), 2 Configure (persistent
+instructions + project files), 3 Connect (you read the protocol files on
+demand via a connector), 4 Automate (CLI/coding agent runs them as checks).
+
+Declared frame: treat this as capability-matching, not product advice.
+Declared limit: you may not know my plan, connectors or app features —
+where you are unsure, say so and ask me to check my screen; do not guess.
+
+Task: ask me up to three observable questions (about what I can see in my
+app, no jargon), then recommend ONE level as a possible variant.
+Output format: Level — why (one sentence) — what I should verify to confirm.</pre>
+</div>
+
+<h2 id="card">Level 1, ready now: the Paste-Card</h2>
+<p>One page, distilled from the four pipeline protocols (source → interpretive frame →
+writing → authorial voice). Each item carries a tag:
+<span class="tag both">[Both]</span> the AI does the mechanical part, you make the final
+call — <span class="tag human">[Human]</span> not delegable to the AI.
+Across all ten items, <strong>no step hands the method over to the AI</strong>; what varies
+is how much mechanical work the AI carries. Copy it into a fresh session and work through
+it together. (<a href="paste-card.md">raw file</a>)</p>
+
+<div class="copywrap">
+<button type="button" class="copybtn" data-copy="card-text">Copy card</button>
+<pre id="card-text" class="cardbox">
+# AI Work-Session Card — a source-to-publication checklist for humanities work
+
+Paste this at the start of an AI work session. It is a stage-gated checklist we walk through together. Tags: **[Both]** — you (the AI) do the mechanical part (search, compare, enumerate, flag); I (the author) make the final call. **[Human]** — only I can do it. No item on this card is fully delegable to you.
+
+## Stage 1 — Before research
+
+Declare the tool set (search engines, aggregators, AI search agents) and the verification plan. Fix the artefact's target language. Open an append-only coding-decision log (*coding* = assigning analytical labels to sources): term used, alternatives considered, reason.
+
+## Stage 2 — During research: source intake
+
+**1. Snippets ≠ Primary [Both].** Search snippets are pointers to sources, not attestations. Before a hit is cited or argued from, the full text is opened and the passage verified verbatim.
+Apply: you retrieve and compare; on divergence, anchor on the full text. Your comparison alone yields only *agent-reported* status — I cross-read personally before anything becomes load-bearing. Unreachable full text → tag "pointer, unverified".
+
+**2. Secondary ≠ Primary [Both].** A description of a primary source is not the primary source. Every source tag declares its level: primary / secondary / tertiary — always, not only on suspicion.
+Apply: you propose the level and name the claimed primary; check it is independently accessible. Watch for *promoter amplification* — promotional material circulating an altered version of an original quote until repetition stabilises it; locate original language, venue, date. Unverifiable original → never used as primary attestation.
+
+**3. Search-Absence ≠ Proof-of-Absence [Both].** A negative search result means "not found in [tool] with [query] on [date]" — never "does not exist".
+Apply: you record tool, full query, date, hit count, and the possible reasons (indexing gap, operator mismatch, paywall, language corpus, cache staleness). Load-bearing absence claims need ≥ 2 independent tools; I hedge residual uncertainty as "not demonstrable in the available indices".
+
+**Verification levels** — every source-based claim carries one: *deep-read* (full text read by me, passages verified — high trust) · *abstract* (summary only — medium) · *agent-reported* (your synthesis, not personally cross-read — low, provisional) · *aggregator-only* (snippet — not load-bearing). Levels persist: several agent-reported findings never merge into deep-read.
+
+## Stage 3 — Before drafting: coding and analysis
+
+Gate: every hit still *agent-reported* or *aggregator-only* is upgraded (deep-read) or dropped from load-bearing arguments.
+
+**4. Lexicon Stability [Both].** The terms naming source items must not drift silently between stages — analytical (intake → coding → synthesis) or linguistic (source-language notes → target-language draft). A term change is a decision, not a translation.
+Apply: prefer descriptive-actional names; defer typological labels until justified ("lasso-thrower" before "cowboy"). No articulable reason → roll back. Source-language terms survive only as marked quotes: target-language gloss primary, source term italicised in parentheses. You run a mechanical target-language sweep (regex over out-of-language diacritics) before publication — independently of my re-reading.
+
+**5. Frame Plurality Check [Both].** Before a connotation or cultural-significance reading is assigned, two-to-three alternative readings are enumerated; the default is chosen consciously, not by first association.
+Apply: you enumerate the alternatives and note which are excludable on source-internal grounds (context, genre, audience). I make the interpretive choice, mark it as *chosen against* the alternatives, and log them. My own cultural alignment with a reading demands extra scrutiny, not a skipped step.
+
+## Stage 4 — While drafting
+
+**6. Composition Drift [Both].** My memory of a source drifts over long composition windows (roughly two hours and beyond).
+Apply: you diff every direct quotation verbatim against the source. I track the clock: after ~2 hours away from a source, claims resting on it are re-anchored against the source itself — never against a later draft state. Every "this artefact shows X" claim gets a re-check flag that persists until re-inspection.
+
+## Stage 5 — Before publishing
+
+**7. Descriptive Accuracy [Human].** Empirical claims about artefacts ("this image shows X", "this emoji is Z") are verified directly against the source — not from memory, not from a tool-rendered view.
+Apply: I re-inspect the artefact myself — images at native resolution, text compared against a pasted verbatim original, emoji by Unicode codepoint. Your view of an artefact *is* the tool-mediated approximation this pattern corrects; the direct look cannot be delegated to you.
+
+Then run the three-part re-check as its own step: quotations vs. original sources; "shows X" claims vs. the artefacts; a self-read of the freshly rendered final draft. For author-voiced texts only (essays, op-eds, public commentary, documentation with normative claims), add three audits:
+
+**8. Verb Audit [Both].** Covertly asymmetric constructions — "fails to", "has not yet", "still hasn't", "refuses to" — smuggle my frame in as the implicit measure.
+Apply: you flag *fail, not yet, still, refuse, neglect, omit, ignore* and equivalents. Per hit I either declare the measure ("by the standard of X …") or use a neutral verb — the smuggle stands in neither form.
+
+**9. Addressee Audit [Both].** The pronoun pattern (*we/you* vs. *they/it*) positions the reader.
+Apply: you map who *we/our/us* includes and whom *they/them* discusses. I judge whether that coalition is intended; if it is default, I neutralise it or declare it.
+
+**10. Discrediting-Frame Inoculation [Both].** Texts drawing on critical-theoretical traditions (ideology critique, Frankfurt-School concepts, discourse analysis, post-colonial theory) cite the tradition preemptively by name — author, title, year — before a discrediting frame ("Cultural Marxism", "woke ideology") can be applied.
+Apply: you propose exact citation details; I verify them against the source before use — AI-proposed names, titles and years are a known fabrication risk. I decide whether and how to cite, in the running text, without paraphrasing the tradition into anonymity.
+
+---
+
+The reasoning (*Why*) behind each rule and the documented failure cases grounding it live in the four full protocols: source, interpretive-frame, writing, actant self-check.
+Not covered here: tool fidelity (tool protocol) and the three meta-protocols — falsification, provenance, read-write boundary — the advanced set.
+</pre>
+</div>
+
+<h2 id="example">What a session actually looks like (worked example)</h2>
+<p>Suppose you are writing an essay tomorrow with AI support — say, on how a museum
+advertises a controversial exhibition. All names below are <em>fictitious placeholders</em>;
+the moves are the method. <span class="who">You</span> = the author,
+<span class="who">AI</span> = your assistant.</p>
+
+<ol class="workflow">
+  <li><strong>Stage 1 — setup (5 min).</strong> <span class="who">You</span> paste the card,
+  then declare: "Tools: your web search + the library portal. Target language: English.
+  Decision log: a notes file called <code>decisions.txt</code>." That one sentence is the
+  whole setup.</li>
+  <li><strong>Stage 2 — research.</strong> <span class="who">AI</span> finds a quote in an
+  exhibition brochure and tags it before you use it:
+  <em>"Brochure quotes a newspaper calling the show 'a great hymn to the body' —
+  <strong>secondary</strong> (the brochure describes the paper), <strong>agent-reported</strong>
+  (I have not shown you the original), possible promoter amplification. Original not yet
+  located."</em> — That tag is what a <strong>source tag</strong> looks like: level +
+  verification status + what is still unverified. <span class="who">You</span> decide it
+  cannot be cited until the original newspaper text is found and you have read it
+  (<em>deep-read</em>).</li>
+  <li><strong>Stage 3 — coding.</strong> The gate runs: two agent-reported hits get upgraded
+  (you read them), one gets dropped. Then a naming decision: the brochure photo shows a
+  figure with a raised arm. <span class="who">AI</span> proposes three readings (athletic
+  pose / heroic-monument pose / advertising gesture) and notes none is excludable from
+  context alone. <span class="who">You</span> choose "raised-arm figure" (descriptive) for
+  now, log: <code>raised-arm figure — not 'hero pose'; typological label deferred, no
+  source-internal grounds</code>.</li>
+  <li><strong>Stage 4 — drafting.</strong> Two hours in, <span class="who">AI</span> re-diffs
+  your three direct quotes against the sources: one drifted ("hymn to the body" had become
+  "hymn to bodies" in your draft) — fixed against the source, not the draft.</li>
+  <li><strong>Stage 5 — before publishing.</strong> <span class="who">You</span> (not the AI —
+  this is the one <span class="tag human">[Human]</span> step) open the brochure image at
+  full resolution and check every "the photo shows…" sentence yourself. Then
+  <span class="who">AI</span> flags in your conclusion: <em>"the museum still hasn't
+  addressed the criticism"</em> — an asymmetric verb. <span class="who">You</span> decide:
+  declare the measure ("has not addressed the criticism raised by X") instead of the smuggle.
+  Done — and the decision log now documents every judgement call you made.</li>
+</ol>
+
+<h2 id="advanced">Beyond the card: the full stack</h2>
+<div class="tablewrap">
+<table>
+  <tr><th>Set</th><th>Protocols</th><th>When you need them</th></tr>
+  <tr><td>Pipeline (in the card)</td><td>Source · Interpretive-Frame · Writing · Actant Self-Check</td><td>Every writing project — this is the beginner set.</td></tr>
+  <tr><td>Infrastructure</td><td>Tool</td><td>When your pipeline includes encoding, OCR, APIs, file conversion — tool failures silently invalidate everything downstream.</td></tr>
+  <tr><td>Meta (advanced)</td><td>Falsification · Provenance · Read-Write Boundary</td><td>When you audit the method itself: could this be wrong? where did this idea come from? who may write this field?</td></tr>
+</table>
+</div>
+<!-- NOTE (flip-time): ../protocols/ resolves in the GitHub repo view but sits outside a
+     docs/-rooted Pages deployment; re-point to the repository URL when Pages goes live. -->
+<p>All eight live as full texts — rule, reasoning, failure galleries — in the
+<a href="../protocols/">protocols folder</a>; the
+<a href="addressee-map.md">addressee map</a> records who acts on each pattern.</p>
+
+<h2 id="contribute">Status, licence, contributing</h2>
+<ul>
+  <li><strong>Status:</strong> working draft. The protocols are <code>version-0.1</code>-certified
+  (seven originals; an eighth is draft) after a stability window — a fixed reference point,
+  not a maturity claim.</li>
+  <li><strong>Licence:</strong> CC BY-SA 4.0 by default; a commercial licence exists for uses
+  the ShareAlike term does not fit. Attribution required.</li>
+  <li><strong>Contributing:</strong> protocols are <em>promoted from documented practice</em>,
+  never authored on request — so no pull requests adding new protocols. What helps:
+  <em>report a gap</em> (a failure mode the protocols miss), <em>offer a de-identified case
+  study</em>, or <em>propose a structure change</em> as a decision record.</li>
+</ul>
+
+<footer>
+  <p>This page is self-contained: no external requests, no analytics, no cookies.
+  Explainer videos are planned as opt-in links (click-to-load, no embedded trackers).</p>
+</footer>
+
+</main>
+<script>
+(function () {
+  var quiz = document.getElementById('quiz');
+  function show(sel) {
+    quiz.querySelectorAll('.step, .result').forEach(function (el) {
+      el.hidden = true; el.classList.remove('show');
+    });
+    var t = quiz.querySelector(sel);
+    if (t) { t.hidden = false; t.classList.add('show'); }
+  }
+  quiz.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.classList.contains('again')) { show('[data-step="1"]'); return; }
+    var next = b.getAttribute('data-next'); if (!next) return;
+    if (next === '2') show('[data-step="2"]');
+    else show('[data-result="' + next + '"]');
+  });
+  document.querySelectorAll('.copybtn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var src = document.getElementById(btn.getAttribute('data-copy'));
+      var text = src.textContent.trim();
+      function done(ok) {
+        var old = btn.textContent;
+        btn.textContent = ok ? 'Copied ✓' : 'Select + copy manually';
+        setTimeout(function () { btn.textContent = old; }, 2000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+      } else { done(false); }
+    });
+  });
+  show('[data-step="1"]');
+})();
+</script>
+</body>
+</html>
