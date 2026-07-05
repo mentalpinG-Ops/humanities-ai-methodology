@@ -91,49 +91,53 @@
 <body>
 <main>
 
-<h1>Work responsibly with AI — protocols you can take into <em>your</em> setup</h1>
-<p class="lede">A methodology for humanities students and scholars: eight practice-grounded protocols
-(rule + reasoning + documented failure cases) covering source intake, interpretive coding,
-composition, authorial voice, tool fidelity, and self-audit. This page helps you integrate
-them into the AI environment you already use — from a free web chat to a full command-line agent.</p>
+<h1>Working with an AI on your texts — without losing your sources, or your voice</h1>
+<p class="lede">You probably know these moments: the AI cites a book nobody can find. A quote
+looks right, but reads differently in the original. You describe an image from memory and get
+a detail wrong. Three hours into writing, your draft says something the source never said —
+and you can no longer tell which ideas were yours.</p>
+<p class="lede">None of that means you are careless. It means you are working without
+guardrails. This page gives you the guardrails — a set of working rules for studying and
+writing with AI, each one distilled from a real, documented mistake — and helps you take them
+into whatever AI setup you already use, from a free chat window to a full command-line agent.</p>
 
-<p class="note"><strong>Honest status:</strong> the methodology is a working draft (v0.5).
-Its protocols are distilled from documented practice and versioned (<code>version-0.1</code>
-certifies the seven original protocols); its normative grounding and literature positioning
-are explicitly open questions. Nothing here claims more maturity than that.</p>
+<p class="note"><strong>Honest status:</strong> this is young, working material. Every rule
+grew out of a real, documented mistake — but the set as a whole is still in progress, and
+nothing here claims to be more finished than it is. (Version details and open questions:
+bottom of the page.)</p>
 
-<h2 id="ladder">The four integration levels</h2>
-<p>The levels are named by <strong>activated capability</strong> — what you have switched on —
-not by which app or plan you use. (A free account can sit on level 2 or 3; a paid one may still
-work best at level 1.)</p>
+<h2 id="ladder">Four ways to bring the rules into your AI — pick by what you already use</h2>
+<p>The four levels below are sorted by <strong>what you have already switched on in your AI
+app</strong> — not by which app or subscription you have. (A free account can sit on level 2
+or 3; a paid one may still work best at level 1.)</p>
 
 <ol class="ladder">
   <li class="rung built" style="--i:0">
     <span class="name">1 · Paste</span>
-    <span class="cap">Nothing set up. You paste one card into each session; the AI carries its share from there.</span>
-    <span class="status">BUILT — the Paste-Card below</span>
+    <span class="cap">Nothing set up. You paste one card into each chat; from that moment the AI knows its share of the rules.</span>
+    <span class="status">READY TODAY — the card below</span>
   </li>
   <li class="rung" style="--i:1">
     <span class="name">2 · Configure</span>
-    <span class="cap">You have persistent instructions and a project/space with files (Projects, custom GPTs, Gems). The protocols live there and apply to every chat.</span>
-    <span class="status">RECIPE COMING — until then, the Paste-Card works here too</span>
+    <span class="cap">You have set up a project or space of your own in your AI app (called Projects, GPTs or Gems), with saved instructions and files. Save the card there once — it then applies to every chat.</span>
+    <span class="status">RECIPE COMING — until then, the card works here too</span>
   </li>
   <li class="rung" style="--i:2">
     <span class="name">3 · Connect</span>
-    <span class="cap">Your AI reads the protocol files on demand through a connector (works in web, desktop and mobile apps that support connectors).</span>
-    <span class="status">COMING — until then, the Paste-Card works here too</span>
+    <span class="cap">Your AI app can read files from a connected folder by itself — so it opens the right rule at the right moment, without you pasting anything.</span>
+    <span class="status">COMING — until then, the card works here too</span>
   </li>
   <li class="rung" style="--i:3">
     <span class="name">4 · Automate</span>
-    <span class="cap">A command-line / coding agent runs the protocols as active machinery: skills, hooks, sub-agent audits, mechanical sweeps.</span>
+    <span class="cap">A coding-style AI agent on your computer runs the checks for you — comparing quotes, sweeping for leftover foreign words, flagging judging verbs — without being asked each time.</span>
     <span class="status">COMING — a preview of what it looks like is below</span>
   </li>
 </ol>
 
 <p><strong>When to climb:</strong> when pasting the card every session starts to feel like
-friction, that is the signal for level 2. When you keep pointing your AI at protocol files
-manually, that is the signal for level 3. When you find yourself wanting the checks to run
-without being asked, that is level 4.</p>
+a chore, that is the signal for level 2. When you keep re-uploading or re-pointing the AI at
+the same rule files, that is the signal for level 3. When you catch yourself wishing the
+checks would just run on their own, that is level 4.</p>
 
 <h2 id="test">Which level fits you? (½ minute)</h2>
 
@@ -167,109 +171,122 @@ without being asked, that is level 4.</p>
     <button type="button" class="again">start over</button>
   </div>
   <div class="result" data-result="automate">
-    <p><strong>You are set up for level 4 — Automate.</strong> The packaged bundle (skills,
-    hooks, audit sub-agents) is still being prepared. A preview of what it will do: the
-    falsification protocol ships seven operational tests that run as a self-audit pass over
-    a project; the mechanical language sweep runs pre-commit without being asked.
-    <strong>Until the bundle ships, the Paste-Card below works in your agent's context
-    file too</strong> (e.g. as part of the project instructions your agent reads).</p>
+    <p><strong>You are set up for level 4 — Automate.</strong> The ready-made bundle for
+    agents is still being prepared. A preview of what it will do: your agent compares every
+    quote against its source, sweeps your text for leftover foreign words before you commit,
+    and flags judging verbs — all without being asked each time.
+    <strong>Until the bundle ships, the card below works in your agent's instructions
+    file too</strong> (the file your agent reads at the start of its work).</p>
     <button type="button" class="again">start over</button>
   </div>
 </div>
 
-<h3>Prefer to ask your AI? (illustrative, not authoritative)</h3>
-<p>You can also paste this <em>method-declared</em> diagnostic prompt into your AI — it
-demonstrates the methodology's own style: the frame, the limits and the output format are
-declared instead of implied. Treat the answer as <strong>one possible recommendation</strong>,
-not a verdict: your AI may not reliably know which plan or connectors your account has, and
-the prompt tells it to say so rather than guess.</p>
+<h3>Prefer to ask your AI instead? (its answer is a suggestion, not a verdict)</h3>
+<p>Paste this into your AI and it will help you choose. Two honest warnings baked in: the AI
+often does not know what your account can actually do, so the prompt tells it to say so
+rather than guess — and it must answer in plain language, using <em>your</em> situation as
+the example. (The prompt also quietly demonstrates how this whole method works: tell the AI
+its limits and the shape of the answer you want, up front.)</p>
 
 <div class="copywrap">
 <button type="button" class="copybtn" data-copy="prompt">Copy prompt</button>
-<pre id="prompt">I want to integrate a set of protocols for responsible AI-assisted humanities
-work into my setup. They ship at four integration levels, named by activated
-capability:
-1 Paste (paste a card into each session), 2 Configure (persistent
-instructions + project files), 3 Connect (you read the protocol files on
-demand via a connector), 4 Automate (CLI/coding agent runs them as checks).
+<pre id="prompt">I'm a student working with AI on my texts. I want to use a set of working
+rules that keeps my sources honest and my own voice mine. It comes in four
+setups, from simplest to most automated:
+1) I paste a one-page card into each chat.
+2) I save the card once in a project/space in my AI app, so it applies to
+   every chat there.
+3) My AI app reads the rule files itself through a connected folder.
+4) A coding-style AI agent on my computer runs the checks automatically.
 
-Declared frame: treat this as capability-matching, not product advice.
-Declared limit: you may not know my plan, connectors or app features —
-where you are unsure, say so and ask me to check my screen; do not guess.
-
-Task: ask me up to three observable questions (about what I can see in my
-app, no jargon), then recommend ONE level as a possible variant.
-Output format: Level — why (one sentence) — what I should verify to confirm.</pre>
+Ask me up to three short questions about what I can actually see in my app
+— no technical terms. Then recommend ONE setup to start with, in plain
+language, using my situation as the example, in under 150 words.
+If you are not sure what my app or plan can do, say so openly and tell me
+what to look for on my screen — do not guess.</pre>
 </div>
 
-<h2 id="card">Level 1, ready now: the Paste-Card</h2>
-<p>One page, distilled from the four pipeline protocols (source → interpretive frame →
-writing → authorial voice). Each item carries a tag:
-<span class="tag both">[Both]</span> the AI does the mechanical part, you make the final
-call — <span class="tag human">[Human]</span> not delegable to the AI.
-Across all ten items, <strong>no step hands the method over to the AI</strong>; what varies
-is how much mechanical work the AI carries. Copy it into a fresh session and work through
-it together. (<a href="paste-card.md">raw file</a>)</p>
+<h2 id="card">Level 1, ready now: the card</h2>
+<p>One page that walks with you from gathering sources to hitting publish. Every item splits
+the work in two: <strong>→ AI</strong> — the busywork your assistant does (fetching, comparing,
+listing, flagging) — and <strong>→ Me</strong> — the reading and deciding that stays with you.
+Across all ten items, <strong>no step hands your judgement over to the AI</strong>; one step
+is explicitly yours alone. The names in brackets at the end of each item are the formal names
+of the full rules — you don't need them to use the card; they're the trail to the reasoning
+and the original mistakes, for when you want to go deeper. Copy the card into a fresh chat
+and work through it together. (<a href="paste-card.md">raw file</a>)</p>
 
 <div class="copywrap">
 <button type="button" class="copybtn" data-copy="card-text">Copy card</button>
 <pre id="card-text" class="cardbox">
-# AI Work-Session Card — a source-to-publication checklist for humanities work
+# Working with an AI on a real text — our session card
 
-Paste this at the start of an AI work session. It is a stage-gated checklist we walk through together. Tags: **[Both]** — you (the AI) do the mechanical part (search, compare, enumerate, flag); I (the author) make the final call. **[Human]** — only I can do it. No item on this card is fully delegable to you.
+You know these moments: the AI cites a book nobody can find. A quote looks right but reads differently in the original. Three hours into writing, your draft says something the source never said. This card is the set of guardrails against exactly those moments. I paste it at the start of our session; we follow it together.
 
-## Stage 1 — Before research
+**How to read the arrows:** → **AI:** is your part (mechanical work — fetching, comparing, listing, flagging). → **Me:** is my part (reading, judging, deciding). Nothing on this card is yours alone to decide; the final call is always mine. *(One item is marked mine alone.)*
 
-Declare the tool set (search engines, aggregators, AI search agents) and the verification plan. Fix the artefact's target language. Open an append-only coding-decision log (*coding* = assigning analytical labels to sources): term used, alternatives considered, reason.
+## Step 1 — Two minutes of setup
 
-## Stage 2 — During research: source intake
+I tell you: which search tools we'll use, what language the final text is in, and that I'm keeping a small running note of naming decisions (which word we chose for a thing, and why). That note is our memory.
 
-**1. Snippets ≠ Primary [Both].** Search snippets are pointers to sources, not attestations. Before a hit is cited or argued from, the full text is opened and the passage verified verbatim.
-Apply: you retrieve and compare; on divergence, anchor on the full text. Your comparison alone yields only *agent-reported* status — I cross-read personally before anything becomes load-bearing. Unreachable full text → tag "pointer, unverified".
+## Step 2 — While we gather sources
 
-**2. Secondary ≠ Primary [Both].** A description of a primary source is not the primary source. Every source tag declares its level: primary / secondary / tertiary — always, not only on suspicion.
-Apply: you propose the level and name the claimed primary; check it is independently accessible. Watch for *promoter amplification* — promotional material circulating an altered version of an original quote until repetition stabilises it; locate original language, venue, date. Unverifiable original → never used as primary attestation.
+**1. The preview is not the source.** Search results and AI summaries show fragments — truncated, outdated, sometimes from ad copy rather than the original.
+→ **AI:** fetch the full text and compare the exact wording; if they differ, the full text wins.
+→ **Me:** I read it myself before we build anything on it. If the full text can't be reached, the fragment keeps its "unchecked" label — we never treat it as evidence, and if it must be mentioned, we say openly that it is unverified. *(Snippets ≠ Primary)*
 
-**3. Search-Absence ≠ Proof-of-Absence [Both].** A negative search result means "not found in [tool] with [query] on [date]" — never "does not exist".
-Apply: you record tool, full query, date, hit count, and the possible reasons (indexing gap, operator mismatch, paywall, language corpus, cache staleness). Load-bearing absence claims need ≥ 2 independent tools; I hedge residual uncertainty as "not demonstrable in the available indices".
+**2. "Someone wrote about it" is not the thing itself.** A blog post about a study is not the study; a brochure quoting a newspaper is not the newspaper. Copies drift — sometimes deliberately, when promotional material polishes a quote until it says something better than the original did.
+→ **AI:** for every source, say out loud what kind it is — the original, a description of it, or a description of a description — and name where the original should be found.
+→ **Me:** if we can't reach the original, we say so in the text instead of quoting the copy as if it were the original. *(Secondary ≠ Primary)*
 
-**Verification levels** — every source-based claim carries one: *deep-read* (full text read by me, passages verified — high trust) · *abstract* (summary only — medium) · *agent-reported* (your synthesis, not personally cross-read — low, provisional) · *aggregator-only* (snippet — not load-bearing). Levels persist: several agent-reported findings never merge into deep-read.
+**3. "I found nothing" doesn't mean "it doesn't exist."** Search tools have gaps: paywalls, other languages, missing indexes, stale caches.
+→ **AI:** when a search comes up empty, report it precisely — which tool, which exact search words, what date — and name what might have hidden it.
+→ **Me:** before we claim something doesn't exist, we try at least two different tools; in the text I write "we could not find it", not "there is none". *(Search-Absence ≠ Proof-of-Absence)*
 
-## Stage 3 — Before drafting: coding and analysis
+**Our trust labels.** Every source we use carries one, and it sticks until *I* change it by reading:
+**read-it-myself** (safe to build on) · **summary-only** (I read only an abstract) · **AI-told-me** (you summarised it; I haven't read it — not safe to cite yet) · **preview-only** (a fragment — never cite). Ten AI summaries never add up to one read text.
 
-Gate: every hit still *agent-reported* or *aggregator-only* is upgraded (deep-read) or dropped from load-bearing arguments.
+## Step 3 — Before I start writing
 
-**4. Lexicon Stability [Both].** The terms naming source items must not drift silently between stages — analytical (intake → coding → synthesis) or linguistic (source-language notes → target-language draft). A term change is a decision, not a translation.
-Apply: prefer descriptive-actional names; defer typological labels until justified ("lasso-thrower" before "cowboy"). No articulable reason → roll back. Source-language terms survive only as marked quotes: target-language gloss primary, source term italicised in parentheses. You run a mechanical target-language sweep (regex over out-of-language diacritics) before publication — independently of my re-reading.
+**The gate:** anything still labelled *AI-told-me* or *preview-only* either gets read by me now — or it stays out of the argument.
 
-**5. Frame Plurality Check [Both].** Before a connotation or cultural-significance reading is assigned, two-to-three alternative readings are enumerated; the default is chosen consciously, not by first association.
-Apply: you enumerate the alternatives and note which are excludable on source-internal grounds (context, genre, audience). I make the interpretive choice, mark it as *chosen against* the alternatives, and log them. My own cultural alignment with a reading demands extra scrutiny, not a skipped step.
+**4. Watch our words for quiet shifts.** Early on we called the figure in the photo "a person throwing a lasso"; three drafts later it's "a cowboy". That switch smuggles in a whole interpretation — and nobody decided it.
+→ **AI:** flag it whenever a name for the same thing changes between work stages, and before we finish, sweep the text for leftover foreign-language words (a mechanical check — run it even if I feel sure).
+→ **Me:** every renaming needs a reason I can say out loud; no reason, we go back to the earlier plain word. Foreign terms appear only as marked quotes: my wording first, the original in italics in brackets. *(Lexicon Stability)*
 
-## Stage 4 — While drafting
+**5. The first interpretation that comes to mind is not the only one.** A folded-hands emoji: prayer? thanks? a polite sign-off? Whichever reading feels obvious to me probably just matches my own background.
+→ **AI:** before we fix a meaning, list two or three other plausible readings and note whether the text itself rules any of them out.
+→ **Me:** I choose — and I write down that I chose it *against* the alternatives, so a reader (and future me) can see it was a decision, not a fact. *(Frame Plurality Check)*
 
-**6. Composition Drift [Both].** My memory of a source drifts over long composition windows (roughly two hours and beyond).
-Apply: you diff every direct quotation verbatim against the source. I track the clock: after ~2 hours away from a source, claims resting on it are re-anchored against the source itself — never against a later draft state. Every "this artefact shows X" claim gets a re-check flag that persists until re-inspection.
+## Step 4 — While I write
 
-## Stage 5 — Before publishing
+**6. My memory of the source drifts as I write.** After a couple of hours, I'm quoting my own draft, not the source — confidently and wrong.
+→ **AI:** re-compare every direct quote in the draft against the source text, word for word, whenever I ask — and remind me if two hours have passed.
+→ **Me:** every claim of the kind "the picture/text shows X" gets a little flag in the draft; the flag stays until I've looked at the original again. *(Composition Drift)*
 
-**7. Descriptive Accuracy [Human].** Empirical claims about artefacts ("this image shows X", "this emoji is Z") are verified directly against the source — not from memory, not from a tool-rendered view.
-Apply: I re-inspect the artefact myself — images at native resolution, text compared against a pasted verbatim original, emoji by Unicode codepoint. Your view of an artefact *is* the tool-mediated approximation this pattern corrects; the direct look cannot be delegated to you.
+## Step 5 — Before it goes out
 
-Then run the three-part re-check as its own step: quotations vs. original sources; "shows X" claims vs. the artefacts; a self-read of the freshly rendered final draft. For author-voiced texts only (essays, op-eds, public commentary, documentation with normative claims), add three audits:
+**7. Look at the thing itself — this one is mine alone.** Whatever you tell me about an image or a document is itself a description, and descriptions of images are exactly where the famous mistakes happen (the hat that belonged to a different figure).
+→ **Me:** I open the image at full size, put the original text next to my quote, check the actual emoji character — with my own eyes. This is the one step I cannot hand to you, because your view of the artefact is the thing being double-checked. *(Descriptive Accuracy — [Human])*
 
-**8. Verb Audit [Both].** Covertly asymmetric constructions — "fails to", "has not yet", "still hasn't", "refuses to" — smuggle my frame in as the implicit measure.
-Apply: you flag *fail, not yet, still, refuse, neglect, omit, ignore* and equivalents. Per hit I either declare the measure ("by the standard of X …") or use a neutral verb — the smuggle stands in neither form.
+Then one last pass, three quick rounds: quotes vs. originals · "shows X" sentences vs. the artefacts · a fresh read of the final layout. And if the text speaks in my voice — an essay, an opinion piece, a public post — three more checks:
 
-**9. Addressee Audit [Both].** The pronoun pattern (*we/you* vs. *they/it*) positions the reader.
-Apply: you map who *we/our/us* includes and whom *they/them* discusses. I judge whether that coalition is intended; if it is default, I neutralise it or declare it.
+**8. Words that judge while pretending to describe.** "The museum *still hasn't* responded" sounds like a fact but carries a verdict — *by whose deadline?*
+→ **AI:** flag every "fails to", "still hasn't", "refuses to", "ignores" and the like.
+→ **Me:** for each one I either name the standard openly ("measured against X…") or switch to a neutral verb. Hidden verdicts stay out either way. *(Verb Audit)*
 
-**10. Discrediting-Frame Inoculation [Both].** Texts drawing on critical-theoretical traditions (ideology critique, Frankfurt-School concepts, discourse analysis, post-colonial theory) cite the tradition preemptively by name — author, title, year — before a discrediting frame ("Cultural Marxism", "woke ideology") can be applied.
-Apply: you propose exact citation details; I verify them against the source before use — AI-proposed names, titles and years are a known fabrication risk. I decide whether and how to cite, in the running text, without paraphrasing the tradition into anonymity.
+**9. Who is "we"?** Every "we must…" pulls the reader onto my team without asking; every "they" pushes a group away.
+→ **AI:** map the we's and they's — who's included, who's talked about.
+→ **Me:** if I didn't choose that team-building on purpose, I rewrite it neutrally — or state openly whom I'm speaking for. *(Addressee Audit)*
+
+**10. Name the school of thought before someone weaponises it.** If my text uses ideas from a tradition that gets smeared in public debate (critical theory and its relatives), vague borrowing invites the smear.
+→ **AI:** suggest the exact reference — author, title, year.
+→ **Me:** I check every suggested name and year against the source before it goes in (invented references are a known AI failure), and I cite the tradition openly in the running text, by name — scholarship engaged is harder to smear than influence smuggled. *(Discrediting-Frame Inoculation)*
 
 ---
 
-The reasoning (*Why*) behind each rule and the documented failure cases grounding it live in the four full protocols: source, interpretive-frame, writing, actant self-check.
-Not covered here: tool fidelity (tool protocol) and the three meta-protocols — falsification, provenance, read-write boundary — the advanced set.
+Every rule above was distilled from a documented, real mistake — the stories and the reasoning live in the four full protocols: source, interpretive-frame, writing, actant self-check.
+Not covered here: checking your tools themselves (encoding, OCR, file readers) and the three advanced self-audit protocols — falsification, provenance, read-write boundary.
 </pre>
 </div>
 
@@ -280,45 +297,46 @@ the moves are the method. <span class="who">You</span> = the author,
 <span class="who">AI</span> = your assistant.</p>
 
 <ol class="workflow">
-  <li><strong>Stage 1 — setup (5 min).</strong> <span class="who">You</span> paste the card,
-  then declare: "Tools: your web search + the library portal. Target language: English.
-  Decision log: a notes file called <code>decisions.txt</code>." That one sentence is the
-  whole setup.</li>
-  <li><strong>Stage 2 — research.</strong> <span class="who">AI</span> finds a quote in an
-  exhibition brochure and tags it before you use it:
-  <em>"Brochure quotes a newspaper calling the show 'a great hymn to the body' —
-  <strong>secondary</strong> (the brochure describes the paper), <strong>agent-reported</strong>
-  (I have not shown you the original), possible promoter amplification. Original not yet
-  located."</em> — That tag is what a <strong>source tag</strong> looks like: level +
-  verification status + what is still unverified. <span class="who">You</span> decide it
-  cannot be cited until the original newspaper text is found and you have read it
-  (<em>deep-read</em>).</li>
-  <li><strong>Stage 3 — coding.</strong> The gate runs: two agent-reported hits get upgraded
-  (you read them), one gets dropped. Then a naming decision: the brochure photo shows a
-  figure with a raised arm. <span class="who">AI</span> proposes three readings (athletic
-  pose / heroic-monument pose / advertising gesture) and notes none is excludable from
-  context alone. <span class="who">You</span> choose "raised-arm figure" (descriptive) for
-  now, log: <code>raised-arm figure — not 'hero pose'; typological label deferred, no
-  source-internal grounds</code>.</li>
+  <li><strong>Stage 1 — setup (2 min).</strong> <span class="who">You</span> paste the card,
+  then tell the AI: "Tools: your web search + the library portal. The essay will be in
+  English. I'm keeping naming decisions in a notes file called <code>decisions.txt</code>."
+  That one sentence is the whole setup.</li>
+  <li><strong>Stage 2 — gathering sources.</strong> <span class="who">AI</span> finds a quote
+  in an exhibition brochure and labels it honestly before you use it:
+  <em>"The brochure says a newspaper called the show 'a great hymn to the body'. Careful:
+  that's the brochure quoting the paper, not the paper itself — and brochures polish quotes.
+  I haven't shown you the original, so for now this is <strong>AI-told-me</strong>. The
+  original article is not yet located."</em> — <span class="who">You</span> decide: this
+  cannot go into the essay until the actual newspaper text is found and you have read it
+  yourself (<strong>read-it-myself</strong>).</li>
+  <li><strong>Stage 3 — before writing.</strong> The check-point: of three sources still
+  labelled <strong>AI-told-me</strong>, you read two (they're in), and one gets dropped from
+  the argument. Then a naming decision: the brochure photo shows a figure with a raised arm.
+  <span class="who">AI</span> lists three possible readings (athletic pose / heroic-monument
+  pose / advertising gesture) and notes the photo alone can't settle it.
+  <span class="who">You</span> stick with the plain description for now and jot it in your
+  notes file: <code>calling it "raised-arm figure", not "hero pose" — the photo doesn't
+  justify the bigger label yet</code>.</li>
   <li><strong>Stage 4 — drafting.</strong> Two hours in, <span class="who">AI</span> re-diffs
   your three direct quotes against the sources: one drifted ("hymn to the body" had become
   "hymn to bodies" in your draft) — fixed against the source, not the draft.</li>
-  <li><strong>Stage 5 — before publishing.</strong> <span class="who">You</span> (not the AI —
-  this is the one <span class="tag human">[Human]</span> step) open the brochure image at
-  full resolution and check every "the photo shows…" sentence yourself. Then
-  <span class="who">AI</span> flags in your conclusion: <em>"the museum still hasn't
-  addressed the criticism"</em> — an asymmetric verb. <span class="who">You</span> decide:
-  declare the measure ("has not addressed the criticism raised by X") instead of the smuggle.
-  Done — and the decision log now documents every judgement call you made.</li>
+  <li><strong>Stage 5 — before publishing.</strong> <span class="who">You</span> — not the AI;
+  this is the one step that is yours alone — open the brochure image at full size and check
+  every "the photo shows…" sentence with your own eyes. Then <span class="who">AI</span>
+  flags a phrase in your conclusion: <em>"the museum still hasn't addressed the criticism"</em>
+  — a verb that judges while pretending to describe (<em>still hasn't — by whose deadline?</em>).
+  <span class="who">You</span> decide: name the standard openly ("has not addressed the
+  criticism raised by X") instead of letting the hidden verdict stand. Done — and your notes
+  file now documents every judgement call you made along the way.</li>
 </ol>
 
 <h2 id="advanced">Beyond the card: the full stack</h2>
 <div class="tablewrap">
 <table>
   <tr><th>Set</th><th>Protocols</th><th>When you need them</th></tr>
-  <tr><td>Pipeline (in the card)</td><td>Source · Interpretive-Frame · Writing · Actant Self-Check</td><td>Every writing project — this is the beginner set.</td></tr>
-  <tr><td>Infrastructure</td><td>Tool</td><td>When your pipeline includes encoding, OCR, APIs, file conversion — tool failures silently invalidate everything downstream.</td></tr>
-  <tr><td>Meta (advanced)</td><td>Falsification · Provenance · Read-Write Boundary</td><td>When you audit the method itself: could this be wrong? where did this idea come from? who may write this field?</td></tr>
+  <tr><td>In the card</td><td>Source ("is it real?") · Interpretive-Frame ("did we name it fairly?") · Writing ("does the text still match the source?") · Actant Self-Check ("how does my voice position the reader?")</td><td>Every writing project — this is the beginner set.</td></tr>
+  <tr><td>Your tools</td><td>Tool ("did the software quietly mangle it?")</td><td>When your work passes through file conversion, text recognition (OCR), special characters or web services — tool errors silently poison everything after them.</td></tr>
+  <tr><td>Advanced self-audit</td><td>Falsification ("how would I notice if a rule is wrong?") · Provenance ("which ideas were mine, which the AI's?") · Read-Write Boundary ("what may automation change, what stays mine?")</td><td>When you start auditing your own method — the advanced set.</td></tr>
 </table>
 </div>
 <!-- NOTE (flip-time): ../protocols/ resolves in the GitHub repo view but sits outside a
@@ -334,10 +352,12 @@ the moves are the method. <span class="who">You</span> = the author,
   not a maturity claim.</li>
   <li><strong>Licence:</strong> CC BY-SA 4.0 by default; a commercial licence exists for uses
   the ShareAlike term does not fit. Attribution required.</li>
-  <li><strong>Contributing:</strong> protocols are <em>promoted from documented practice</em>,
-  never authored on request — so no pull requests adding new protocols. What helps:
-  <em>report a gap</em> (a failure mode the protocols miss), <em>offer a de-identified case
-  study</em>, or <em>propose a structure change</em> as a decision record.</li>
+  <li><strong>Contributing:</strong> a rule only enters this set after it has proven itself
+  in real, documented work — nobody (including the maintainer) gets to write one from
+  imagination. So new-rule pull requests are not accepted. What genuinely helps:
+  <em>report a gap</em> (a mistake the rules don't catch), <em>offer a de-identified case
+  study</em> (a real working sequence, stripped of names), or <em>propose a structure
+  change</em> as a decision record.</li>
 </ul>
 
 <footer>
