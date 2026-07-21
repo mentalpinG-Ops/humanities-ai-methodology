@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-*(nothing yet)*
+### Added
+
+- **Falsification Protocol 0.2.0 — Pattern 2.4 *Instrument Validation and Test-Material Design*** (+ OT-8/9/10, two failure-mode gallery entries): pre-registered instrument validation with a hypothesis-independent reference key ("the prediction table is not the reference key"), minimal-pair gates for property toggles, material difficulty as a declared and varied design variable, pre-registered consequence matrices. Promoted from a documented test family in the maintainer's practice corpus (July 2026) in which a clean null finding was overturned by varying only the material difficulty.
+- **Tool Protocol 0.2.0 — Pattern 2.4 *Declare vs. Enforce for Encoded Analytical Rules***: a tool may declare (mark, recommend) on the basis of untested encoded rules, but may enforce (block, reject) only rules that have passed a material test, per operationalisation; the evidence status travels in the tool's output; a shared evidence field is written by the test regime and read by the tool; applying is not testing. Promoted from a documented tool-governance decision (July 2026).
+- **Interpretive-Frame Protocol 0.2.0 — Pattern 2.3 *Operation Declaration — the Smallest Auditable Unit***: auditable AI-assisted interpretation declares not only the framework but the specific analytical operation performed, including its non-deliverables. Promoted from the same practice corpus (July 2026).
 
 ## [0.1.0] — 2026-07-05
 

@@ -1,8 +1,8 @@
 ---
 name: Tool Protocol
-version: 0.1.0
+version: 0.2.0
 status: draft
-last_changed: 2026-06-17
+last_changed: 2026-07-20
 ---
 
 # Tool Protocol
@@ -17,7 +17,7 @@ Tools mediate. Between the author and the artefact, between the source and the c
 
 Tool protocol is *infrastructure-facing*: it does not check what the author says about the artefact (writing protocol) or what the author says as a positioned voice (actant self-check); it checks what the *tool* says about the artefact before either of those concerns arise.
 
-Three patterns are robust enough across documented failures to be named separately. Together they constitute Tool Protocol.
+Four patterns are robust enough across documented failures — and one documented averted-failure decision — to be named separately. Together they constitute Tool Protocol.
 
 ---
 
@@ -61,6 +61,22 @@ Empirical case: a coding assistant's file-reader summarised an image artefact in
 - Run the test packet through any new tool or new tool-chain configuration before integrating it.
 - Compare output to source byte-for-byte where possible; visually where not.
 - Document tool-specific findings in the project's own working materials (outside this repository) so the next iteration of the same tool-chain does not require rediscovery.
+
+### 2.4 Declare vs. Enforce for Encoded Analytical Rules
+
+**Rule.** When a tool encodes analytical rules — an operations register, a conflict table, a screening heuristic — the rules' evidence status governs how hard the tool may act on them. An *untested* encoded rule may be **declared**: marked, recommended, planned around. Only a rule that has passed a material test may be **enforced**: used to block, reject, or overrule — and a passed test licenses enforcement per operationalisation, not per rule-family. The evidence status travels *in the tool's output*, not in source-code comments: code strips metadata, and a stripped status re-enters downstream work looking like fact.
+
+**Why.** Enforcement is a structural promise. A hard gate built on an untested hypothesis asserts a certainty the evidence does not cover — frame-imposition through code, the failure class [interpretive-frame protocol](interpretive-frame-protocol.md) names at the coding step, recurring at the infrastructure layer. Declaration, by contrast, keeps the hypothesis falsifiable: every marked recommendation is a falsification candidate that continued use can refute. "Conservative defaults" are not exempt; the operative test is mechanical — *does it block, or does it mark?* A default that in practice blocks counts as enforcement.
+
+Empirical case (July 2026, maintainer's practice corpus): an operations register for artefact analysis (24 operations with conflict and interoperability relations) was built into a planning tool while the register itself was almost entirely untested — a single rule carried practice evidence. An adversarial review of the build plans converged, from both use cases examined, on the same verdict: build nothing that hardens the untested register into a gate. The tool was built declaring — it marks exposed operations and carries the register's evidence status in its output. A subsequent test family delivered the first positive behavioural evidence that the marking approach reaches the executing agent's behaviour: explicit source-marking where an unmitigated run had silently adopted the source's self-interpretation.
+
+**The shared evidence field — the hinge between testing and use.** The register carries one evidence field per rule (e.g. *reading-derived / practice-void / practice-attested*). The test regime **writes** it (after a test, one cell at a time); the tool **reads** it (at each application, all cells at once). A passed test thereby becomes a tool licence: *practice-attested* lifts a rule from "marks only" to "may enforce". The asymmetry is the load-bearing part: **applying is not testing.** A clean tool run does not attest the register — no pre-registration, no control, no instrument validation — it only produces test material. "The tool ran cleanly, so the register holds" is precisely the overclaim the shared field exists to block.
+
+**How to apply.**
+- For every encoded analytical rule, record an evidence status; emit it in the tool's output wherever the rule shapes a recommendation.
+- Ask the mechanical question per rule: does the tool *mark* on its basis, or *block*? Blocking requires a passed material test of that rule, in that operationalisation.
+- Let only the test regime write the evidence field, and only after a test; let the tool read it. Never lift a status because application "went well".
+- Treat tool runs as producers of test material and route that material into the test regime, rather than counting clean runs as confirmation.
 
 ---
 
@@ -114,4 +130,4 @@ Implementation-specific tool fixes — encoding flags, configuration files, code
 
 ---
 
-*Versioning: working-draft. As the canonical practice accumulates more tool-failure incidents, additional patterns may emerge. Inline patch edits do not trigger a version bump; new patterns trigger a status update.*
+*Versioning: working-draft. As the canonical practice accumulates more tool-failure incidents, additional patterns may emerge. Pattern 2.4 (declare vs. enforce) was added 2026-07-20, promoted from a documented tool-governance decision in the maintainer's practice corpus; minor version bump per governance. Inline patch edits do not trigger a version bump; new patterns trigger a status update.*

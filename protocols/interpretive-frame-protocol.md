@@ -1,8 +1,8 @@
 ---
 name: Interpretive-Frame Protocol
-version: 0.1.0
+version: 0.2.0
 status: draft
-last_changed: 2026-06-17
+last_changed: 2026-07-20
 ---
 
 # Interpretive-Frame Protocol
@@ -21,7 +21,7 @@ A separate finding underwrites this distinction: descriptive errors in a publish
 
 ---
 
-## 2. The Two Patterns
+## 2. The Three Patterns
 
 ### 2.1 Lexicon Stability Across Stage Transitions
 
@@ -63,6 +63,18 @@ The result is a frame default that is invisible from the analyst's position and 
 - For each alternative, note briefly whether it can be excluded on source-internal grounds (the surrounding text, the genre, the audience) or whether the choice between readings is interpretive.
 - Where the choice is interpretive, mark the default reading as *chosen against* the alternatives, not as *the* reading. Cite the alternatives in a footnote, an annex, or a coding-decision log.
 - When the analyst's cultural background is closely aligned with one of the candidate readings, treat that alignment as a reason for extra scrutiny, not as a reason to skip the enumeration step.
+
+### 2.3 Operation Declaration — the Smallest Auditable Unit
+
+**Rule.** Declaring the interpretive frame (the framework, the observer position) is necessary but not sufficient for auditability. An auditable AI-assisted reading also declares *which analytical operation* it performs — which specific move it makes (a channel inventory, a role assignment, an interdependence reading), including what that operation expressly does **not** deliver. The operation is the smallest auditable unit of interpretation.
+
+**Why.** Two analyses under the same declared framework can perform entirely different analytical moves; the frame-level declaration does not distinguish them. Auditability — a third party can open the work, see where a finding comes from, and see where its limit runs — attaches to the move, not to the school. Empirical case (July 2026, from the maintainer's practice corpus): a register of analytical operations was demonstrated on a photograph. The naive reading says *"the figure on the right seems close."* The operation-declared reading says *"channel 1 — contact asymmetry, rank 1; and this operation delivers no role assignment and no biographical finding."* The content of the observation was the same; its checkability was not. Without the operation declaration, the second reading's discipline is invisible — and the first reading's lack of it is, too.
+
+**How to apply.**
+- For each analytical step, name the operation performed, not only the framework it belongs to.
+- Declare the operation's non-deliverables alongside its deliverables: which questions this move cannot answer, so the reader does not credit the finding with more scope than the move supports.
+- Treat a reading that declares only its framework as under-declared: the frame narrows the space of possible moves but does not identify the move.
+- Where an operations register exists, cite the operation by its register entry; where none exists, one sentence naming the move and its limit suffices.
 
 ---
 
@@ -124,4 +136,4 @@ Practical implication: when a publication review surfaces *both* a class-one and
 
 ---
 
-*Versioning: working-draft. The protocol was added 2026-05-21 as the fifth pipeline-stage Methodology module, after a cascade audit of the museum-exhibition op-ed distinguished class-one and class-two failure modes; falsification- and provenance-protocols were added later the same day as meta-level modules. Substantial structural re-articulation triggers a status update. Inline patch edits do not trigger a version bump.*
+*Versioning: working-draft. The protocol was added 2026-05-21 as the fifth pipeline-stage Methodology module, after a cascade audit of the museum-exhibition op-ed distinguished class-one and class-two failure modes; falsification- and provenance-protocols were added later the same day as meta-level modules. Pattern 2.3 (operation declaration) was added 2026-07-20, promoted from the maintainer's documented practice (an operations-register build); minor version bump per governance. Substantial structural re-articulation triggers a status update. Inline patch edits do not trigger a version bump.*

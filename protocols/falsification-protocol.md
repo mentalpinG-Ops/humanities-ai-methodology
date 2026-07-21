@@ -1,8 +1,8 @@
 ---
 name: Falsification Protocol
-version: 0.1.0
+version: 0.2.0
 status: draft
-last_changed: 2026-06-17
+last_changed: 2026-07-20
 ---
 
 # Falsification Protocol
@@ -31,7 +31,7 @@ Falsifiability as criterion; method as anti-ad-hoc selection pressure; methodolo
 
 ---
 
-## 2. The Three Patterns
+## 2. The Four Patterns
 
 ### 2.1 Demarcation at the Claim Level
 
@@ -68,11 +68,27 @@ A concrete instance from this repository's own short history: a workspace schema
 - For empirical claims in published outputs, the writing-protocol source-recheck is already a test-mode step. Falsification protocol generalises: every load-bearing claim should be paired with a sentence answering *this would be wrong if [...]*.
 - For methodology revisions: a single failure-instance is not sufficient evidence for protocol-change (per Popper § 22: *single conflicting basic statement* ≠ *falsification*). A reproducible failure-mode pattern (≥ 2 instances, or 1 instance with constructive generalisation path) is required before a protocol is revised. This guards against ad-hoc protocol-churn under one-off pressure.
 
+### 2.4 Instrument Validation and Test-Material Design
+
+**Rule.** An empirical test of a methodological or analytical claim must apply falsification discipline to its own *instrument* and *material*, not only to the hypothesis. Four requirements:
+
+- **(a) Pre-registered instrument validation.** The validation gate — the check that the judging procedure can discriminate at all — is specified in the pre-registration (reference-key source + flip set), independent of the hypotheses. Where the reference key can be built *by construction* (one base, N variants, each violating exactly one item of a finite forbidden list, built hypothesis-blind), the gate survives the refutation of the hypothesis: **the prediction table is not the reference key.** Where no independent key is possible, that limitation is declared in advance, with a substitute verification plan.
+- **(b) Minimal pair for property toggles.** Where the tested property is a toggle (marked vs. unmarked, present vs. absent), the gate must contain a minimal pair — the same content with only the property switched. The pair *is* the instrument validation: it proves discrimination by the property rather than by co-varying content.
+- **(c) Material difficulty as a design variable.** For tests on constructed material, how easy the material makes the clean result is a declared design parameter, varied across at least two tiers — or the conclusion is explicitly narrowed to the tested tier. A null finding on easy material says nothing about hard material.
+- **(d) Pre-registered consequence matrix.** Where several pre-registered conditions jointly decide the verdict, the full matrix with explicit precedence is registered in advance, so that no conflicting clause-crossing is resolved under data knowledge.
+
+**Why.** Each clause generalises a documented failure mode from the maintainer's test practice (July 2026). (a) The gap *instrument validation designed only at evaluation time, under data knowledge* occurred twice in one day, in independent runs — and, per this protocol's own OT-5, was acted on at the second instance, not the first. (b) Two successive runs of one test series returned VOID because the instrument could not be shown to discriminate the tested property from its carrier content; the first run whose gate was a minimal pair passed, retroactively explaining the VOIDs as instrument failures rather than untestability of the claim. (c) A test family returned a clean null on self-built material that carried explicit attribution markers; varying only the material difficulty surfaced the defect the easy tier had hidden. The deeper point: when the same actor states the hypotheses, builds the material, and evaluates, the bias lands invisibly in the material-construction step — the standard one-hand bias declaration named hypotheses, prompts, and evaluation, and missed the material as its own bias surface. (d) Two pre-registered clauses fired in opposite directions (test arm confirming, control arm voiding) with no precedence rule; the resolution thereby fell after data sight.
+
+**How to apply.**
+- OT-8, OT-9, and OT-10 below operationalise clauses (a)–(c); clause (d) folds into the pre-registration document itself.
+- When constructing test material, treat your own expectations as a contamination source for difficulty calibration: name the difficulty axis (what makes the clean result easy) and place at least one cell per tier.
+- Treat a passed gate as licensing verdicts about the hypothesis — and a failed or missing gate as capping the run at VOID, regardless of how the hypothesis cells look.
+
 ---
 
 ## 3. Operational Tests for AI-Assisted Work
 
-The protocol's patterns translate to seven operational tests applicable to humanities-AI working contexts. They are usable individually; together they form a methodology self-audit pass.
+The protocol's patterns translate to ten operational tests applicable to humanities-AI working contexts. They are usable individually; together they form a methodology self-audit pass.
 
 | # | Test | Operative question | Failure-signal |
 |---|---|---|---|
@@ -83,8 +99,11 @@ The protocol's patterns translate to seven operational tests applicable to human
 | OT-5 | Reproducibility before methodology-revision (per Popper § 22) | Is the proposed protocol-revision grounded in a single failure-instance, or in a reproducible pattern? | One-off finding promoted to protocol change without second-instance confirmation |
 | OT-6 | Test-mode reframing | For each load-bearing claim or decision, has the test-mode question (*how is this tested?*) been answered, not only the justification question (*how is this grounded?*)? | Justification given, no falsifier paired |
 | OT-7 | Status-vocabulary audit | Are *stable / canonical / final*-labels paired with explicit falsifier specifications? | Labels carry implicit foundationalism (the *Pile-driver* failure mode) |
+| OT-8 | Pre-registered instrument validation | Is the gate (reference-key source + flip set) specified before data sight, independent of the hypotheses? | Gate constructed under data knowledge; reference key derived from the prediction table |
+| OT-9 | Material-difficulty declaration | Is the difficulty of constructed test material declared and varied (≥ 2 tiers) — or the conclusion narrowed to the tested tier? | Null finding generalised beyond its material tier; same-author material tuned, unnoticed, toward the expected outcome |
+| OT-10 | Minimal-pair gate for property toggles | Does the gate contain the same content with only the tested property switched? | Gate cells vary content and property together; discrimination unproven |
 
-The seven tests trace directly to anchors and operational tests in the project's Popper-notes; the per-anchor mapping is preserved internally so that revisions to either side propagate via cross-reference rather than requiring re-derivation.
+The first seven tests trace directly to anchors and operational tests in the project's Popper-notes; the per-anchor mapping is preserved internally so that revisions to either side propagate via cross-reference rather than requiring re-derivation.
 
 ---
 
@@ -120,7 +139,11 @@ Three documented failure-modes from this methodology's own short history serve a
 
 - **The actant-self-check survival in the museum-exhibition op-ed (2026-05-17).** The actant self-check was performed on the op-ed pipeline as designed. Descriptive-accuracy errors and frame-imposition still passed through. The single-coder design exhibited the predicted OT-5 weakness: a one-off check by the same author cannot substitute for reproducible test. *Lift: Pattern 2.3 (OT-5 reproducibility before methodology-revision); also fed the addition of interpretive-frame-protocol.*
 
-In all three cases the failure was caught and absorbed as methodology-evidence rather than as application-error. That absorption pathway — Failure → Methodology-Lift → Protocol-Addition — is itself the operative mechanism this protocol names.
+- **The null finding overturned by its own material (2026-07-18/19).** A two-operation authorship test came back clean — gate passed, full inter-judge agreement — on self-built material that carried explicit first-person attribution markers. The verification phase caught the confound: "self-interpreting material" had drifted, unnoticed, into "obviously attributable material", making the clean result easy. A follow-up run changed only the material difficulty (marker-free, gnomic register): the defect that never appeared on the easy tier appeared on the hard one (0/3 → 1/3, unanimous verdict). The null finding was material-dependent — demonstrated within the test family itself. *Lift: Pattern 2.4c (OT-9); second instance of the same-author-material ceiling class.*
+
+- **A pre-registration gap meeting its own change threshold (2026-07-16 → 19).** The gap *instrument-validation design absent from the pre-registration* occurred twice in one day, in independent test runs. The first instance was parked per OT-5 (a single instance does not license protocol change); the second reached the threshold, and the gate became a mandatory pre-registration field — decided as its own act, not as a side effect of a running test. The first application under the new field built its reference key by construction and carried through: the gate stayed valid although the hypothesis under test was refuted. Three gate/analysis-plan patterns were subsequently ratified out of a three-run series whose first two attempts were VOID (the instrument could not be shown to discriminate) and whose third passed on a minimal-pair gate. *Lift: Pattern 2.4a/b (OT-8, OT-10) — the protocol applying its own reproducibility rule to its own revision.*
+
+In all five cases the failure was caught and absorbed as methodology-evidence rather than as application-error. That absorption pathway — Failure → Methodology-Lift → Protocol-Addition — is itself the operative mechanism this protocol names.
 
 ---
 
@@ -144,4 +167,4 @@ In all three cases the failure was caught and absorbed as methodology-evidence r
 
 ---
 
-*Versioning: working-draft. The protocol emerged as the meta-level Popper-falsification module of the methodology. Anchored in three verbatim Popper passages from Niklas 1977 (§§ 6 + 30), a cross-mapping against the other six protocols, and seven operational tests for AI-assisted humanities work. Substantial structural re-articulation triggers a status update. Inline patch edits do not.*
+*Versioning: working-draft. The protocol emerged as the meta-level Popper-falsification module of the methodology. Anchored in three verbatim Popper passages from Niklas 1977 (§§ 6 + 30), a cross-mapping against the other six protocols, and — since 0.2.0 — ten operational tests for AI-assisted humanities work. Pattern 2.4 (instrument validation and test-material design, with OT-8–OT-10 and two gallery entries) was added 2026-07-20, promoted from a documented test family in the maintainer's practice corpus; minor version bump per governance. Substantial structural re-articulation triggers a status update. Inline patch edits do not.*
