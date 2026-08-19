@@ -1,8 +1,8 @@
 ---
 name: Tool Protocol
-version: 0.2.0
+version: 0.2.1
 status: draft
-last_changed: 2026-07-20
+last_changed: 2026-08-19
 ---
 
 # Tool Protocol
@@ -21,7 +21,7 @@ Four patterns are robust enough across documented failures — and one documente
 
 ---
 
-## 2. The Three Patterns
+## 2. The Four Patterns
 
 ### 2.1 Encoding Fidelity
 
