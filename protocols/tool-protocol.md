@@ -1,6 +1,6 @@
 ---
 name: Tool Protocol
-version: 0.2.1
+version: 0.3.0
 status: draft
 last_changed: 2026-08-19
 ---
@@ -72,10 +72,14 @@ Empirical case (July 2026, maintainer's practice corpus): an operations register
 
 **The shared evidence field — the hinge between testing and use.** The register carries one evidence field per rule (e.g. *reading-derived / practice-void / practice-attested*). The test regime **writes** it (after a test, one cell at a time); the tool **reads** it (at each application, all cells at once). A passed test thereby becomes a tool licence: *practice-attested* lifts a rule from "marks only" to "may enforce". The asymmetry is the load-bearing part: **applying is not testing.** A clean tool run does not attest the register — no pre-registration, no control, no instrument validation — it only produces test material. "The tool ran cleanly, so the register holds" is precisely the overclaim the shared field exists to block.
 
+**Enforcement means a checking step, not a stricter sentence.** The rule above governs *when* a tool may enforce. It says nothing about what enforcing consists of, and that gap is where enforcement quietly fails: a rule can be declared binding in every document that mentions it and still never act, because no step between the work and its aggregation ever tests compliance. Documented failure (July 2026, two consecutive runs of one test series): a pre-registered obligation to quote verbatim was **never once applied** — three findings carried non-verbatim quotations, and nothing caught it, because no check stood between collection and aggregation. Such a rule is not weakly enforced; it is not enforced at all, and it is worse than an absent rule, because it purchases the appearance of control at the price of trust in every other rule beside it. **Therefore: every obligation that is to be enforced names the mechanical step that checks it, and the point in the sequence where that step runs — before aggregation, not after. An obligation for which no such step can be named is downgraded to a declaration or struck.**
+
 **How to apply.**
 - For every encoded analytical rule, record an evidence status; emit it in the tool's output wherever the rule shapes a recommendation.
 - Ask the mechanical question per rule: does the tool *mark* on its basis, or *block*? Blocking requires a passed material test of that rule, in that operationalisation.
 - Let only the test regime write the evidence field, and only after a test; let the tool read it. Never lift a status because application "went well".
+- For every rule you intend to enforce, name the checking step and its position in the sequence. If you cannot name one, you have a declaration — label it as such rather than leaving it to read as a constraint.
+- Audit in the other direction too: for each obligation already declared binding, ask when it last actually fired. An obligation that has never fired is either superfluous or unenforced, and both call for a decision.
 - Treat tool runs as producers of test material and route that material into the test regime, rather than counting clean runs as confirmation.
 
 ---
