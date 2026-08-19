@@ -1,8 +1,8 @@
 ---
 name: Falsification Protocol
-version: 0.2.0
+version: 0.2.1
 status: draft
-last_changed: 2026-07-20
+last_changed: 2026-08-19
 ---
 
 # Falsification Protocol
@@ -19,15 +19,23 @@ A methodology that names its rules but does not specify how its rules could fail
 
 Falsification protocol addresses this gap. Its source is Karl Popper's *Logik der Forschung* (1934), specifically the demarcation argument, the anti-ad-hoc methodological rules, and the anti-foundationalist treatment of basic statements. Its purpose in this methodology is not to reproduce Popper's philosophy of natural science but to operationalise its testable-rules core for a humanities-AI-working environment in which the analyst's own methodology is itself an object of failure-mode tracking.
 
-Three Popper-anchors are load-bearing for what follows, given here verbatim from the Polish edition (Niklas 1977; full Popper-translation-provenance held in the project's audit notes):
+Three Popper-anchors are load-bearing for what follows, given here verbatim from the Polish edition (Niklas 1977; full Popper-translation-provenance held in the project's audit notes).
+
+**On the English renderings.** Each quotation is followed by an English rendering made *from the Polish text above it*. These renderings are this repository's own. They are **not** the wording of the English standard edition (*The Logic of Scientific Discovery*, 1959), and must not be cited as if they were: anyone quoting Popper in published work quotes the edition actually consulted. The renderings exist so that a reader who does not read Polish can follow which commitment each pattern rests on; the Polish text remains the authoritative wording here.
 
 > „Naturalnie tylko wówczas traktuję pewien system jako empiryczny lub naukowy, gdy poddaje się on sprawdzeniu w doświadczeniu. Z rozważań tych wynika, że za kryterium demarkacji należy przyjąć **nie weryfikowalność, lecz falsyfikowalność systemu**." (§ 6)
+>
+> *Rendering: I treat a system as empirical or scientific only if it can be tested against experience. It follows from these considerations that the criterion of demarcation must be taken to be **not the verifiability but the falsifiability of a system**.*
 
 > „Zgodnie z moją propozycją dla metody empirycznej charakterystyczne jest to, że **system podlegający sprawdzaniu dostępny jest falsyfikacji na wszystkie dające się pomyśleć sposoby**. **Cel tej metody nie polega na ratowaniu życia nie dających się utrzymać systemów, lecz przeciwnie, na rzuceniu ich wszystkich w wir najzacieklejszej walki o przetrwanie i wybraniu tego, który w porównaniu z innymi okaże się najlepiej przystosowany**." (§ 6)
+>
+> *Rendering: On my proposal, what characterises the empirical method is that **the system under test is laid open to falsification in every conceivable way**. **The aim of this method is not to save the lives of untenable systems but, on the contrary, to throw them all into the fiercest struggle for survival and to select the one which, compared with the others, proves the fittest.***
 
 > „**Empiryczna baza nauki obiektywnej nie kryje nic absolutnego. Nauka nie spoczywa na niewzruszonych podstawach.** Śmiała struktura teorii naukowych jak gdyby wznosi się nad grzęzawiskiem. Przypomina gmach wzniesiony na słupach wbijanych z góry w to grzęzawisko, lecz nie sięgających żadnej naturalnej ani «danej» podstawy. **Wbijanie słupów przerywamy wcale nie dlatego, że osiągnęliśmy twardą ziemię. Przerywamy po prostu wtedy, gdy uznamy, że tkwią one wystarczająco mocno, aby przynajmniej tymczasowo udźwignąć strukturę**." (§ 30)
+>
+> *Rendering: **The empirical basis of objective science holds nothing absolute. Science does not rest on unshakeable foundations.** The bold structure of scientific theories rises, as it were, above a swamp. It is like a building raised on piles driven into that swamp from above, reaching no natural or «given» base. **We stop driving the piles not at all because we have reached firm ground. We simply stop when we judge that they hold firmly enough to carry the structure, at least for the time being.***
 
-Falsifiability as criterion; method as anti-ad-hoc selection pressure; methodology itself as pile-driver work, not foundation work. These three commitments shape the three patterns of this protocol.
+Falsifiability as criterion; method as anti-ad-hoc selection pressure; methodology itself as pile-driver work, not foundation work. These three commitments shape the first three patterns of this protocol; the fourth (§2.4) was promoted later, from documented practice rather than from the Popper anchors.
 
 ---
 
