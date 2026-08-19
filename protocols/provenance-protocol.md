@@ -1,8 +1,8 @@
 ---
 name: Provenance Protocol
-version: 0.1.0
+version: 0.2.0
 status: draft
-last_changed: 2026-06-17
+last_changed: 2026-08-19
 ---
 
 # Provenance Protocol
@@ -37,7 +37,14 @@ The protocol does not constrain *how* AI assistance is used; it constrains how t
 
 The four-category distinction matters because the categories carry different attribution weights. *Human-originated* is the strongest claim to authorship; *AI-introduced* is the weakest; *AI-amplified* and *co-developed* sit between and require honest assessment of which side did the load-bearing work. Conflating them — treating all AI-touched ideas as "mine" or all touched ideas as "the AI's" — produces misattribution in opposite directions, both equally problematic.
 
+**Transcription is a second introduction — and the point at which provenance is most often stripped.** The rule above secures the moment an idea *enters* the working materials. There is a second moment, at least as lossy and far more frequent: when a claim moves *within* them — from a reading note into an outline, from an outline into a draft, from one person's file into a register several people read. A target format earns its usefulness by making entries uniform, and that is exactly what costs the metadata: who claimed this, checked against what, and was it ever in doubt. After the move, every line reads like every other, and a note that said *"the assistant summarised this, I have not read it"* becomes a sentence that says only what it says. Nobody deceives anyone; the form does the work.
+
+Two properties make this worse than ordinary forgetting. First, the loss is **asymmetric**: material describing *itself* gets corrected by whoever maintains it, while material describing *something else* has no owner — nobody is obliged to revisit it when its referent changes, so it does not decay noticeably, it simply stops being true. Second, an unsupported reference and an outdated one are **indistinguishable after the fact**: a pointer can not only go stale, it can have been empty from the start (documented case: a constraint cited as "stated in the paragraph in file X" where no such paragraph had ever existed), and checking only for currency never finds the second kind. Documented cases from the maintainer's practice (July–August 2026) include both directions of the same movement: a foreign claim entering a shared register and reading as knowledge two months later, and an author's own morning entry being cited by that same author in the afternoon as a source.
+
 **How to apply.**
+- **Carry the marker across every transcription, not only across the first introduction.** When a claim moves into a note, an outline, a summary, or a shared register, the provenance tag moves with it. A target format with no slot for provenance is a format that launders it — add the slot, or do not move load-bearing claims into it.
+- Before citing your own working materials, ask what the entry rests on. An entry you wrote is evidence that you wrote it, not that it holds; the interval between a note and its re-use is precisely where that difference disappears.
+- Treat claims *about other people's material* as the high-risk class, and give them a verification date rather than only a source: they have no natural owner and will not correct themselves.
 - For each new concept, term, or framework that enters a working file, attach a brief provenance tag at first appearance: `[H]` (human-originated), `[AI]` (AI-introduced), `[AI+]` (AI-amplified), `[H+AI]` (co-developed). Or use full-word equivalents in a project-decision-log.
 - For methodological moves, ADRs, and protocol-additions, name the originating side in the document body (*"This pattern was first surfaced by [the assistant / by me / jointly]"*).
 - For text passages, mark provenance at paragraph-granularity where origins differ; uniform-origin texts can be marked once at document-level.
