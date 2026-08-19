@@ -1,6 +1,6 @@
 ---
 name: Falsification Protocol
-version: 0.2.1
+version: 0.3.0
 status: draft
 last_changed: 2026-08-19
 ---
@@ -35,11 +35,11 @@ Three Popper-anchors are load-bearing for what follows, given here verbatim from
 >
 > *Rendering: **The empirical basis of objective science holds nothing absolute. Science does not rest on unshakeable foundations.** The bold structure of scientific theories rises, as it were, above a swamp. It is like a building raised on piles driven into that swamp from above, reaching no natural or «given» base. **We stop driving the piles not at all because we have reached firm ground. We simply stop when we judge that they hold firmly enough to carry the structure, at least for the time being.***
 
-Falsifiability as criterion; method as anti-ad-hoc selection pressure; methodology itself as pile-driver work, not foundation work. These three commitments shape the first three patterns of this protocol; the fourth (§2.4) was promoted later, from documented practice rather than from the Popper anchors.
+Falsifiability as criterion; method as anti-ad-hoc selection pressure; methodology itself as pile-driver work, not foundation work. These three commitments shape the first three patterns of this protocol; the fourth and fifth (§2.4, §2.5) were promoted later, from documented practice rather than from the Popper anchors.
 
 ---
 
-## 2. The Four Patterns
+## 2. The Five Patterns
 
 ### 2.1 Demarcation at the Claim Level
 
@@ -81,16 +81,32 @@ A concrete instance from this repository's own short history: a workspace schema
 **Rule.** An empirical test of a methodological or analytical claim must apply falsification discipline to its own *instrument* and *material*, not only to the hypothesis. Four requirements:
 
 - **(a) Pre-registered instrument validation.** The validation gate — the check that the judging procedure can discriminate at all — is specified in the pre-registration (reference-key source + flip set), independent of the hypotheses. Where the reference key can be built *by construction* (one base, N variants, each violating exactly one item of a finite forbidden list, built hypothesis-blind), the gate survives the refutation of the hypothesis: **the prediction table is not the reference key.** Where no independent key is possible, that limitation is declared in advance, with a substitute verification plan.
+- **(a′) Ad-hoc checks get the cheap version of (a).** Clause (a) binds pre-registered tests — but most checking is not pre-registered. A linter run, a quick query, a validation script pointed at a directory: these are more frequent than formal tests and less protected, because nobody writes a pre-registration for them, and therefore nobody asks whether the instrument holds for this material. **Before an ad-hoc result is reported as a finding about the object, establish that the instrument was in scope for it.** Documented failure (August 2026): a checking tool run outside its documented range reported failures that were the correct answer to a rule not in force there; two of five audit findings had to be withdrawn. The scope statement existed — in a different file. A tool that declares its range anywhere other than at the point of use will be misused precisely by those who read its own documentation.
 - **(b) Minimal pair for property toggles.** Where the tested property is a toggle (marked vs. unmarked, present vs. absent), the gate must contain a minimal pair — the same content with only the property switched. The pair *is* the instrument validation: it proves discrimination by the property rather than by co-varying content.
 - **(c) Material difficulty as a design variable.** For tests on constructed material, how easy the material makes the clean result is a declared design parameter, varied across at least two tiers — or the conclusion is explicitly narrowed to the tested tier. A null finding on easy material says nothing about hard material.
+- **(c′) The setting is a design variable too, and the test arrangement can supply the answer.** Material is the best-known case, not the only one. Operating mode, addressee, observation window and the wording of the commission are equally conditions of the result, and a test arrangement that holds one of them fixed can manufacture the finding it then reports. Documented failures (July–August 2026): a specified output step never executed in three of three runs, because test runs have no addressee and the selection rule then correctly returns "none" — **the test arrangement produced the very condition under which the process it was to examine does not occur**; six delegated enquiries returned one premise unanimously, and the premise came from the commissioning text, so agreement was echo rather than convergence; an adversarial probe carried in its own instruction the property it was probing for, so the result showed that coders *can* separate when told, not that they do; a calibration test pre-registered for scheduled operation measured on-demand operation instead, where the gate under test is regularly bypassed; and in the same test, over half the data points came from catch-up runs long enough to make a positive finding near-certain, so the measured rate tracked window length rather than the quality of the proxy. **Name the conditions the arrangement holds fixed, and ask of each: could this alone produce the result?** The uncomfortable case is the last one, where the setting changed *after* pre-registration — a pre-registered test can be confounded by the world moving while it runs.
 - **(d) Pre-registered consequence matrix.** Where several pre-registered conditions jointly decide the verdict, the full matrix with explicit precedence is registered in advance, so that no conflicting clause-crossing is resolved under data knowledge.
 
 **Why.** Each clause generalises a documented failure mode from the maintainer's test practice (July 2026). (a) The gap *instrument validation designed only at evaluation time, under data knowledge* occurred twice in one day, in independent runs — and, per this protocol's own OT-5, was acted on at the second instance, not the first. (b) Two successive runs of one test series returned VOID because the instrument could not be shown to discriminate the tested property from its carrier content; the first run whose gate was a minimal pair passed, retroactively explaining the VOIDs as instrument failures rather than untestability of the claim. (c) A test family returned a clean null on self-built material that carried explicit attribution markers; varying only the material difficulty surfaced the defect the easy tier had hidden. The deeper point: when the same actor states the hypotheses, builds the material, and evaluates, the bias lands invisibly in the material-construction step — the standard one-hand bias declaration named hypotheses, prompts, and evaluation, and missed the material as its own bias surface. (d) Two pre-registered clauses fired in opposite directions (test arm confirming, control arm voiding) with no precedence rule; the resolution thereby fell after data sight.
 
 **How to apply.**
-- OT-8, OT-9, and OT-10 below operationalise clauses (a)–(c); clause (d) folds into the pre-registration document itself.
+- OT-8, OT-9, and OT-10 below operationalise clauses (a)–(c); clause (d) folds into the pre-registration document itself. Clauses (a′) and (c′) extend the reach of (a) and (c) rather than adding machinery: (a′) applies wherever no pre-registration exists, (c′) wherever the arrangement — not the material — could account for the result.
 - When constructing test material, treat your own expectations as a contamination source for difficulty calibration: name the difficulty axis (what makes the clean result easy) and place at least one cell per tier.
 - Treat a passed gate as licensing verdicts about the hypothesis — and a failed or missing gate as capping the run at VOID, regardless of how the hypothesis cells look.
+
+### 2.5 The Referent Is the Privileged Falsifier
+
+**Rule.** For any claim of the form *"A says X about B"*, **B is the sharpest and cheapest available test.** Not because B is neutral — B is the opposite of a disinterested third party — but because B holds the primary material and has no stake in A's version. Where a claim about something can be routed to that something, route it there before treating the claim as established.
+
+**Why.** Descriptions drift away from what they describe, and they drift *asymmetrically*: a text about itself is corrected by whoever maintains it, while a text about something else has no owner at all — nobody is obliged to check it when the referent changes. Peer review does not close this gap, because it supplies a competent stranger where what is needed is the object. Documented case (July 2026, the maintainer's practice): six checking instances, one per project, each asked to examine what a shared register asserted about its own project. They were not polite — several contradicted the shared record rather than adopting it, and the errors they surfaced had stood for weeks in a form indistinguishable from verified entries. The practical consequence is a division of labour: **selecting the falsifier is mechanisable** (whoever is described, checks), **the judgement is not**.
+
+**How to apply.**
+- Before treating a second-hand claim as established, ask what its referent is, and whether the referent can be asked.
+- Where cross-references are machine-findable, group them by referent rather than by source: the grouping *is* the assignment of checking work.
+- Expect the referent to disagree, and treat agreement as the result that needs explaining — a checker who confirms everything is either right or unused.
+- **Name the blind spot rather than papering over it:** shared infrastructure that describes no one in particular has no referent, and this pattern does not reach it. In the documented case that was exactly where drift was densest.
+
+**Standing limitation.** This pattern rests on a single operating period, not on the two independent instances the rest of this protocol asks for. It was adopted on structural grounds — the asymmetry it names is a property of ownership, not of any one toolchain, and it holds for human reviewers as much as for automated ones. The evidential thinness is stated here rather than hidden: a second instance would strengthen it, and a case where the referent proved a *worse* checker than a third party would falsify it.
 
 ---
 
