@@ -1,8 +1,8 @@
 ---
 name: Source Protocol
-version: 0.1.0
+version: 0.2.0
 status: draft
-last_changed: 2026-06-17
+last_changed: 2026-08-19
 ---
 
 # Source Protocol
@@ -59,10 +59,13 @@ Empirical case: marketing material for a travelling exhibition in Poland attribu
 
 **Why.** Search tools have indexing gaps, operator mismatches, paywall barriers, language-corpus limits, version caches, and regional filters. An unsuccessful search may reflect any of these. Inferring *"does not exist"* from *"not found"* promotes the search tool from a pointer-giver to a complete index — a status no available tool legitimately fulfils.
 
+**Scope: any search, not only bibliographic search.** The rule was written for source discovery, but the inference it forbids is not specific to catalogues. It applies wherever a query returns nothing and the emptiness is read as a fact about the material: a local file search whose pattern matches the wrong thing, a grep whose expression is narrower than the author assumed, a working set that a tool never reached. Documented cases (the maintainer's practice, August 2026): a channel reported as absent held twenty-eight files — the pattern matched filenames while the material sat in directory names, and a second worker reproduced the same reading independently, which is what identifies it as tool-shaped rather than careless. A related case shifts the failure one level further: three search strands returned thirty-two candidate findings and *none* verified, because a fourth strand had taken every verification slot — in the output, unexamined is indistinguishable from unfound. **Absence is a claim about the search until someone has checked the search**, and a local query is exactly where that check is skipped, because nobody mistakes a `grep` for research.
+
 **How to apply.**
 - Record the negative result verbatim: tool, full query (operators included), date, hit count.
-- Make the possible reasons explicit: indexing gap / operator mismatch / paywall / language corpus / cache staleness.
-- For load-bearing use, run ≥ 2 independent search tools, ideally with different corpora.
+- Make the possible reasons explicit: indexing gap / operator mismatch / paywall / language corpus / cache staleness. For local search, add the two that dominate there: the pattern matched a different unit than intended (name vs. content, file vs. directory), and the search never reached part of the material.
+- For load-bearing use, run ≥ 2 independent search tools, ideally with different corpora. For local search, the cheap equivalent is a **positive control**: run the same query against material known to contain a hit. A pattern that finds nothing where something is has been falsified as an instrument, not as a finding.
+- Where a procedure distributes limited attention across candidates, state the distribution: an unexamined candidate is not a negative result, and must not be reported as one.
 - For residual uncertainty, hedge: *"not demonstrable in the available indices"* rather than *"does not exist"*.
 
 ---
