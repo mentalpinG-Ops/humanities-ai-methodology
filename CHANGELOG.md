@@ -4,7 +4,9 @@ All notable changes to this methodology are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) per the rules in [`GOVERNANCE.md`](GOVERNANCE.md).
 
-## [Unreleased]
+## [0.2.0] — 2026-08-19
+
+**Second version freeze — tag `version-0.2`.** A fixed reference point over the state reached in July 2026 and consolidated here: three practice-grounded pattern promotions (falsification 2.4, tool 2.4, interpretive-frame 2.3), the first reader-facing delivery layer under `docs/`, and the consistency pass that repaired what those two independent edit-lines left behind — broken links, stale pattern counts, an undeclared document class, and a delivery that had shipped without a changelog entry of its own. Per [`GOVERNANCE.md`](GOVERNANCE.md) §Versioning, a version tag is a fixed reference point: it publishes nothing and changes no protocol's status. All eight protocols remain `draft`, and the certification question the `version-0.1` note raised for the read-write-boundary module is untouched here.
 
 ### Added
 
