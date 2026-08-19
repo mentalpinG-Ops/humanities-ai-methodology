@@ -56,7 +56,7 @@ Each protocol in `protocols/` carries a four-field YAML frontmatter block. Four 
 
 - New protocols start as `draft` — grounded in documented failure modes but not yet externally tested.
 - Promotion to `current` means in active methodological use and structurally settled.
-- Promotion to `stable` requires external read-tests and a period without structural re-articulation (the maturity signals in [`README.md`](repos/humanities-ai-methodology/README.md) §7). A protocol may not be labelled `stable` without naming the conditions under which it would be revised — the status-vocabulary audit of [`protocols/falsification-protocol.md`](protocols/falsification-protocol.md).
+- Promotion to `stable` requires external read-tests and a period without structural re-articulation (the maturity signals in [`README.md`](README.md) §7). A protocol may not be labelled `stable` without naming the conditions under which it would be revised — the status-vocabulary audit of [`protocols/falsification-protocol.md`](protocols/falsification-protocol.md).
 - `deprecated` retires a protocol without removing it from history.
 
 ### Repository version tags
@@ -78,9 +78,12 @@ Every document in this repository belongs to one of the classes below. Each clas
 | **Methodology** | the protocols (`protocols/`) | `draft` → `current` → `stable` → `deprecated` | four-field (`name`, `version`, `status`, `last_changed`) |
 | **Specification** | `METHODOLOGY_SPEC.md` | `draft` → `current` → `stable` | `status`, `last_changed` |
 | **Process** | maintained reference / process docs (none beyond the spec at present) | `current` (in force) · `draft` (proposed, not yet adopted) · `superseded` (overtaken — see the file's banner for the successor) | `status`, `last_changed` |
+| **Delivery** | reader-facing material under `docs/`: the onboarding page, the paste-card, the addressee map, the design brief | `draft` → `current` | `status`, `last_changed`; a document *derived* from protocols additionally carries `derived_from` (protocol @ version) and a `staleness_rule`, and may declare `class: derived-gloss` |
 | **Archive** | frozen records: public decision-records (`decisions/`) and any frozen prior versions of living docs | `historical` (frozen event record) · `superseded` (frozen prior version — carries `superseded_by`) | `status`, `last_changed` (the record's own content date) |
 
-For **Process** and **Archive** documents, `last_changed` records the date the *content* last changed, not the date a status label was applied — so the field answers "how current is this material?" honestly.
+For **Process**, **Delivery**, and **Archive** documents, `last_changed` records the date the *content* last changed, not the date a status label was applied — so the field answers "how current is this material?" honestly.
+
+**Delivery documents inherit their currency from what they are derived from.** A card, map, or page that compresses protocol material is only as current as the protocol version it was glossed against, so it names that version in `derived_from` and states its own `staleness_rule`. When a named protocol bumps, the derived document is stale by its own declaration and a human re-glosses it: automation may *flag* the staleness, but may never regenerate the gloss — the compression is a judgement, and the read-write boundary protocol governs who may author it. A re-gloss that deliberately leaves new protocol material off the delivery artefact records that as a decision in the frontmatter rather than leaving an unexplained absence. Delivery documents are not part of the methodology: they carry no protocol authority, and where a card and a protocol disagree, the protocol governs.
 
 ### Living documents (currency = git, not a stamp)
 
@@ -113,7 +116,7 @@ This boundary exists to protect privacy, prevent IP leakage, and maintain legal 
 ## Reference
 
 - The protocol stack: [`METHODOLOGY_SPEC.md`](METHODOLOGY_SPEC.md)
-- Statement, motivation, two-repo architecture, status, license: [`README.md`](repos/humanities-ai-methodology/README.md)
+- Statement, motivation, two-repo architecture, status, license: [`README.md`](README.md)
 - Contribution guidelines (incl. material boundaries): [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- AI assistant context: [`CLAUDE.md`](repos/humanities-ai-methodology/CLAUDE.md)
+- AI assistant context: [`CLAUDE.md`](CLAUDE.md)
 - Copilot instructions: [`.github/copilot-instructions.md`](.github/copilot-instructions.md)

@@ -1,22 +1,22 @@
 ---
 status: current
-last_changed: 2026-06-29
+last_changed: 2026-08-19
 ---
 
 # Methodology Specification — the protocol stack
 
-This document specifies the methodology's protocol stack: the eight protocols under `protocols/`, how they layer, the sections each one declares, and the rules for composing them. It is the structural companion to [`README.md`](repos/humanities-ai-methodology/README.md) (statement, motivation, status) and [`GOVERNANCE.md`](GOVERNANCE.md) (versioning, document classes).
+This document specifies the methodology's protocol stack: the eight protocols under `protocols/`, how they layer, the sections each one declares, and the rules for composing them. It is the structural companion to [`README.md`](README.md) (statement, motivation, status) and [`GOVERNANCE.md`](GOVERNANCE.md) (versioning, document classes).
 
 ## 1. The eight protocols
 
 | Protocol | File | Layer | Covers |
 |---|---|---|---|
 | Source | [`protocols/source-protocol.md`](protocols/source-protocol.md) | pipeline (intake) | source intake: *Snippets ≠ Primary*, *Secondary ≠ Primary*, *Search-Absence ≠ Proof-of-Absence* |
-| Interpretive-Frame | [`protocols/interpretive-frame-protocol.md`](protocols/interpretive-frame-protocol.md) | pipeline (coding) | the analytical coding step: *Lexicon Stability Across Stage Transitions*, *Frame Plurality Check* |
+| Interpretive-Frame | [`protocols/interpretive-frame-protocol.md`](protocols/interpretive-frame-protocol.md) | pipeline (coding) | the analytical coding step: *Lexicon Stability Across Stage Transitions*, *Frame Plurality Check*, *Operation Declaration* |
 | Writing | [`protocols/writing-protocol.md`](protocols/writing-protocol.md) | pipeline (composition) | composition: *Composition Drift*, *Descriptive Accuracy* |
 | Actant Self-Check | [`protocols/actant-self-check.md`](protocols/actant-self-check.md) | pipeline (voice) | author positionality: *Verb Audit*, *Addressee Audit*, *Discrediting-Frame Inoculation* |
-| Tool | [`protocols/tool-protocol.md`](protocols/tool-protocol.md) | infrastructure (upstream) | tool fidelity: *Encoding Fidelity*, *Read Fidelity*, *Pre-Production Tool Validation* |
-| Falsification | [`protocols/falsification-protocol.md`](protocols/falsification-protocol.md) | meta (validity axis) | claim-status: *Demarcation at the Claim Level*, *Methodology as Pile-Driver Work*, *Test Mode over Defense Mode* (+ seven operational tests) |
+| Tool | [`protocols/tool-protocol.md`](protocols/tool-protocol.md) | infrastructure (upstream) | tool fidelity: *Encoding Fidelity*, *Read Fidelity*, *Pre-Production Tool Validation*, *Declare vs. Enforce* |
+| Falsification | [`protocols/falsification-protocol.md`](protocols/falsification-protocol.md) | meta (validity axis) | claim-status: *Demarcation at the Claim Level*, *Methodology as Pile-Driver Work*, *Test Mode over Defense Mode*, *Instrument Validation and Test-Material Design* (+ ten operational tests) |
 | Provenance | [`protocols/provenance-protocol.md`](protocols/provenance-protocol.md) | meta (provenance axis) | human-vs-AI provenance: *Provenance Marking at Introduction-Time*, *Audit-Trail Across Project-Span*, *Learning-Progress Verifiability* |
 | Read-Write Boundary | [`protocols/read-write-boundary-protocol.md`](protocols/read-write-boundary-protocol.md) | meta (authority/currency axis) | field-class write-contract + premise-bound invalidation: *The Four Field-Classes*, *Invalidate, Never Author*, *A Hand-Maintained Derived Field Is a Drift Bug* |
 

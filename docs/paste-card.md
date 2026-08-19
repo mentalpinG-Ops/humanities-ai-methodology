@@ -1,17 +1,25 @@
 ---
 name: Paste-Card
 status: draft
-last_changed: 2026-07-05
+last_changed: 2026-08-19
 class: derived-gloss   # human-judged compression; the pointer below is mechanical
 derived_from:
   - protocols/source-protocol.md @ 0.1.0
-  - protocols/interpretive-frame-protocol.md @ 0.1.0
+  - protocols/interpretive-frame-protocol.md @ 0.2.0
   - protocols/writing-protocol.md @ 0.1.0
   - protocols/actant-self-check.md @ 0.1.0
 staleness_rule: >
   If any protocol under derived_from bumps its version, this card is stale:
   a human re-glosses it against the changed text. Automation may flag
   staleness; it must never regenerate the card.
+scope_decision: >
+  2026-08-19, re-gloss against interpretive-frame 0.2.0. That bump added
+  pattern 2.3 (Operation Declaration). Judged and deliberately NOT carried
+  onto the card: the pattern presupposes a vocabulary of named analytical
+  operations that this card nowhere introduces, and the card is already a
+  selection — it glosses four of the eight protocols. The omission is a
+  decision, not a gap; it is revisited when the card's scope is next widened.
+  Card text unchanged by this re-gloss.
 ---
 
 <!-- Everything below this line is the card users copy. -->
