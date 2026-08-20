@@ -22,8 +22,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **City names removed repository-wide (boundary rule enforced).** This repository's own hard rule — no
   employer, institution, city, or person named in any public file — was violated in three places, two of
   them long-standing: the README (§2 motivation and §6 case-study list) and `source-protocol.md`'s
-  failure-mode gallery said "Body-Worlds **Wrocław**" since May/June, and the maturity-signal SVGs added
-  the same day as this fix carried two channel city names in signal 2. All city names are gone: the
+  failure-mode gallery had carried a city name after "Body-Worlds" since May/June, and the maturity-signal
+  SVGs added the same day as this fix carried two channel city names in signal 2. All city names are gone: the
   exhibition is "a Body-Worlds travelling exhibition", the channels read "channel 1 ready" / "channel 2
   ready". Source Protocol takes a patch bump (0.2.1) for the gallery wording. Kept deliberately: the
   maintainer's own name in `CITATION.cff` and the licence files (authorship, decided 2026-08-20), and
