@@ -19,6 +19,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+- **`docs/index.html` — the diagnostic paste-prompt answers instead of interviewing.** First live user
+  test of the onboarding page (2026-08-20, in a chat app) surfaced two defects within minutes. The prompt
+  said *"Ask me up to three short questions … Then recommend"* — and nothing required waiting for the
+  answers: in the observed run the model asked its three questions, received none, and recommended anyway,
+  which makes the questions decorative (the same failure class the tool protocol names for unenforced
+  obligations). And for the card's actual audience the interaction was backwards — a first-time user wants
+  a recommendation and got an interrogation, although the model demonstrably knew which app it was in and
+  recommended sensibly without any answers. The prompt now instructs: answer right away, base the
+  recommendation only on what the model actually knows about the app it is running in, and where an
+  account-level feature matters but cannot be verified, hand the user a one-line *"where to look on your
+  screen"* instead of a question or a guess. Both honest-warning properties survive; the blocking
+  interview does not. Worth recording: the previous version had passed a weak-reader proxy test and a
+  persona read — the first real user falsified the interaction design in one paste, which is the
+  external-readers lesson doing exactly what it predicted.
+
 - **The reader-facing front door is now findable, and its links survive a Pages deployment.** Two defects,
   both flagged in the 0.2.0 hygiene pass: the README never mentioned `docs/` — a visitor landed on the
   project statement and could not learn that a reader-facing entry point exists — and `docs/index.html`
