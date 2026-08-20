@@ -8,6 +8,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Falsification Protocol 0.4.0 — §2.4 clause (e) *Yield declared before the run*.** Before an empirical
+  check starts, state what will exist after it — in **both** outcomes: an investigation whose null outcome
+  yields nothing was designed badly, not run unluckily. Three parts: the anchored goal the check can move;
+  the yield of best *and* worst outcome, with **asymmetry declared** (an existence negation can be refuted
+  by one find but never confirmed by any number of misses — its null yield is a search record, not a
+  finding); and the **cheapest partial step that could spare the expensive ones** — positive control first,
+  sharpest single refuter first. The point is not to run less; it is to run in an order in which each step
+  can change whether the next is needed. The ad-hoc case gets the cheap version, exactly as (a′) provides
+  for instrument scope. Promoted from the maintainer's practice corpus (August 2026): a six-axis literature
+  sweep, correctly pre-registered in every other respect, launched all axes at once — the two decisive axes
+  would have been a third of the cost, the computed token floor was exceeded by a third, and the run broke
+  off mid-verification at a session limit (stated as observation, not proof). The clause closes the gap the
+  case exposed: pre-registration discipline alone never asked the price. It matters more under delegation,
+  not less — an archive trip disciplines the investigator through its own effort, a delegated agent run
+  does not; the economics of checking do not disappear, they become invisible.
+
 - **Falsification Protocol 0.3.0 — §2.5 *The Referent Is the Privileged Falsifier*** (new pattern), plus clauses **(a′)** and **(c′)** on §2.4. **§2.5:** for any claim of the form *"A says X about B"*, B is the sharpest and cheapest available test — not because B is neutral, but because B holds the primary material and has no stake in A's version. Descriptions drift asymmetrically: a text about *itself* gets corrected by whoever maintains it, a text about something *else* has no owner. Selecting the falsifier is mechanisable (whoever is described, checks); the judgement is not. The pattern names its own blind spot — shared infrastructure that describes no one in particular has no referent, and that is where drift proved densest — and carries a standing limitation stating that it rests on a single operating period, adopted on structural grounds, together with the case that would falsify it. **(a′):** clause (a) binds pre-registered tests, but most checking is ad-hoc — a linter run, a quick query — and therefore unprotected, since nobody writes a pre-registration for those and nobody asks whether the instrument is in scope. **(c′):** material difficulty is the best-known design variable, not the only one; operating mode, addressee, observation window and the wording of the commission are equally conditions of the result, and a test arrangement can supply the answer it then reports. Five documented cases, the sharpest being a specified output step that never executed in three of three runs because test runs have no addressee — the arrangement produced the very condition under which the examined process does not occur. Promoted from the maintainer's practice corpus (July–August 2026).
 
 ### Changed
