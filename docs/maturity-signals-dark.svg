@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 384" width="680" height="384" role="img" aria-labelledby="msTitle msDesc">
+<!-- status: draft · last_changed: 2026-08-20 · class: delivery (dark variant; light: maturity-signals.svg)
+     Derived view of README §7 candidate signals. The as-of date below is load-bearing:
+     this image is a hand-maintained snapshot and must be re-dated when a signal moves. -->
+<title id="msTitle">Maturity signals for peer-review escalation, as of 2026-08-20</title>
+<desc id="msDesc">Four signal rows: intervention before the failure, one candidate of proposed two to three; external read-tests, zero of proposed two to three, the bottleneck; structural stability, one and a half of proposed three to six months; cross-material confirmation, one of one, itself an unratified candidate signal. Earliest review point under the proposed minimal set is October 2026 if signal two delivers.</desc>
+<style>text{font-family:ui-sans-serif,system-ui,-apple-system,sans-serif}</style>
+
+<text x="16" y="24" font-size="16" font-weight="500" fill="#E8E6DD">Maturity signals for peer-review escalation</text>
+<text x="664" y="24" font-size="12" fill="#9A9890" text-anchor="end">as of 2026-08-20</text>
+<text x="16" y="42" font-size="12" fill="#EF9F27">All thresholds shown are proposed, not adopted — the S5 decision is still open.</text>
+
+<text x="16" y="72" font-size="13" fill="#E8E6DD">1 · Intervention <tspan font-style="italic">before</tspan> the failure</text>
+<text x="664" y="72" font-size="12" fill="#9A9890" text-anchor="end">1 candidate · prop. min. 2 · cons. 3</text>
+<rect x="16" y="80" width="212" height="22" rx="4" fill="#633806" stroke="#EF9F27" stroke-width="1"/>
+<text x="122" y="95" font-size="11" fill="#FAC775" text-anchor="middle">C10 catch, Aug 19</text>
+<rect x="234" y="80" width="212" height="22" rx="4" fill="#262624" stroke="#888780" stroke-width="1" stroke-dasharray="3 2"/>
+<rect x="452" y="80" width="212" height="22" rx="4" fill="#262624" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="16" y="117" font-size="11" fill="#9A9890">Counting rule open: does a tool hardening count, or only protocol discipline?</text>
+
+<text x="16" y="144" font-size="13" fill="#E8E6DD">2 · External read-tests (humans)</text>
+<text x="664" y="144" font-size="12" fill="#9A9890" text-anchor="end">0 on file · prop. min. 2 · cons. 3</text>
+<rect x="16" y="152" width="212" height="22" rx="4" fill="#262624" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="122" y="167" font-size="11" fill="#9A9890" text-anchor="middle">channel ready: Toruń</text>
+<rect x="234" y="152" width="212" height="22" rx="4" fill="#262624" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="340" y="167" font-size="11" fill="#9A9890" text-anchor="middle">channel ready: Wałbrzych</text>
+<rect x="452" y="152" width="212" height="22" rx="4" fill="#262624" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="16" y="189" font-size="11" fill="#F09595">Bottleneck — the only signal at zero. AI reviews do not count (external-readers rule).</text>
+
+<text x="16" y="216" font-size="13" fill="#E8E6DD">3 · Structurally stable, no re-articulation</text>
+<text x="664" y="216" font-size="12" fill="#9A9890" text-anchor="end">1.5 mo · prop. min. 3 · cons. 6</text>
+<rect x="16" y="224" width="648" height="22" rx="4" fill="#262624" stroke="#5F5E5A" stroke-width="1"/>
+<rect x="16" y="224" width="162" height="22" rx="4" fill="#085041" stroke="#5DCAA5" stroke-width="1"/>
+<line x1="340" y1="224" x2="340" y2="246" stroke="#888780" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="186" y="239" font-size="11" fill="#9FE1CB">today</text>
+<text x="346" y="239" font-size="11" fill="#9A9890">prop. min. — Oct 2026</text>
+<text x="658" y="239" font-size="11" fill="#9A9890" text-anchor="end">cons. — Jan 2027</text>
+<text x="16" y="261" font-size="11" fill="#9A9890">Clock start: the v0.1 freeze (Jul 5). Additive growth counts as stable; restructuring does not.</text>
+
+<text x="16" y="288" font-size="13" fill="#E8E6DD">4 · Cross-material confirmation <tspan font-size="11" fill="#9A9890">(candidate signal, unratified)</tspan></text>
+<text x="664" y="288" font-size="12" fill="#9A9890" text-anchor="end">1 · prop. min. 1</text>
+<rect x="16" y="296" width="648" height="22" rx="4" fill="#085041" stroke="#5DCAA5" stroke-width="1"/>
+<text x="340" y="311" font-size="11" fill="#9FE1CB" text-anchor="middle">Aug 18: an independent changelog analysis confirmed read-write-boundary §2.3 on material foreign to its derivation</text>
+
+<line x1="16" y1="336" x2="664" y2="336" stroke="#444441" stroke-width="1"/>
+<rect x="16" y="348" width="12" height="12" rx="3" fill="#085041" stroke="#5DCAA5" stroke-width="1"/>
+<text x="34" y="358" font-size="12" fill="#9A9890">met</text>
+<rect x="70" y="348" width="12" height="12" rx="3" fill="#633806" stroke="#EF9F27" stroke-width="1"/>
+<text x="88" y="358" font-size="12" fill="#9A9890">candidate, counting rule open</text>
+<rect x="268" y="348" width="12" height="12" rx="3" fill="#262624" stroke="#888780" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="286" y="358" font-size="12" fill="#9A9890">open</text>
+<text x="664" y="358" font-size="12" fill="#E8E6DD" text-anchor="end">Earliest review point (proposed minimal set 2·2·3): Oct 2026 — if signal 2 delivers</text>
+</svg>

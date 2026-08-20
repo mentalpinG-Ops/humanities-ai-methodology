@@ -17,6 +17,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   GitHub renders the file as a "Cite this repository" box once the repository is visible to the reader —
   which, per ADR-0013, remains a separate decision.
 
+### Added
+
+- **README §7 gains a maturity-signal dashboard (`docs/maturity-signals.svg` + dark variant).** The
+  candidate signals for peer-review escalation existed only as prose bullets with "Operationalisation of
+  N / M / X pending"; the new graphic shows where each signal actually stands — one intervention-candidate
+  with its counting rule open, zero human read-tests against two ready channels (the bottleneck, marked as
+  such), the stability clock at 1.5 of a proposed 3–6 months, and the cross-material confirmation already
+  on file as an unratified fourth candidate. Three honesty properties are built in: every threshold is
+  labelled **proposed, not adopted** (the graphic must not ratify S5 as a side effect), the as-of date is
+  load-bearing and printed in the image (it is a hand-maintained snapshot — the drift risk the read-write
+  boundary protocol names, accepted here and declared in the SVG's own comment header), and the embedded
+  alt text carries the full content for non-visual readers. Light/dark via the GitHub-supported
+  `<picture>` pattern; both variants carry Delivery-class comment frontmatter.
+
 ### Changed
 
 - **`docs/paste-card.md` (and its embedded copy in `docs/index.html`) — six tightenings from the first

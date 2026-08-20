@@ -90,7 +90,16 @@ Contribution is *ad-hoc*: an artefact yields methodology material when it does s
 
 The eight modules are orthogonal layers. Tool protocol is *infrastructure-upstream* of the other seven (its failures invalidate them); falsification, provenance, and read-write boundary protocols are *meta-level* across the others along three distinct axes (validity vs. provenance vs. authority/currency — falsification asks *"could this be wrong?"*, provenance asks *"where did this come from?"*, read-write boundary asks *"who may write this, and has it outlived its premises?"*). The remaining four run sequentially along the source-to-publication pipeline (source intake → interpretive coding → composition → author voice).
 
-**Maturity signals for peer-review escalation** are not yet operationalised. Candidates:
+**Maturity signals for peer-review escalation** are not yet operationalised. A working view of where the
+candidate signals stand — the thresholds in it are **proposed, not adopted** (the S5 decision is open),
+and the image is a dated snapshot, re-cut when a signal moves:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/maturity-signals-dark.svg">
+  <img alt="Maturity-signal dashboard, as of 2026-08-20: signal 1, intervention before the failure — one candidate of a proposed two to three, counting rule open; signal 2, external human read-tests — zero on file of a proposed two to three, the bottleneck, two channels ready; signal 3, structural stability — one and a half of a proposed three to six months, clock started at the v0.1 freeze; signal 4, cross-material confirmation — one of one, itself an unratified candidate signal. Earliest review point under the proposed minimal set: October 2026, if signal 2 delivers." src="docs/maturity-signals.svg" width="680">
+</picture>
+
+Candidates:
 
 - ≥ N case studies in which the methodology intervened *before* the failure (not only retrospective lift).
 - External read-tests by ≥ M humanities scholars with substantive feedback.
