@@ -2,6 +2,13 @@
 
 *Working draft, 2026-05-21. Language: English. TBD markers in §§1, 4, 5, 7 indicate Strategic Open Questions whose resolution is pending.*
 
+> **Reading, not maintaining?** The reader-facing entry point lives under [`docs/`](docs/): the
+> [onboarding page](docs/index.html) (plain-language front door — integration levels, a two-question
+> capability test, a worked example; renders once GitHub Pages is enabled, until then GitHub shows its
+> source), the copyable [session paste-card](docs/paste-card.md), and the
+> [addressee map](docs/addressee-map.md) (who acts on each pattern — you, or your AI). This README below
+> is the project statement, written for people who want to understand or audit the methodology itself.
+
 ---
 
 ## 1. Statement

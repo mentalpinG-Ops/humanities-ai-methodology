@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **The reader-facing front door is now findable, and its links survive a Pages deployment.** Two defects,
+  both flagged in the 0.2.0 hygiene pass: the README never mentioned `docs/` — a visitor landed on the
+  project statement and could not learn that a reader-facing entry point exists — and `docs/index.html`
+  carried three relative links (`../protocols/`, `paste-card.md`, `addressee-map.md`) that resolve in the
+  GitHub repository view but break under a docs/-rooted Pages deployment, a trap the page itself recorded
+  in its flip-time NOTE. The README opens with a reader-vs-maintainer pointer (honest about the interim
+  state: the HTML renders only once Pages is enabled — until then the readable entries are the paste-card
+  and the addressee map); the three links are absolute repository URLs now, which work identically in both
+  contexts, and the NOTE records the fix instead of the trap. The page's status line also caught up with
+  yesterday: it named `version-0.1` as the current reference point while `version-0.2` has been the citable
+  tag since 2026-08-19.
+
 ### Added
 
 - **Falsification Protocol 0.4.0 — §2.4 clause (e) *Yield declared before the run*.** Before an empirical
