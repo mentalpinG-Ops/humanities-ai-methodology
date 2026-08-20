@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: >-
+  If you use or discuss this methodology, please cite it using the metadata
+  below — and cite a tag, not the moving main branch (see GOVERNANCE.md
+  §Versioning: a tag is the fixed reference point external references
+  should attach to).
+title: "Humanities-AI Methodology"
+abstract: >-
+  An AI-agnostic methodology for humanities students and scholars working
+  with AI tools toward responsible, publishable outcomes: a stack of eight
+  composable working protocols (source intake, interpretive framing,
+  composition, author voice, tool fidelity, falsification, provenance,
+  read-write authority), each distilled from documented practice — no
+  protocol enters without an empirical anchor in at least one documented
+  practice sequence.
+authors:
+  - family-names: Pokropski
+    given-names: Denis
+version: "0.2.0"
+date-released: "2026-08-19"
+url: "https://github.com/mentalpinG-Ops/humanities-ai-methodology"
+repository-code: "https://github.com/mentalpinG-Ops/humanities-ai-methodology"
+license: CC-BY-SA-4.0
+keywords:
+  - humanities
+  - research methodology
+  - responsible AI use
+  - AI-assisted research
+  - provenance
+  - falsification
+  - digital humanities

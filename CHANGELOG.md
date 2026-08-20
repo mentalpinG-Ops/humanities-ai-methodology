@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- **`CITATION.cff` — the citability claim finally has a mechanism.** The README has said
+  "methodologically citable from day one" since May; GOVERNANCE has required "cite a tag, not the moving
+  `main` branch" since July — and no file told a reader how to do either. The citation file names the
+  work, the author, the licence, and `version 0.2.0` with its release date, and its message restates the
+  tag rule. Author attribution follows the form already public on the distribution channel's release
+  notes (© Denis Pokropski / mentalpinG-Ops); an ORCID can be added later without changing anything else.
+  GitHub renders the file as a "Cite this repository" box once the repository is visible to the reader —
+  which, per ADR-0013, remains a separate decision.
+
 ### Fixed
 
 - **The reader-facing front door is now findable, and its links survive a Pages deployment.** Two defects,
