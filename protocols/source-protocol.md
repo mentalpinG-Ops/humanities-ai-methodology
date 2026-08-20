@@ -1,8 +1,8 @@
 ---
 name: Source Protocol
-version: 0.2.0
+version: 0.2.1
 status: draft
-last_changed: 2026-08-19
+last_changed: 2026-08-20
 ---
 
 # Source Protocol
@@ -91,7 +91,7 @@ The protocol is grounded in documented failure modes, not prophylactic abstracti
 
 - **Snippet-cascade failure** (administrative-document forensic-analysis case study). A search snippet from an administrative secondary source was treated as primary attestation; downstream synthesis stabilised the inaccuracy through several editorial stages. Methodology lift: an explicit cascade-risk audit step (separately codified).
 
-- **Promoter amplification *hymn* vs. *hołd*** (Body-Worlds Wrocław travelling exhibition). Promotional secondary text treated as original Vatican attestation. Direct lift to Pattern 2.2.
+- **Promoter amplification *hymn* vs. *hołd*** (a Body-Worlds travelling exhibition). Promotional secondary text treated as original Vatican attestation. Direct lift to Pattern 2.2.
 
 - **Agent-report synthesis drift** (knowledge-representation lab). Aggregated agent searches were synthesised without per-source verification level; the synthesis stage must re-check verification level, not assume it carries through. Methodology lift: Pattern 3 plus a dedicated verification-level rule.
 

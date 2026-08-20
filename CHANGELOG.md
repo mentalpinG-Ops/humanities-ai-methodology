@@ -17,6 +17,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   GitHub renders the file as a "Cite this repository" box once the repository is visible to the reader —
   which, per ADR-0013, remains a separate decision.
 
+### Fixed
+
+- **City names removed repository-wide (boundary rule enforced).** This repository's own hard rule — no
+  employer, institution, city, or person named in any public file — was violated in three places, two of
+  them long-standing: the README (§2 motivation and §6 case-study list) and `source-protocol.md`'s
+  failure-mode gallery said "Body-Worlds **Wrocław**" since May/June, and the maturity-signal SVGs added
+  the same day as this fix carried two channel city names in signal 2. All city names are gone: the
+  exhibition is "a Body-Worlds travelling exhibition", the channels read "channel 1 ready" / "channel 2
+  ready". Source Protocol takes a patch bump (0.2.1) for the gallery wording. Kept deliberately: the
+  maintainer's own name in `CITATION.cff` and the licence files (authorship, decided 2026-08-20), and
+  cited scholars (Popper, the translation credit, the skin-in-the-game attribution) — citations are
+  references, not stakeholders. Two flagged edge cases, not silently resolved: "Body-Worlds" and
+  "Vatican" are institutions named as **objects of analysis** in documented failure cases; the boundary
+  rule's letter covers institutions too, so their retention is recorded here as a deliberate reading
+  (analysis subject ≠ stakeholder), open to reversal. The names remain in the git history of earlier
+  commits; the working tree is clean, and a history question is a separate decision — the natural moment
+  for it is before any public flip.
+
 ### Added
 
 - **README §7 gains a maturity-signal dashboard (`docs/maturity-signals.svg` + dark variant).** The

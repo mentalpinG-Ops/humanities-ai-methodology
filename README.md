@@ -19,7 +19,7 @@ Audience specification (early-career vs. established vs. mixed) pending S1.
 
 ## 2. Motivation
 
-The trigger was not a theoretical need but an empirical diagnosis. During the publication of an analytical op-ed on the Body-Worlds Wrocław travelling exhibition (May 2026), *descriptive-accuracy* errors appeared that required manual post-publication correction. The methodological reconstruction yielded a finding: the protocols that would have prevented such errors did exist fragmentarily in individual project checklists, but not as a coherent workflow. The question *"do we have a consistent workflow, or piecework?"* had to be answered with *piecework*.
+The trigger was not a theoretical need but an empirical diagnosis. During the publication of an analytical op-ed on a Body-Worlds travelling exhibition (May 2026), *descriptive-accuracy* errors appeared that required manual post-publication correction. The methodological reconstruction yielded a finding: the protocols that would have prevented such errors did exist fragmentarily in individual project checklists, but not as a coherent workflow. The question *"do we have a consistent workflow, or piecework?"* had to be answered with *piecework*.
 
 From this emerged the reframing: **methodology is not a side effect of project work; it is a primary research object**. Concrete projects (Ideologiekritik, Studium, Rosenkranz, knowledge-representation, aXIOM) are ad-hoc test cases against which the methodology develops and is stress-tested — not its telos.
 
@@ -63,7 +63,7 @@ Pending: a literature survey to determine whether established standards or best 
 
 The five active projects are test cases in which the methodology either holds up or produces failure modes:
 
-- **Ideologiekritik** — op-ed pipeline and multimodal artefact analysis; the Body-Worlds-Wrocław op-ed is the first empirical failure-to-methodology lift (pre-publication checklist as the first Methodology-material).
+- **Ideologiekritik** — op-ed pipeline and multimodal artefact analysis; the Body-Worlds op-ed is the first empirical failure-to-methodology lift (pre-publication checklist as the first Methodology-material).
 - **Studium** — bibliography management and cross-disciplinary methods inventory.
 - **Rosenkranz** — translation workflow German → Polish with glossary protocol.
 - **knowledge-representation** — retrieval tooling over a library corpus; evaluation methodology.
