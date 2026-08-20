@@ -1,7 +1,7 @@
 ---
 name: Paste-Card
 status: draft
-last_changed: 2026-08-19
+last_changed: 2026-08-20
 class: derived-gloss   # human-judged compression; the pointer below is mechanical
 derived_from:
   - protocols/source-protocol.md @ 0.1.0
@@ -37,19 +37,20 @@ I tell you: which search tools we'll use, what language the final text is in, an
 ## Step 2 — While we gather sources
 
 **1. The preview is not the source.** Search results and AI summaries show fragments — truncated, outdated, sometimes from ad copy rather than the original.
-→ **AI:** fetch the full text and compare the exact wording; if they differ, the full text wins.
+→ **AI:** fetch the full text and compare the exact wording; if they differ, the most authoritative version we can identify for this claim wins — and we note the difference instead of silently picking one. (A handy webpage can itself be the wrong edition, a translation, or a quietly revised copy.)
 → **Me:** I read it myself before we build anything on it. If the full text can't be reached, the fragment keeps its "unchecked" label — we never treat it as evidence, and if it must be mentioned, we say openly that it is unverified. *(Snippets ≠ Primary)*
 
 **2. "Someone wrote about it" is not the thing itself.** A blog post about a study is not the study; a brochure quoting a newspaper is not the newspaper. Copies drift — sometimes deliberately, when promotional material polishes a quote until it says something better than the original did.
-→ **AI:** for every source, say out loud what kind it is — the original, a description of it, or a description of a description — and name where the original should be found.
+→ **AI:** for every source, say out loud what it is *for the claim we're using it for* — the thing itself, someone reporting on it, or a report about a report — and name where the original should be found. (The same newspaper piece is a report *about* an event, but the thing itself for *how people wrote at the time*.)
 → **Me:** if we can't reach the original, we say so in the text instead of quoting the copy as if it were the original. *(Secondary ≠ Primary)*
 
 **3. "I found nothing" doesn't mean "it doesn't exist."** Search tools have gaps: paywalls, other languages, missing indexes, stale caches.
 → **AI:** when a search comes up empty, report it precisely — which tool, which exact search words, what date — and name what might have hidden it.
-→ **Me:** before we claim something doesn't exist, we try at least two different tools; in the text I write "we could not find it", not "there is none". *(Search-Absence ≠ Proof-of-Absence)*
+→ **Me:** before we claim something doesn't exist, we try at least two genuinely different search routes — say, a web search *and* a library catalogue or scholarly database; two search engines often look in the same places. In the text I write "we could not find it", not "there is none". *(Search-Absence ≠ Proof-of-Absence)*
 
 **Our trust labels.** Every source we use carries one, and it sticks until *I* change it by reading:
-**read-it-myself** (safe to build on) · **summary-only** (I read only an abstract) · **AI-told-me** (you summarised it; I haven't read it — not safe to cite yet) · **preview-only** (a fragment — never cite). Ten AI summaries never add up to one read text.
+**read-it-myself** (I've read the real thing with my own eyes) · **summary-only** (I read only an abstract) · **AI-told-me** (you summarised it; I haven't read it — not safe to cite yet) · **preview-only** (a fragment — never cite). Ten AI summaries never add up to one read text: **no amount of AI checking upgrades a label — only my own reading does.**
+Two things a label does *not* say: whether the source is any good (a propaganda leaflet can be honestly *read-it-myself*), and whether it actually supports my claim. Both are separate judgements, made next to the label — never read off it.
 
 ## Step 3 — Before I start writing
 
@@ -66,7 +67,7 @@ I tell you: which search tools we'll use, what language the final text is in, an
 ## Step 4 — While I write
 
 **6. My memory of the source drifts as I write.** After a couple of hours, I'm quoting my own draft, not the source — confidently and wrong.
-→ **AI:** re-compare every direct quote in the draft against the source text, word for word, whenever I ask — and remind me if two hours have passed.
+→ **AI:** re-compare every direct quote in the draft against the source text, word for word, whenever I ask. (In a long session I may ask you to run that check at intervals — a convenience, not the rule; the rule is the final pass below.)
 → **Me:** every claim of the kind "the picture/text shows X" gets a little flag in the draft; the flag stays until I've looked at the original again. *(Composition Drift)*
 
 ## Step 5 — Before it goes out
@@ -84,9 +85,9 @@ Then one last pass, three quick rounds: quotes vs. originals · "shows X" senten
 → **AI:** map the we's and they's — who's included, who's talked about.
 → **Me:** if I didn't choose that team-building on purpose, I rewrite it neutrally — or state openly whom I'm speaking for. *(Addressee Audit)*
 
-**10. Name the school of thought before someone weaponises it.** If my text uses ideas from a tradition that gets smeared in public debate (critical theory and its relatives), vague borrowing invites the smear.
-→ **AI:** suggest the exact reference — author, title, year.
-→ **Me:** I check every suggested name and year against the source before it goes in (invented references are a known AI failure), and I cite the tradition openly in the running text, by name — scholarship engaged is harder to smear than influence smuggled. *(Discrediting-Frame Inoculation)*
+**10. Name the school of thought you're drawing on.** If my argument leans on a recognisable tradition, an unnamed borrowing weakens it — readers cannot check what they cannot see.
+→ **AI:** when my argument depends on such a tradition, propose the exact reference — author, title, year.
+→ **Me:** I check every proposed name and year against the source before it goes in (invented references are a known AI failure), judge whether the fit is real, and cite the tradition openly in the running text. *(Intellectual Lineage Check — the full protocol, Discrediting-Frame Inoculation, also explains when open citation protects a text in hostile debates.)*
 
 ---
 

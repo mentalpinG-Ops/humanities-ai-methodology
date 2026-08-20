@@ -17,6 +17,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   GitHub renders the file as a "Cite this repository" box once the repository is visible to the reader —
   which, per ADR-0013, remains a separate decision.
 
+### Changed
+
+- **`docs/paste-card.md` (and its embedded copy in `docs/index.html`) — six tightenings from the first
+  reviewed live test, provenance / reading-state / evidential-quality made explicit.** An AI review of the
+  card, brought in by the maintainer from the same live test that caught the prompt defect, held up under
+  triage on all six points. The card now says: the most authoritative identifiable version wins — not
+  simply "the full text" — and version disagreements are recorded, not silently resolved; a source is
+  classified by its **relationship to the claim in hand** (the same newspaper piece is a report *about* an
+  event but the thing itself for *how people wrote at the time*); "two different tools" became **two
+  genuinely different retrieval routes**, since two search engines often query the same indexes; the
+  two-hour reminder is separated from the rule it decorated (the invariant is the final pre-publication
+  quote pass, the interval check is a convenience); and item 10 is methodologically neutral on the card —
+  **Intellectual Lineage Check**: name the tradition your argument depends on because readers cannot check
+  what they cannot see — while the protective rationale for hostile debates stays where it belongs, in the
+  full protocol (Discrediting-Frame Inoculation), which the bracket trail still names. The deepest fix is
+  a two-sentence addition at the trust labels: **a label records how I know what a source says, never
+  whether the source is any good or whether it supports my claim** (a propaganda leaflet can be honestly
+  *read-it-myself*) — and **no amount of AI checking upgrades a label; only my own reading does**, stated
+  now as a rule rather than left implicit in the ten-summaries line. Card text and embedded HTML copy
+  verified string-identical after the edit.
+
 ### Fixed
 
 - **`docs/index.html` — the diagnostic paste-prompt answers instead of interviewing.** First live user
