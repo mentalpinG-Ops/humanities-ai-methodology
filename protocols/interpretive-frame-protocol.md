@@ -1,8 +1,8 @@
 ---
 name: Interpretive-Frame Protocol
-version: 0.2.0
+version: 0.2.1
 status: draft
-last_changed: 2026-07-20
+last_changed: 2026-09-06
 ---
 
 # Interpretive-Frame Protocol
@@ -93,7 +93,7 @@ The protocol does not require formal protocols. It requires that the analyst can
 
 ## 4. Failure-Mode Gallery
 
-Three documented cases — two from a single op-ed publication (Body-Worlds exhibition advertisement op-ed, May 2026), one from this repository's own methodology files (language-stage transition, May 2026):
+Three documented cases — two from a single op-ed publication (an op-ed on the advertising of a travelling anatomical exhibition, May 2026), one from this repository's own methodology files (language-stage transition, May 2026):
 
 - **Lexicon-drift from "lasso-thrower" to "cowboy".** Early-stage analysis (a methodological synthesis grounded in the exhibition catalogue's own pose-vocabulary) labelled a plastinated figure with raised arm a *lasso-thrower* — descriptive-actional, drawn from the catalogue. Mid-stage analysis (discourse analysis tables, semiotic coding) substituted *cowboy* — culturally-typological, Western-genre-loaded. The published op-ed inherited *cowboy*. The substitution was never flagged with a reason. *Lift: Pattern 2.1 (analytical-stage form).*
 

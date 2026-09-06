@@ -19,9 +19,9 @@ Audience specification (early-career vs. established vs. mixed) pending S1.
 
 ## 2. Motivation
 
-The trigger was not a theoretical need but an empirical diagnosis. During the publication of an analytical op-ed on a Body-Worlds travelling exhibition (May 2026), *descriptive-accuracy* errors appeared that required manual post-publication correction. The methodological reconstruction yielded a finding: the protocols that would have prevented such errors did exist fragmentarily in individual project checklists, but not as a coherent workflow. The question *"do we have a consistent workflow, or piecework?"* had to be answered with *piecework*.
+The trigger was not a theoretical need but an empirical diagnosis. During the publication of an analytical op-ed on a travelling anatomical exhibition (May 2026), *descriptive-accuracy* errors appeared that required manual post-publication correction. The methodological reconstruction yielded a finding: the protocols that would have prevented such errors did exist fragmentarily in individual project checklists, but not as a coherent workflow. The question *"do we have a consistent workflow, or piecework?"* had to be answered with *piecework*.
 
-From this emerged the reframing: **methodology is not a side effect of project work; it is a primary research object**. Concrete projects (Ideologiekritik, Studium, Rosenkranz, knowledge-representation, aXIOM) are ad-hoc test cases against which the methodology develops and is stress-tested — not its telos.
+From this emerged the reframing: **methodology is not a side effect of project work; it is a primary research object**. Concrete research projects — an ideology-critique pipeline, a master's-studies workflow, a translation project, a retrieval lab, a schema-development track — are ad-hoc test cases against which the methodology develops and is stress-tested — not its telos.
 
 ## 3. What is delivered
 
@@ -63,11 +63,11 @@ Pending: a literature survey to determine whether established standards or best 
 
 The five active projects are test cases in which the methodology either holds up or produces failure modes:
 
-- **Ideologiekritik** — op-ed pipeline and multimodal artefact analysis; the Body-Worlds op-ed is the first empirical failure-to-methodology lift (pre-publication checklist as the first Methodology-material).
-- **Studium** — bibliography management and cross-disciplinary methods inventory.
-- **Rosenkranz** — translation workflow German → Polish with glossary protocol.
-- **knowledge-representation** — retrieval tooling over a library corpus; evaluation methodology.
-- **aXIOM** — schema-development track (Declarative Frame Schema for analytical prompts); methodological self-description.
+- **Ideology-critique pipeline** — op-ed production and multimodal artefact analysis; the exhibition op-ed of May 2026 is the first empirical failure-to-methodology lift (pre-publication checklist as the first Methodology-material).
+- **Master's-studies workflow** — bibliography management and cross-disciplinary methods inventory; later the home of the research-workflow routine whose incident register anchors several protocols.
+- **Translation project** — a German → Polish translation of a nineteenth-century aesthetics treatise, with a glossary protocol.
+- **Retrieval lab** — retrieval tooling over a personal library corpus; evaluation methodology.
+- **Schema-development track** — a declarative frame schema for analytical prompts; methodological self-description. Archived; its active strands moved into the successor projects.
 
 Contribution is *ad-hoc*: an artefact yields methodology material when it does so naturally, not prophylactically per project.
 

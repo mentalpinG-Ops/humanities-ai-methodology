@@ -29,17 +29,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+- **Internal project names removed repository-wide.** The README (§2 reframing, §6 case-study list),
+  `source-protocol.md`'s failure-mode gallery and one CHANGELOG entry named the maintainer's private
+  working projects and a sibling repository by their internal names. Those names are working labels,
+  not public identities, and a reader of the methodology gains nothing from them. Each is replaced by
+  what the project *is* (an ideology-critique pipeline, a master's-studies workflow, a translation
+  project, a retrieval lab, a schema-development track), which is the information the case-study
+  list was carrying anyway. In the same pass the two edge cases the previous entry had flagged and kept —
+  the exhibition brand and the institution it quoted, both named as objects of analysis — are generalised
+  too ("a travelling anatomical exhibition", "the institution it quoted"): the failure cases lose nothing
+  by it, and the rule is simpler with no exceptions than with two. Interpretive-Frame Protocol takes a
+  patch bump (0.2.1) and Source Protocol another (0.2.2) for the gallery wording. Cited published authors
+  are untouched — a citation is attribution, and removing one would trade a boundary rule for an
+  attribution failure.
 - **City names removed repository-wide (boundary rule enforced).** This repository's own hard rule — no
   employer, institution, city, or person named in any public file — was violated in three places, two of
   them long-standing: the README (§2 motivation and §6 case-study list) and `source-protocol.md`'s
-  failure-mode gallery had carried a city name after "Body-Worlds" since May/June, and the maturity-signal
+  failure-mode gallery had carried a city name after the exhibition brand since May/June, and the maturity-signal
   SVGs added the same day as this fix carried two channel city names in signal 2. All city names are gone: the
-  exhibition is "a Body-Worlds travelling exhibition", the channels read "channel 1 ready" / "channel 2
+  exhibition kept its brand at the time (generalised further in the entry above), the channels read "channel 1 ready" / "channel 2
   ready". Source Protocol takes a patch bump (0.2.1) for the gallery wording. Kept deliberately: the
   maintainer's own name in `CITATION.cff` and the licence files (authorship, decided 2026-08-20), and
   cited scholars (Popper, the translation credit, the skin-in-the-game attribution) — citations are
-  references, not stakeholders. Two flagged edge cases, not silently resolved: "Body-Worlds" and
-  "Vatican" are institutions named as **objects of analysis** in documented failure cases; the boundary
+  references, not stakeholders. Two flagged edge cases, not silently resolved: the exhibition brand and
+  the institution it quoted are named as **objects of analysis** in documented failure cases; the boundary
   rule's letter covers institutions too, so their retention is recorded here as a deliberate reading
   (analysis subject ≠ stakeholder), open to reversal. The names remain in the git history of earlier
   commits; the working tree is clean, and a history question is a separate decision — the natural moment
@@ -177,5 +190,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - **Read-Write Boundary protocol (eighth module).** A meta-level protocol on a third audit axis (authority/currency, alongside falsification's validity and provenance's origin): every durable-artefact field is classed COMPUTED / MECHANICAL / HUMAN / EXTERNAL; automation may *invalidate* a human judgement (force re-decision) but never *author* one; a mechanically-derivable field maintained by hand is a drift bug. Promoted from a recurrent artefact-drift pattern — a recorded judgement outliving the premises it was decided under. Added to `protocols/`, the `METHODOLOGY_SPEC.md` §1 table and §2 layering, `README.md` §7, and the `CLAUDE.md` module count; recorded in [`decisions/0002-add-read-write-boundary-protocol.md`](decisions/0002-add-read-write-boundary-protocol.md).
 
-- **Public governance.** The repository now carries its own public governance, mirroring the maintainer's `prompt-library` pattern: `GOVERNANCE.md` (versioning, status pipeline, a Document-Classes-and-Currency taxonomy, material boundaries), `CONTRIBUTING.md`, `CLAUDE.md`, and `.github/copilot-instructions.md` (all `status: living`); `METHODOLOGY_SPEC.md` (the protocol stack — layers, required sections, composition rules; `status: current`); this `CHANGELOG.md`; and a public `decisions/` log. Resolves the prior state in which the methodology's design-rationale lived only in the maintainer's private workspace.
+- **Public governance.** The repository now carries its own public governance, mirroring the governance pattern of the maintainer's earlier public repository: `GOVERNANCE.md` (versioning, status pipeline, a Document-Classes-and-Currency taxonomy, material boundaries), `CONTRIBUTING.md`, `CLAUDE.md`, and `.github/copilot-instructions.md` (all `status: living`); `METHODOLOGY_SPEC.md` (the protocol stack — layers, required sections, composition rules; `status: current`); this `CHANGELOG.md`; and a public `decisions/` log. Resolves the prior state in which the methodology's design-rationale lived only in the maintainer's private workspace.
 - **Four-field frontmatter on every protocol** (`name`, `version`, `status`, `last_changed`) — each protocol stamped `version: 0.1.0`, `status: draft`, `last_changed: 2026-06-17`.

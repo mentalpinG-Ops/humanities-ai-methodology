@@ -1,8 +1,8 @@
 ---
 name: Source Protocol
-version: 0.2.1
+version: 0.2.2
 status: draft
-last_changed: 2026-08-20
+last_changed: 2026-09-06
 ---
 
 # Source Protocol
@@ -45,7 +45,7 @@ These failure modes recur across tool generations. An AI-agnostic methodology ca
 
 **Why.** A specific failure class is *promoter amplification*: marketing, promotional, or intermediary material circulates a modified version of an original verbatim quote and stabilises the modification through repetition. A scholar who consumes the circulated secondary text and treats it as original attestation absorbs the modification invisibly — and, by citation, passes it on to others.
 
-Empirical case: marketing material for a travelling exhibition in Poland attributed to a Vatican daily the phrase *"wspaniały hymn" (great hymn)*. The original daily had written *"hołd dla ciała" (tribute to the body)*. *"Hymn"* is the promoter amplification; *"hołd"* is the original. A scholar who cites the promotional text as primary, without flagging it as secondary, propagates the amplification as if it were the original claim.
+Empirical case: marketing material for a travelling exhibition attributed to a church-affiliated daily newspaper the phrase *"wspaniały hymn" (great hymn)*. The original daily had written *"hołd dla ciała" (tribute to the body)*. *"Hymn"* is the promoter amplification; *"hołd"* is the original. A scholar who cites the promotional text as primary, without flagging it as secondary, propagates the amplification as if it were the original claim.
 
 **How to apply.**
 - Make the source level (primary / secondary / tertiary) a required field of the source tag.
@@ -91,9 +91,9 @@ The protocol is grounded in documented failure modes, not prophylactic abstracti
 
 - **Snippet-cascade failure** (administrative-document forensic-analysis case study). A search snippet from an administrative secondary source was treated as primary attestation; downstream synthesis stabilised the inaccuracy through several editorial stages. Methodology lift: an explicit cascade-risk audit step (separately codified).
 
-- **Promoter amplification *hymn* vs. *hołd*** (a Body-Worlds travelling exhibition). Promotional secondary text treated as original Vatican attestation. Direct lift to Pattern 2.2.
+- **Promoter amplification *hymn* vs. *hołd*** (a travelling anatomical exhibition). Promotional secondary text treated as original attestation by the institution it quoted. Direct lift to Pattern 2.2.
 
-- **Agent-report synthesis drift** (knowledge-representation lab). Aggregated agent searches were synthesised without per-source verification level; the synthesis stage must re-check verification level, not assume it carries through. Methodology lift: Pattern 3 plus a dedicated verification-level rule.
+- **Agent-report synthesis drift** (retrieval lab). Aggregated agent searches were synthesised without per-source verification level; the synthesis stage must re-check verification level, not assume it carries through. Methodology lift: Pattern 3 plus a dedicated verification-level rule.
 
 Each case shows: source protocol addresses dated, observable failure modes — not generic best practice.
 
