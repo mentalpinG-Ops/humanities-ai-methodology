@@ -1,8 +1,8 @@
 ---
 name: Read-Write Boundary Protocol
-version: 0.1.0
+version: 0.1.1
 status: draft
-last_changed: 2026-06-29
+last_changed: 2026-09-04
 ---
 
 # Read-Write Boundary Protocol
@@ -90,7 +90,7 @@ The protocol requires no separate file *if* the artefact's existing spec or gove
 
 ## 4. Failure-Mode Gallery
 
-Three failure modes the protocol guards against, drawn from observed patterns in AI-assisted scholarly work. Each is described generically; all are recoverable only with the protocol's before-the-fact discipline.
+Four failure modes the protocol guards against, drawn from observed patterns in AI-assisted scholarly work. Each is described generically; all are recoverable only with the protocol's before-the-fact discipline.
 
 - **The stale continuity note.** A project keeps a short "where I left off / what's next / what's blocking" note at the head of its task file. One working session shifts the project's active front but updates only the body of the task file, not the head note. At the next session the head note confidently points at the *previous* front; the researcher follows it and loses time before noticing the newer work. The note was a judgement (the next-step) whose premise (which front is live) had moved, inherited silently across the change. *Lift: Pattern 2.2 (name the premise; invalidate on change) + 2.1 (the next-step is HUMAN, the staleness-flag is COMPUTED).*
 
@@ -98,7 +98,9 @@ Three failure modes the protocol guards against, drawn from observed patterns in
 
 - **The un-propagated amendment.** A decision record is amended by a later one. The amendment is noted in the new record, but the several other documents that cited the old decision are not updated — because the update depended on someone remembering each citation site. A reader of one of those documents acts on the superseded decision. The propagation should have followed the rule "everywhere this decision is cited," recomputed, not recalled. *Lift: Pattern 2.3 (enumeration is a seed; the audit-rule is the standard).*
 
-In all three, the failure is invisible from within because the stale field still displays a plausible value. The protocol's value is that it makes the staleness a *flagged* state rather than a silent one.
+- **The laundered register entry.** A register — an index, a catalogue, a status table, a changelog — carries an entry *about* an artefact that it does not own. Nobody with authority over that artefact ever confirmed the entry, but the entry now inherits the register's standing: a reader treats it as the artefact's status because the register is the place one looks. Two sub-forms occur. In the first, the entry was accurate when written and the artefact moved on, so the register quietly launders a stale fact into a current one. In the second, the entry never had a source at all — a cross-reference pointing at a section, a decision, or a file that does not contain what the entry claims, and did not contain it when the entry was made. The second sub-form is the harder one: re-checking the artefact does not reveal it, because the defect is in the citation, not in the artefact. *Lift: Pattern 2.1 (the entry is a claim about someone else's field; write-authority for it lies with the referent, not the register) + 2.3 (an "everywhere this is referenced" audit-rule, recomputed, beats a hand-maintained list of citation sites).*
+
+In all four, the failure is invisible from within because the stale field still displays a plausible value. The protocol's value is that it makes the staleness a *flagged* state rather than a silent one.
 
 ---
 

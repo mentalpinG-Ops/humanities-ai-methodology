@@ -8,6 +8,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Read-Write Boundary Protocol 0.1.1 — a fourth failure mode: the laundered register entry.** The
+  gallery covered three ways a durable judgement outlives its premises, all of them inside the artefact
+  that carries the judgement. The fourth covers the case where a register carries an entry *about* an
+  artefact it does not own, and the entry inherits the register's standing without anyone with authority
+  over the referent ever confirming it. The second sub-form — a cross-reference that never had a source,
+  as opposed to one that drifted — is what earned the entry its place: re-reading the referent does not
+  surface it, because the defect sits in the citation rather than in the thing cited. Promoted after two
+  independent anchors roughly a month apart; the write-authority reading (the referent owns the claim,
+  the register only hosts it) is what places it in this protocol rather than in provenance.
+
 - **`CITATION.cff` — the citability claim finally has a mechanism.** The README has said
   "methodologically citable from day one" since May; GOVERNANCE has required "cite a tag, not the moving
   `main` branch" since July — and no file told a reader how to do either. The citation file names the
