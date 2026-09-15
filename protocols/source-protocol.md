@@ -1,8 +1,8 @@
 ---
 name: Source Protocol
-version: 0.2.2
+version: 0.2.4
 status: draft
-last_changed: 2026-09-06
+last_changed: 2026-09-15
 ---
 
 # Source Protocol
@@ -67,6 +67,7 @@ Empirical case: marketing material for a travelling exhibition attributed to a c
 - For load-bearing use, run ≥ 2 independent search tools, ideally with different corpora. For local search, the cheap equivalent is a **positive control**: run the same query against material known to contain a hit. A pattern that finds nothing where something is has been falsified as an instrument, not as a finding.
 - Where a procedure distributes limited attention across candidates, state the distribution: an unexamined candidate is not a negative result, and must not be reported as one.
 - For residual uncertainty, hedge: *"not demonstrable in the available indices"* rather than *"does not exist"*.
+- **When the search was for an origin and it failed, say so in the output.** Where an idea, result, or formulation cannot be attributed to the prior work it rests on, state that explicitly rather than leaving the attribution silent. To a reader, an unattributed claim and an independently originated one are indistinguishable, and the reader has no way to tell which one they are looking at. *External anchor: Leiden Declaration on Artificial Intelligence and Mathematics, 2 June 2026 (DOI 10.5281/zenodo.20302944), Recommendations for individual mathematicians — "Where a satisfactory attribution is not possible, state this explicitly in the publication." The Declaration ties this obligation to the known weakness of automated tools at attributing ideas; where such tools were used, the obligation is therefore heavier, not lighter.*
 
 ---
 
@@ -89,7 +90,7 @@ Verification levels apply **not only** at the brief or research stage but **also
 
 The protocol is grounded in documented failure modes, not prophylactic abstraction. Three cases:
 
-- **Snippet-cascade failure** (administrative-document forensic-analysis case study). A search snippet from an administrative secondary source was treated as primary attestation; downstream synthesis stabilised the inaccuracy through several editorial stages. Methodology lift: an explicit cascade-risk audit step (separately codified).
+- **Snippet-cascade failure** (administrative-document forensic-analysis case study). A search snippet from an administrative secondary source was treated as primary attestation; downstream synthesis stabilised the inaccuracy through several editorial stages. Methodology lift: an explicit cascade-risk audit step — declared here, not codified as a pattern in this repository.
 
 - **Promoter amplification *hymn* vs. *hołd*** (a travelling anatomical exhibition). Promotional secondary text treated as original attestation by the institution it quoted. Direct lift to Pattern 2.2.
 

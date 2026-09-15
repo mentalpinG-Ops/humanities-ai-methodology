@@ -25,7 +25,7 @@ From this emerged the reframing: **methodology is not a side effect of project w
 
 ## 3. What is delivered
 
-This repository holds the methodology itself — an abstract, reusable stack of protocols describing what a responsible humanities-scholar AI-working environment contains: positionality, material boundaries, source intake, interpretive framing, composition, author voice, tool fidelity, falsification, and provenance. It is public-bound (private initially; the public-flip is a separate decision); licence terms are in §8 below; the language is English.
+This repository holds the methodology itself — an abstract, reusable stack of protocols describing what a responsible humanities-scholar AI-working environment contains: positionality, material boundaries, source intake, interpretive framing, composition, author voice, tool fidelity, falsification, and provenance. It is public (private initially; the maintainer flipped visibility manually, and the changelog records the fact rather than a date); licence terms are in §8 below; the language is English.
 
 The methodology is not invented here in the abstract. It is **distilled from documented practice**, kept separately in a private working repository. The relationship runs one way: the methodology is derived from practice; practice is never derived from the methodology.
 

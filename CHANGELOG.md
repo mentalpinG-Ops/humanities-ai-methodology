@@ -29,6 +29,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+- **README §3 — the repository is public, and the text said otherwise.** The statement "private
+  initially; the public-flip is a separate decision" described the founding intent; the maintainer
+  flipped visibility manually on GitHub without a decision record, and the date was not written down
+  (GitHub's event feed shows a public event only at creation time, which does not match the
+  maintainer's account; the discrepancy is recorded, not resolved). The README now states the fact.
+  Consequence for the entry below on internal names: the "natural moment before any public flip" for
+  the history question had already passed when that entry was written.
+- **History question decided: the git history stays as it is.** Verified against the public repository
+  (not against this file's own account): commits up to 14072c2 (2026-09-06) carry four internal project
+  labels in `README.md`, `protocols/source-protocol.md` and the retired `disciplines/*.md` (93
+  commit/file pairs); the exhibition brand with its host city in README §2 and the source-protocol
+  gallery; and two channel city names in the maturity-signal SVGs for a few hours on 2026-09-06. No
+  employer, client, institution, or person appears anywhere in the history. The maintainer's reading,
+  recorded here as a decision rather than left as an omission: project labels are working names, the
+  host city is the object of analysis, and the channel cities identify no stakeholder — none of it is
+  the material the boundary rule protects, and a history rewrite would move the `version-0.2` tag that
+  `CITATION.cff` cites. The working tree from 07fcbc3 onward is clean; the history is left intact.
+- **Source Protocol 0.2.4 — a codification claim with nothing behind it.** The snippet-cascade entry in
+  the failure-mode gallery stated that its methodology lift, an explicit cascade-risk audit step, was
+  "separately codified". No pattern in this repository codifies it; the step is declared in that gallery
+  entry and nowhere else. The wording now says so. The distinction is the one Tool Protocol §2.4 draws
+  between declaring and enforcing, applied to the methodology's own text: a step named as codified,
+  without a place where it is, buys the appearance of a mechanism. Patch bump; scope unchanged.
 - **Internal project names removed repository-wide.** The README (§2 reframing, §6 case-study list),
   `source-protocol.md`'s failure-mode gallery and one CHANGELOG entry named the maintainer's private
   working projects and a sibling repository by their internal names. Those names are working labels,
