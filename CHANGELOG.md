@@ -27,6 +27,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   GitHub renders the file as a "Cite this repository" box once the repository is visible to the reader —
   which, per ADR-0013, remains a separate decision.
 
+- **Source Protocol 0.2.3 — §2.3 gains the stated-unattributability line (entry recorded
+  retroactively).** *Search-Absence ≠ Proof-of-Absence* said what a failed search may not be taken to
+  show; it said nothing about the case where the search was for an origin. The added how-to-apply line
+  covers it: where an idea, result, or formulation cannot be attributed to the prior work it rests on,
+  the output says so explicitly instead of leaving the attribution silent — to a reader, an
+  unattributed claim and an independently originated one look the same. External anchor: the Leiden
+  Declaration on Artificial Intelligence and Mathematics (2 June 2026, DOI 10.5281/zenodo.20302944).
+  The line was written on 2026-09-10 as 0.2.3 and reached the repository five days later inside the
+  commit that carried 0.2.4, whose entry below describes only the gallery correction and reads "scope
+  unchanged". 0.2.3 therefore never existed as a committed state and had no entry. The gap was found
+  when a consumer that pins this protocol re-read the diff instead of this file. This entry exists
+  because the change shipped without one, against `CONTRIBUTING.md`'s own rule.
+
 ### Fixed
 
 - **README §3 — the repository is public, and the text said otherwise.** The statement "private
