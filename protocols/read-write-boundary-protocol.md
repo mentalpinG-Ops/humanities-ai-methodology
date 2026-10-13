@@ -1,8 +1,8 @@
 ---
 name: Read-Write Boundary Protocol
-version: 0.1.1
+version: 0.2.0
 status: draft
-last_changed: 2026-09-04
+last_changed: 2026-10-13
 ---
 
 # Read-Write Boundary Protocol
@@ -35,14 +35,17 @@ The protocol does not mechanise the judgements themselves. It governs *who may w
 - **COMPUTED** — derivable from other state. An automated step derives it and *overwrites it on every run* (e.g. a "last-checked" flag, an aggregated verdict, a cross-reference resolution, a count).
 - **MECHANICAL** — bookkeeping that changes only when derived output changes (a version bump, a superseded-by pointer, an updated-at timestamp). An automated step may write it, but only on a real change; a human may refine it before it is finalised.
 - **HUMAN** — a judgement, an attestation, a rationale, a decision. An automated step *must never author or alter it*. It may, where the rule below permits, *void* it — but it never writes its content.
-- **EXTERNAL** — outside the automation's trust boundary entirely: a person's identity, a signature, the act of sending, publishing, or committing. The automation may prepare the thing to be signed or sent; it never holds the key and never performs the act.
+- **EXTERNAL** — outside the automation's trust boundary entirely. Two things sit in this class, and they behave differently. *Identity and signature* — who a person is, and what they put their name to — cannot be delegated: the automation never holds the key. *The act* of sending, publishing, or committing can be carried out by someone other than the person who decides on it, as happens whenever a letter goes out through an assistant or a manuscript through a printer. The automation may prepare the thing to be signed or sent, and it may carry out the act once the person has released that act; it never performs it on its own authority. The release, given by the person for the act in question, is the signature of this class, and it stays with the person.
 
 **Why.** Most artefact drift and most over-reach come from an *unstated* field-class. When the class is left implicit, an assistant "helpfully" edits a rationale (over-reach into HUMAN), or a researcher hand-maintains a value a script could derive (under-automation of COMPUTED), and neither error is visible until it has propagated. Naming the class per field converts a vague "be careful here" into a checkable contract: each field has exactly one writer-of-record and one rule for automation. The four classes are exhaustive for the artefacts a scholarly project actually keeps; a field that seems to belong to two classes is usually two fields that should be separated.
+
+**On "performs the act".** Through version 0.1.1 the EXTERNAL clause ended "it never holds the key and never performs the act", and so treated carrying out an act like holding an identity. The two differ. Nobody can sign as someone else; people hand the carrying-out of their decisions to others every day and remain the ones who decided. What the clause guards is the decision. An automation that sends, publishes or commits has over-reached when no release for that act came from the person. Documented failures (October 2026, the maintainer's practice): asked whether a change should be pushed, the person answered not with a yes but with a condition; the assistant judged the condition met by its own check, and pushed. An instruction that could be read as "start on this" was read as a release to commit; the working environment refused the commit, because none had been asked for.
 
 **How to apply.**
 - When designing any new durable artefact type (a record format, a header convention, a review schema), classify each field COMPUTED / MECHANICAL / HUMAN / EXTERNAL *before* it is first used. Write the classification into the artefact's own spec or governance note.
 - For existing artefacts, classify on first edit. The fastest diagnostic question per field: *"If I deleted this value, could a script regenerate it correctly from other state?"* Yes → COMPUTED (or MECHANICAL if it only changes on a real edit). No, it took a judgement → HUMAN. It is an identity/signature/send → EXTERNAL.
 - Treat a field that "needs a human to confirm what the script proposed" as MECHANICAL (machine drafts, human finalises) — not as a blurred HUMAN/COMPUTED hybrid.
+- Before an automated step carries out an EXTERNAL act, it must be able to point to the person's release for that act. If it cannot, it prepares the act and asks.
 
 ### 2.2 Invalidate, Never Author
 
@@ -135,4 +138,4 @@ Read-Write Boundary is a *meta-level* protocol, operating across the whole metho
 
 ---
 
-*Versioning: working-draft. The protocol was promoted 2026-06-29 from documented practice: a recurrent class of artefact-drift in which a recorded judgement (a continuity note, a version stamp, an amended decision) outlived the premises it was decided under, or an automated step over-reached into a field only a human should write. Per the auxiliary-hypothesis admissibility test (falsification-protocol §3 OT-3), the addition increases the methodology's forbidden set by three items — automation authoring a human judgement, a mechanically-derivable field maintained by vigilance, and a recorded judgement inherited unchanged across a premise-change. Substantial structural re-articulation triggers a status update; inline patch edits do not.*
+*Versioning: working-draft. The protocol was promoted 2026-06-29 from documented practice: a recurrent class of artefact-drift in which a recorded judgement (a continuity note, a version stamp, an amended decision) outlived the premises it was decided under, or an automated step over-reached into a field only a human should write. Per the auxiliary-hypothesis admissibility test (falsification-protocol §3 OT-3), the addition increases the methodology's forbidden set by three items — automation authoring a human judgement, a mechanically-derivable field maintained by vigilance, and a recorded judgement inherited unchanged across a premise-change. Version 0.2.0 (2026-10-13) separates, within the EXTERNAL class, identity and signature from the act, and restates "never performs the act" as "never on its own authority"; the changelog records the maintainer's reading behind this, and what supports it. Substantial structural re-articulation triggers a status update; inline patch edits do not.*

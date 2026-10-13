@@ -1,8 +1,8 @@
 ---
 name: Tool Protocol
-version: 0.3.0
+version: 0.4.0
 status: draft
-last_changed: 2026-08-19
+last_changed: 2026-10-13
 ---
 
 # Tool Protocol
@@ -31,8 +31,11 @@ Four patterns are robust enough across documented failures — and one documente
 
 Empirical case: an op-ed publication pipeline routed text through a PowerShell HTTP-API call that defaulted to ISO-8859-1 string-body encoding. UTF-8 content (German umlauts, the section sign) was silently corrupted to replacement characters in the published output. Recovery required reissuing the publication with explicit `charset=utf-8` declarations and byte-array body construction.
 
+**Scope: any change of content at a hand-over, not only character encoding.** The rule was written for encodings, but the situation it describes — a change that happens silently at a transport boundary and is invisible at source and destination each taken alone — has other causes. Four are documented beside encoding (the maintainer's practice, October 2026). *Escape evaluation:* a search pattern containing a backslash sequence was passed through a shell into a file and arrived as a control character; the test built on it could no longer fail. *Invisible characters:* a byte-order mark entered the source text of two files; the code ran, and a later counter-check could not find its place in them. *Line endings:* an in-place edit removed all 272 carriage returns from a file, and the display of the same tool shows none either way; a byte count caught it. *Structural re-parsing:* commas in free text split seventeen values into keys without values when a serialisation format read them as separators, and nothing reported an error. Two further cases from the same weeks are encoding in the original sense: a text extraction from PDF files dropped diacritics, so that 22 of 46 quotations were found where 32 could be; a console's code page rejected a one-line command that contained an umlaut. **A hand-over is not faithful because its encoding has been declared.**
+
 **How to apply.**
 - At every transport boundary (file read/write, HTTP request/response, API call, terminal output, copy-paste), declare encoding explicitly.
+- Count, before and after the hand-over, what has to survive it — carriage returns, a particular byte sequence, the number of fields — and do not take the display of the tool that performed the edit as the count.
 - For HTTP / API: send `Content-Type: ...; charset=utf-8` headers explicitly; send body as UTF-8-encoded bytes, not as a string that may be re-encoded by the client.
 - For file I/O: use UTF-8 read and write functions explicitly, not the platform default.
 - Test the chain end-to-end with content that contains diacritics, non-Latin script, and special symbols *before* using it in a real publication.

@@ -8,6 +8,73 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Read-Write Boundary Protocol 0.2.0 — EXTERNAL: "never performs the act" restated as "never on its
+  own authority".** Through 0.1.1 the EXTERNAL clause ended "it never holds the key and never performs
+  the act". The maintainer's practice did otherwise throughout: an assistant carried out commits —
+  this repository's among them — and, on one documented day, a message to the maintainer's own address
+  and a set of calendar entries, each on the maintainer's word for that act. Falsification Protocol §2.2
+  asks that a commitment stay testable against its own application history, and here the history
+  contradicted the letter. Three readings were laid side by side: the literal one (the practice changes
+  and every such act is typed by the person), a delegation clause (the rule is relaxed and the entry
+  says so), and a clarification (the sentence meant authority and called it performing). The maintainer
+  chose the third.
+  The maintainer's statement, 13 October 2026: he does not recall weighing the word "performs" in June.
+  He reads the clause now as being about authority, and the practice since June is his evidence for
+  that reading.
+  What the June record offers in support: decision record 0002 lists the protocol's forbidden set as
+  three items — automation authoring a human judgement, a derivable field maintained by hand, a
+  judgement inherited across a premise-change. Carrying out an act the person has released is not among
+  them. What the entry does not claim: read by the letter, the new wording forbids less than the old
+  one, so it is not an addition in the sense of OT-3 and is not offered as one. On the maintainer's reading
+  it corrects a word.
+  The clause now separates identity and signature, which cannot be delegated, from the act of sending,
+  publishing or committing, which the automation may carry out once the person has released that act and
+  never on its own authority; the release is the signature of the class. Two documented failures stay
+  on the forbidden side and are now in the text: a push made after the person had answered with a
+  condition instead of a yes, which the assistant judged met by its own check; and an ambiguous
+  instruction read as a release to commit. One how-to-apply line: before carrying out an EXTERNAL act,
+  the automation can point to the release for it, or it prepares and asks. Entered as a minor bump on
+  the maintainer's reading. A consumer that pinned §2.1 at 0.1.1 and relied on the literal sentence
+  should re-read; a reader who takes the change as a reframing would expect a major bump under
+  `GOVERNANCE.md`, and this entry says so rather than leaving it to be found.
+
+- **Falsification Protocol 0.5.0 — §2.4 (a′) gains its second half, and clause (e) counts the
+  re-check.** Clause (a′) asked of an ad-hoc check that the instrument be in scope for the material.
+  That it can *fail* was stated in two narrower places only — the positive control for local search
+  (Source Protocol §2.3) and the cheapest partial step of clause (e) — and nowhere for tests and
+  checking scripts. The addition: before a "passed" is reported, show once that the check fails on a
+  known defect; the showing is void if the expected values come from the thing under test, if the check
+  counts something other than what its report says, or if the control runs when the fault state is
+  gone. Newly forbidden: reporting a "passed" from a check whose failure was never shown. Grounded in
+  ten instances across five working sessions (September–October 2026), one of them from a different
+  model; one instance marks the limit of the remedy — a mutation probe measures the tests that exist,
+  not the cases nobody wrote. Clause (e) gains a sentence: the declared yield includes who checks the
+  delegated result, and with what; a result that returns when nothing is left to check it stays
+  `agent-reported`. Three cases in which a usage limit fell on the re-check rather than on the run.
+  Additive; minor bump.
+
+- **Tool Protocol 0.4.0 — §2.1 *Encoding Fidelity* covers any change of content at a hand-over.** The
+  rule spoke of character encoding and named every transport boundary as the place to check. Four
+  documented cases had the same shape — silent, at the hand-over, invisible at source and destination
+  each taken alone — and a different cause: escape evaluation, an invisible character, line endings,
+  structural re-parsing. A scope paragraph, built like the one Source Protocol §2.3 received in August,
+  names them, and one how-to-apply line asks for a count before and after of what has to survive.
+  Newly forbidden: treating a hand-over as faithful because its encoding has been declared. Two further
+  cases from the same weeks are encoding in the original sense. The pattern keeps its name. Expanded
+  scope; minor bump.
+
+- **Source Protocol 0.3.0 — a verdict names the attribute it verified; a self-built extract is a
+  snippet.** Two additions. §3: the verification levels say how a source was read, not what about the
+  claim the reading covered, and a verdict that is right for one attribute (existence, wording, date,
+  status, count) is readily taken for the whole. Five cases, four of them found on one day when a
+  chronicle was checked against the projects it described. §5 gains the matching step for the workflow
+  and for delegated checks. Newly forbidden: passing
+  on a verification verdict without the attribute it verified. §2.1: "any equivalent" now explicitly
+  includes the reduced views a workflow builds of its own material — the head of each record, an output
+  cut at a display limit, a return shortened by the worker that produced it. Three cases. On the
+  version: an added how-to-apply line has been numbered as a patch before (0.2.3, recorded
+  retroactively below); this entry applies the rule as `GOVERNANCE.md` states it — additive, minor.
+
 - **Read-Write Boundary Protocol 0.1.1 — a fourth failure mode: the laundered register entry.** The
   gallery covered three ways a durable judgement outlives its premises, all of them inside the artefact
   that carries the judgement. The fourth covers the case where a register carries an entry *about* an
@@ -42,6 +109,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Fixed
 
+- **Falsification Protocol §2.4 — the rule sentence counted four requirements over five.** Clause (e)
+  arrived with 0.4.0 and the count in the sentence above the list was not adjusted. The same slip as
+  the Tool Protocol heading corrected in 0.2.1: a count written by hand next to a list is a
+  hand-maintained derived field in the sense of Read-Write Boundary §2.3. Corrected within 0.5.0.
 - **README §3 — the repository is public, and the text said otherwise.** The statement "private
   initially; the public-flip is a separate decision" described the founding intent; the maintainer
   flipped visibility manually on GitHub without a decision record, and the date was not written down

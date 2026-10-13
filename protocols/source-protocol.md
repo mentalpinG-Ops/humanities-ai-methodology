@@ -1,8 +1,8 @@
 ---
 name: Source Protocol
-version: 0.2.4
+version: 0.3.0
 status: draft
-last_changed: 2026-09-15
+last_changed: 2026-10-13
 ---
 
 # Source Protocol
@@ -33,11 +33,14 @@ Three patterns are robust enough across documented failure modes to be named sep
 
 These failure modes recur across tool generations. An AI-agnostic methodology cannot rely on better models to fix the problem — the snippet layer itself is the source of imprecision.
 
+**Scope: an extract you built yourself is a snippet too.** "Any equivalent" includes the reduced views a workflow makes of its own material: the first lines of each file, an output cut off at a display limit, a list filtered before anyone read it, a return shortened by the worker that produced it. These come from the author's own tooling, which is why nobody suspects them, and they fail in the ways listed above — truncated, filtered, stale. Documented cases (the maintainer's practice, October 2026): a two-month chronicle was compiled from the head of each session record — its stated goal and its first five completed items — and written up with dates, counts and statuses as if from the records; checked against the projects it described, seven of thirty-two entries needed correction. A search output that displayed 45 of 176 hits was read as complete and reported as "there is none". Delegated readers returned at most six text passages per page; two discrepancy reports were built on those returns before anyone had looked at the pages, and both were wrong. **Before an extract becomes load-bearing, open what it was extracted from.**
+
 **How to apply.**
 - Before use, retrieve the full text (publisher, paywall, repository, Wayback Machine).
 - Compare the verbatim passage against the snippet.
 - If they diverge, discard the snippet and anchor on the full text.
 - If the full text is unreachable, tag the snippet as *"pointer, unverified"* — do not treat as attestation.
+- When you build an extract yourself, write into it what it leaves out (which lines, how many of how many hits), so that the reduction travels with the extract.
 
 ### 2.2 Secondary ≠ Primary
 
@@ -84,6 +87,8 @@ Every source-tagged claim carries an additional *verification level*. This is no
 
 Verification levels apply **not only** at the brief or research stage but **also at later synthesis stages**. When an agent report enters a publication later, its `agent-reported` status remains until full-text cross-reading occurs. A synthesis of multiple `agent-reported` findings does not aggregate into `deep-read`.
 
+**A verification verdict names the attribute it verified.** The levels above say *how* a source was read. They do not say *what about the claim* the reading covered, and a claim usually asserts several things at once: that a document exists, what it says, when it is from, what status it has, how many there are. A verdict that is right for one of these is readily taken for the whole. Documented cases (the maintainer's practice, October 2026): a catalogue was reported to list two lecturers for a given academic year — the page existed, the names were on it, the year was wrong. A decision record was cited with a date and the status "accepted": file, date and status were each correct, but the date was the draft's and the status came from a later acceptance; the same happened with a second record on the same day. "All 46 quotations confirmed" covered 40 found verbatim and 6 matched only through catalogue fields. "8 of 8 successful outputs" came from a report that itself defined success as an output being present, and the next retelling dropped the definition. "48 of 64 confirmed" meant read by two agents. **A verdict that does not say what it verified is passed on as a pointer, not as a confirmation.**
+
 ---
 
 ## 4. Failure-Mode Gallery
@@ -105,7 +110,8 @@ Each case shows: source protocol addresses dated, observable failure modes — n
 Source protocol is not a source-tag collection alone. It is a workflow position:
 
 - **Before research starts:** declare the tool set (search engines, aggregators, AI search agents) and the verification plan.
-- **During research:** classify every hit per Pattern 2.1 / 2.2 / 2.3; tag the verification level.
+- **During research:** classify every hit per Pattern 2.1 / 2.2 / 2.3; tag the verification level, and with it the attribute the verification covered (existence, wording, date, status, count).
+- **When a check is delegated:** name in the commission the attribute that matters — the year, the status, the exact wording — rather than asking whether "the statement is correct". A returned "confirmed" that does not say what it confirmed stays `agent-reported`.
 - **Before synthesis:** every hit tagged `agent-reported` or `aggregator-only` must either be upgraded (deep-read) or removed from load-bearing arguments.
 - **Before publication:** pre-publication re-check against the original source, not against a later composition stage (see `writing-protocol.md` §Composition Drift).
 - **After publication:** preserve the audit trail — which source tags were set at which stage, which verification levels were load-bearing.
