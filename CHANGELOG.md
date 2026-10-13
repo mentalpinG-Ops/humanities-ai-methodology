@@ -8,6 +8,55 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- **Read-Write Boundary Protocol 0.3.0 — the key on the reading side; a missing decision is not a
+  decision; later work is a premise.** Three additions, each promoted from documented failures. §2.1:
+  "never holds the key" had writing and acting in view, and a key can reach an automated step through
+  what it reads. Two cases — a forwarded mailbox, an output filter that selected by pattern — and one
+  how-to-apply line: from material that may contain keys, output only named fields. Newly forbidden:
+  output from key-bearing material through an exclusion rule. §2.2: the pattern said who may write a
+  judgement and when it lapses, and nothing about what holds while it is absent. Silence, a word that
+  reads two ways, and a condition named in place of a yes are not decisions; whether a named condition
+  is met is itself a HUMAN field. Three cases, two of them the EXTERNAL failures that entered §2.1 with
+  0.2.0. Newly forbidden: proceeding on a reading of a decision that has not been given. §2.2 again: a
+  finding about to be rendered, published or built upon has one more premise than the ones it
+  depended on, namely that nothing later on the same question exists. Two failures, and a how-to-apply
+  line asking for a search of a named place. Newly forbidden: rendering or publishing a recorded
+  finding without that search. Additive; minor bump. It follows 0.2.0 on the same day because the
+  screening round was decided in two sittings and 0.2.0 was already public when the second took place.
+
+- **Falsification Protocol 0.6.0 — §2.4: the control in both directions, the handed-over material, the
+  reference arm.** Clause (a′): a known defect shows that a check can fail, not that it fails only
+  where it should. A count or a pattern is run against a case it must hit and against one it must not,
+  and a trial run counts as passed only if it could have triggered the risk it was run for. Four
+  failures, one of them a miscount made while this round was being prepared. Clause (c′): the material
+  a commission hands over — shortened, filtered, or given as the list of sources to consult — is a
+  condition of the result beside its wording. Three failures; in the third, twelve delegates working
+  from one supplied list agreed in 64 of 66 verdicts and none opened a text outside it that carries
+  part of the answer. Clause (d): a reference arm is a gate in another shape. The case "the reference
+  does not carry the property" is registered in advance with its consequence, and a non-inferiority
+  hypothesis registers a minimum reference level. Two cases. Newly forbidden: reporting a count that
+  never ran against a known non-hit; reading agreement among delegates who share supplied material as
+  convergence; running a comparison against a reference arm without the registered row. Additive;
+  minor bump.
+
+- **Source Protocol 0.4.0 — §2.3: the search ran on a derivative, and "unexamined" gets a name; §3: a
+  number names what it counts.** §2.3 gave two reasons why an empty local search says nothing about
+  the material. A third is documented: the search ran on a text extraction or a text layer and not on
+  the artefact. Two cases. The pattern already forbade reporting an unexamined candidate as a negative
+  result; it now names the third state, because a report with two states forces the third into "not
+  found". §3: the attribute rule added in 0.3.0 extends to numbers. A number names the set it counts
+  and the reading it counts under, and where two places count against one threshold the narrower
+  labels itself a partial count. Three cases from three test runs. Newly forbidden: reporting "not
+  found" from a search of a derivative; reporting a number whose counted set and reading exist only in
+  the program. Additive; minor bump.
+
+- **Tool Protocol 0.5.0 — §2.4: a checking step enforces only on the paths it stands on.** The pattern
+  asked for a named step at a named position. Three documented cases had both and still let work
+  through, because the work could reach its result by a second path on which no check stood; in one of
+  them the rule's own text read "mechanically enforced". An obligation is now called enforced on the
+  paths its check covers and declared on the rest, and its text says which. Newly forbidden: calling a
+  rule enforced when a path leads past the check. Additive; minor bump.
+
 - **Read-Write Boundary Protocol 0.2.0 — EXTERNAL: "never performs the act" restated as "never on its
   own authority".** Through 0.1.1 the EXTERNAL clause ended "it never holds the key and never performs
   the act". The maintainer's practice did otherwise throughout: an assistant carried out commits —

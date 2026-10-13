@@ -1,6 +1,6 @@
 ---
 name: Tool Protocol
-version: 0.4.0
+version: 0.5.0
 status: draft
 last_changed: 2026-10-13
 ---
@@ -77,11 +77,14 @@ Empirical case (July 2026, maintainer's practice corpus): an operations register
 
 **Enforcement means a checking step, not a stricter sentence.** The rule above governs *when* a tool may enforce. It says nothing about what enforcing consists of, and that gap is where enforcement quietly fails: a rule can be declared binding in every document that mentions it and still never act, because no step between the work and its aggregation ever tests compliance. Documented failure (July 2026, two consecutive runs of one test series): a pre-registered obligation to quote verbatim was **never once applied** — three findings carried non-verbatim quotations, and nothing caught it, because no check stood between collection and aggregation. Such a rule is not weakly enforced; it is not enforced at all, and it is worse than an absent rule, because it purchases the appearance of control at the price of trust in every other rule beside it. **Therefore: every obligation that is to be enforced names the mechanical step that checks it, and the point in the sequence where that step runs — before aggregation, not after. An obligation for which no such step can be named is downgraded to a declaration or struck.**
 
+**A checking step enforces only on the paths it stands on.** Naming the step and its position is not yet enough. Work can reach the same result by more than one path, and a check placed on one of them leaves the others declared. Documented failures (October 2026, the maintainer's practice): a rule that every delegated worker be started with an explicitly chosen model was checked by a hook on direct starts; workers started through an orchestration script went past the hook — thirty starts in one day left no line in its log — while the rule's own text read "mechanically enforced". The same rule also governs which model the main session runs on; the hook sees delegated starts only, so that half of the rule was never checked. A test was written to skip itself when a required licence was absent; its twin for a second program was not. **For every enforced obligation, list the paths by which the work can be done. The obligation is enforced on the paths the check covers and declared on the rest, and its text says which.**
+
 **How to apply.**
 - For every encoded analytical rule, record an evidence status; emit it in the tool's output wherever the rule shapes a recommendation.
 - Ask the mechanical question per rule: does the tool *mark* on its basis, or *block*? Blocking requires a passed material test of that rule, in that operationalisation.
 - Let only the test regime write the evidence field, and only after a test; let the tool read it. Never lift a status because application "went well".
 - For every rule you intend to enforce, name the checking step and its position in the sequence. If you cannot name one, you have a declaration — label it as such rather than leaving it to read as a constraint.
+- For every rule you call enforced, list the paths by which the governed work can happen and mark each as checked or unchecked. Call the rule enforced only where a check stands.
 - Audit in the other direction too: for each obligation already declared binding, ask when it last actually fired. An obligation that has never fired is either superfluous or unenforced, and both call for a decision.
 - Treat tool runs as producers of test material and route that material into the test regime, rather than counting clean runs as confirmation.
 

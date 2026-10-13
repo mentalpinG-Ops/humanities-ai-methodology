@@ -1,6 +1,6 @@
 ---
 name: Read-Write Boundary Protocol
-version: 0.2.0
+version: 0.3.0
 status: draft
 last_changed: 2026-10-13
 ---
@@ -41,11 +41,14 @@ The protocol does not mechanise the judgements themselves. It governs *who may w
 
 **On "performs the act".** Through version 0.1.1 the EXTERNAL clause ended "it never holds the key and never performs the act", and so treated carrying out an act like holding an identity. The two differ. Nobody can sign as someone else; people hand the carrying-out of their decisions to others every day and remain the ones who decided. What the clause guards is the decision. An automation that sends, publishes or commits has over-reached when no release for that act came from the person. Documented failures (October 2026, the maintainer's practice): asked whether a change should be pushed, the person answered not with a yes but with a condition; the assistant judged the condition met by its own check, and pushed. An instruction that could be read as "start on this" was read as a release to commit; the working environment refused the commit, because none had been asked for.
 
+**The key on the reading side.** "Never holds the key" was written with writing and acting in view. A key can also reach an automated step through what it reads. Documented failures (October 2026, the maintainer's practice): a forwarding rule set up so that an assistant could read a mailbox carried a password in clear text into the session. An output filter meant to show the type and dates of a licence selected fields by a name pattern and printed a signed renewal token along with them. On the day of the second case two further filters went wrong, one too narrow and one on the wrong pattern, and all three shared a cause: each selected by a pattern for what was unwanted, not by a list of what was allowed.
+
 **How to apply.**
 - When designing any new durable artefact type (a record format, a header convention, a review schema), classify each field COMPUTED / MECHANICAL / HUMAN / EXTERNAL *before* it is first used. Write the classification into the artefact's own spec or governance note.
 - For existing artefacts, classify on first edit. The fastest diagnostic question per field: *"If I deleted this value, could a script regenerate it correctly from other state?"* Yes → COMPUTED (or MECHANICAL if it only changes on a real edit). No, it took a judgement → HUMAN. It is an identity/signature/send → EXTERNAL.
 - Treat a field that "needs a human to confirm what the script proposed" as MECHANICAL (machine drafts, human finalises) — not as a blurred HUMAN/COMPUTED hybrid.
 - Before an automated step carries out an EXTERNAL act, it must be able to point to the person's release for that act. If it cannot, it prepares the act and asks.
+- From material that may contain keys — a mailbox, a configuration or licence file, a log — output only named fields. A filter that removes the unwanted by pattern does not count as protection.
 
 ### 2.2 Invalidate, Never Author
 
@@ -55,11 +58,17 @@ The protocol does not mechanise the judgements themselves. It governs *who may w
 
 **Why a premise-change must invalidate.** A judgement is made under premises — the inputs, sources, or prior decisions it depended on. When those change, the judgement's standing is in question, but the working text still *displays* the old conclusion. Without invalidation, the stale conclusion is inherited silently across the change and misleads everyone downstream (including the researcher, days later). Binding a judgement's currency to its premises — so that a premise-change flips it to "re-decide" — is what converts "I should remember to re-check this" into a property of the artefact.
 
+**A missing decision is not a decision.** The rule above says who may write a judgement and when it lapses. It has to be said as well what holds while the judgement is absent: nothing stands in for it. Silence, a word that can be read two ways, and a condition named in place of a yes are not decisions, and whether a named condition is met is itself a HUMAN field. Documented failures (October 2026, the maintainer's practice): an assistant asked what a term meant, received an answer to something else, and twenty minutes later settled the meaning itself and built a conclusion on it. The two cases given under §2.1 — a condition judged met by the automation's own check, an ambiguous instruction read as a release — are the same failure at an EXTERNAL act.
+
+**Later work is a premise.** A judgement's premises are usually listed as what it depended on. A finding that is about to be rendered, published or built upon has one more: that nothing later on the same question exists. Documented failures (found September 2026, the maintainer's practice): a concluding document described one case as "the untested half" while the counter-test had already run and reversed the finding, so that a faithful rendering of the conclusion would have published a refuted result. The only existing report of a test series said "we do not know", weeks after a third run had decided the question. In both, the source document stood still while the work went on.
+
 **How to apply.**
 - Record, with each recorded judgement, the premises it was decided under — by *naming* them (the sources, the prior decisions, the inputs), not merely by date. "Decided given X and Y" is checkable; "decided on the 14th" is not.
 - At natural checkpoints (session start, review, milestone), test whether any named premise has moved. If it has, mark the judgement stale and re-decide; do not carry it forward unread.
 - When automation does the checking, restrict it to two moves: compute whether a premise changed, and set a *stale* flag. It must not edit the judgement's text. The re-decision is the human's.
 - Keep the superseded judgement in the record, flagged, not deleted. Erasing it loses the audit trail the next pattern and the provenance protocol both rely on.
+- When a question to the person comes back unanswered, with a condition, or with a word that reads two ways, record the judgement as open and ask again. Do not proceed on a reading.
+- Before rendering, publishing or building on a recorded finding, search a named place — the folder of the run, the register — for later work on the same question.
 
 ### 2.3 A Hand-Maintained Derived Field Is a Drift Bug
 
@@ -138,4 +147,4 @@ Read-Write Boundary is a *meta-level* protocol, operating across the whole metho
 
 ---
 
-*Versioning: working-draft. The protocol was promoted 2026-06-29 from documented practice: a recurrent class of artefact-drift in which a recorded judgement (a continuity note, a version stamp, an amended decision) outlived the premises it was decided under, or an automated step over-reached into a field only a human should write. Per the auxiliary-hypothesis admissibility test (falsification-protocol §3 OT-3), the addition increases the methodology's forbidden set by three items — automation authoring a human judgement, a mechanically-derivable field maintained by vigilance, and a recorded judgement inherited unchanged across a premise-change. Version 0.2.0 (2026-10-13) separates, within the EXTERNAL class, identity and signature from the act, and restates "never performs the act" as "never on its own authority"; the changelog records the maintainer's reading behind this, and what supports it. Substantial structural re-articulation triggers a status update; inline patch edits do not.*
+*Versioning: working-draft. The protocol was promoted 2026-06-29 from documented practice: a recurrent class of artefact-drift in which a recorded judgement (a continuity note, a version stamp, an amended decision) outlived the premises it was decided under, or an automated step over-reached into a field only a human should write. Per the auxiliary-hypothesis admissibility test (falsification-protocol §3 OT-3), the addition increases the methodology's forbidden set by three items — automation authoring a human judgement, a mechanically-derivable field maintained by vigilance, and a recorded judgement inherited unchanged across a premise-change. Version 0.2.0 (2026-10-13) separates, within the EXTERNAL class, identity and signature from the act, and restates "never performs the act" as "never on its own authority"; the changelog records the maintainer's reading behind this, and what supports it. Version 0.3.0 (same day) adds three things promoted from documented failures: the key on the reading side (§2.1), the rule that a missing decision is not a decision, and later work as a premise (both §2.2). Substantial structural re-articulation triggers a status update; inline patch edits do not.*
