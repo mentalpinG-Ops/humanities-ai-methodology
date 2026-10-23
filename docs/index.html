@@ -34,14 +34,10 @@ note: >
   .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
   .reticle {
     position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;
-    /* lines fade out before they reach the face */
-    -webkit-mask-image: radial-gradient(circle closest-side, transparent 0, transparent 34%, #000 62%);
-    mask-image: radial-gradient(circle closest-side, transparent 0, transparent 34%, #000 62%);
   }
   .reticle * { fill: none; stroke: var(--accent); stroke-width: 1; vector-effect: non-scaling-stroke; }
   .reticle .dots { stroke-dasharray: 1 5; stroke-linecap: round; opacity: .7; }
   .reticle .ring { opacity: .3; }
-  .reticle .axis { opacity: .28; }
   .wordmark { font: 500 1.6rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .06em; margin: 0; }
   .wordmark span { color: var(--accent); }
   .verbs { font: 500 .74rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: .9rem 0 0; }
@@ -126,10 +122,6 @@ note: >
     <svg class="reticle" viewBox="-100 -100 200 200" aria-hidden="true">
       <circle class="dots" r="96"/>
       <circle class="ring" r="78"/>
-      <line class="axis" x1="-96" y1="0" x2="96" y2="0"/>
-      <line class="axis" x1="0" y1="-96" x2="0" y2="96"/>
-      <line class="axis" x1="-68" y1="-68" x2="68" y2="68"/>
-      <line class="axis" x1="68" y1="-68" x2="-68" y2="68"/>
     </svg>
     <img class="head" src="assets/mentalping-head.png" alt="mentalpinG-Ops dot-matrix head" width="150" height="170">
   </div>
