@@ -36,7 +36,7 @@ note: >
      greys, cut to a thin dashed ring by two masks (ring and dashes,
      intersected). Matte on purpose: no glints, no glow. */
   .wires { position: absolute; inset: 0; pointer-events: none; perspective: 1100px; }
-  .wire { position: absolute; --t: 1px; --dash: 3deg; animation: wirespin 28s linear infinite; }
+  .wire { position: absolute; --t: 1px; --bead: 5px; --dash: 3deg; animation: wirespin 28s linear infinite; }
   .band {
     position: absolute; inset: 0; border-radius: 50%;
     background: conic-gradient(#8a909c 0deg, #9aa0ab 90deg, #868c98 180deg, #9ea4af 270deg, #8a909c 360deg);
@@ -48,17 +48,17 @@ note: >
     mask-composite: intersect;
   }
   /* Beads on the rings at successive golden angles (137.5 deg): 0, 137.5, 275 on the outer ring,
-     52.5 and 190 on the inner one. Diameter is twice the ring thickness (--t). They sit inside the
-     turning .wire, so they travel with their ring. */
+     52.5 and 190 on the inner one. Diameter --bead (5 px outer, 4 px inner), centred on the ring.
+     They sit inside the turning .wire, so they travel with their ring. */
   .bead { position: absolute; inset: 0; transform: rotate(var(--a)); }
   .bead::after {
     content: ""; position: absolute; left: 50%; top: 0;
-    width: calc(var(--t) * 2); height: calc(var(--t) * 2);
-    margin: calc(var(--t) * -.5) 0 0 calc(var(--t) * -1); border-radius: 50%;
+    width: var(--bead); height: var(--bead);
+    margin: calc(var(--t) * .5 - var(--bead) * .5) 0 0 calc(var(--bead) * -.5); border-radius: 50%;
     background: radial-gradient(circle at 35% 30%, #aeb3bd, #8a909c 60%, #6e7480);
   }
   .wire.outer { inset: 0; }
-  .wire.inner { inset: 13%; --t: .8px; --dash: 4.5deg; animation-duration: 42s; animation-direction: reverse; }
+  .wire.inner { inset: 13%; --t: .8px; --bead: 4px; --dash: 4.5deg; animation-duration: 42s; animation-direction: reverse; }
   /* Both rings turn about the vertical axis, in opposite directions, seen in perspective. */
   /* Brightness follows the turn, softly: lightest face-on, darkest edge-on. */
   @keyframes wirespin {
