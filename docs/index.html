@@ -39,16 +39,18 @@ note: >
   .wires { position: absolute; inset: 0; pointer-events: none; filter: drop-shadow(0 0 1.5px rgba(232, 192, 99, .45)); }
   .wire {
     position: absolute; border-radius: 50%; --t: 1px;
-    background: conic-gradient(#6b4f1a 0deg, #d4a849 24deg, #fff6d0 31deg, #e8c063 38deg, #7a5a1c 72deg,
-      #b8923a 118deg, #6b4f1a 150deg, #f3d98a 196deg, #fffbe6 203deg, #c79a3b 214deg, #6b4f1a 255deg,
-      #d4a849 292deg, #fff1b8 304deg, #8a6a23 326deg, #6b4f1a 360deg);
+    background: conic-gradient(from var(--a), #b8923a 0deg, #d4a849 40deg, #f3d98a 72deg, #fff6d0 80deg,
+      #f3d98a 88deg, #d4a849 120deg, #b8923a 180deg, #d4a849 222deg, #f3d98a 250deg, #fff6d0 258deg,
+      #e8c063 282deg, #b8923a 330deg, #b8923a 360deg);
     -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t)));
     mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t)));
     animation: wirespin 80s linear infinite;
   }
   .wire.outer { inset: 0; }
   .wire.inner { inset: 13%; --t: .8px; animation-duration: 120s; animation-direction: reverse; }
-  @keyframes wirespin { to { transform: rotate(360deg); } }
+  /* The gradient turns, the ring itself stays put: rotating a 1px masked ring made its edge crawl. */
+  @property --a { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+  @keyframes wirespin { to { --a: 360deg; } }
   @media (prefers-reduced-motion: reduce) { .wire { animation: none; } }
   .wordmark { font: 500 1.6rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .06em; margin: 0; }
   .wordmark span { color: var(--accent); }
