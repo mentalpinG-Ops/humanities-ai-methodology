@@ -32,12 +32,24 @@ note: >
   /* Masthead: head inside its reticle, wordmark and verbs centred below, as in the key visual. */
   .masthead { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 0 3rem; padding-bottom: 1.75rem; border-bottom: 1px dotted var(--accent); }
   .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
-  .reticle {
-    position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;
+  /* Two slowly turning concentric rings. Each is a conic gradient of dark brass, bright gold and
+     narrow near-white glints, cut to a thin ring by a mask; the turning moves the glints like light
+     on polished wire. The glow sits on the wrapper because a filter on the masked element itself
+     would be masked away. */
+  .wires { position: absolute; inset: 0; pointer-events: none; filter: drop-shadow(0 0 1.5px rgba(232, 192, 99, .45)); }
+  .wire {
+    position: absolute; border-radius: 50%; --t: 1px;
+    background: conic-gradient(#6b4f1a 0deg, #d4a849 24deg, #fff6d0 31deg, #e8c063 38deg, #7a5a1c 72deg,
+      #b8923a 118deg, #6b4f1a 150deg, #f3d98a 196deg, #fffbe6 203deg, #c79a3b 214deg, #6b4f1a 255deg,
+      #d4a849 292deg, #fff1b8 304deg, #8a6a23 326deg, #6b4f1a 360deg);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t)));
+    mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t)));
+    animation: wirespin 80s linear infinite;
   }
-  .reticle * { fill: none; stroke: var(--accent); stroke-width: 1; vector-effect: non-scaling-stroke; }
-  .reticle .dots { stroke-dasharray: 1 5; stroke-linecap: round; opacity: .7; }
-  .reticle .ring { opacity: .3; }
+  .wire.outer { inset: 0; }
+  .wire.inner { inset: 13%; --t: .8px; animation-duration: 120s; animation-direction: reverse; }
+  @keyframes wirespin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .wire { animation: none; } }
   .wordmark { font: 500 1.6rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .06em; margin: 0; }
   .wordmark span { color: var(--accent); }
   .verbs { font: 500 .74rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: .9rem 0 0; }
@@ -119,10 +131,7 @@ note: >
 
 <header class="masthead">
   <div class="headwrap">
-    <svg class="reticle" viewBox="-100 -100 200 200" aria-hidden="true">
-      <circle class="dots" r="96"/>
-      <circle class="ring" r="78"/>
-    </svg>
+    <div class="wires" aria-hidden="true"><span class="wire outer"></span><span class="wire inner"></span></div>
     <img class="head" src="assets/mentalping-head.png" alt="mentalpinG-Ops dot-matrix head" width="150" height="170">
   </div>
   <p class="wordmark">mentalpin<span>GO</span>ps</p>
