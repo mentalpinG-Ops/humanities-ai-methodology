@@ -33,17 +33,22 @@ note: >
   .masthead { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 0 3rem; padding-bottom: 1.75rem; border-bottom: 1px dotted var(--accent); }
   .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
   /* Two slowly turning concentric rings. Each is a conic gradient of low-contrast
-     greys, cut to a thin ring by a mask. Matte on purpose: no glints, no glow. */
+     greys, cut to a thin dashed ring by two masks (ring and dashes,
+     intersected). Matte on purpose: no glints, no glow. */
   .wires { position: absolute; inset: 0; pointer-events: none; perspective: 1100px; }
   .wire {
-    position: absolute; border-radius: 50%; --t: 1px;
+    position: absolute; border-radius: 50%; --t: 1px; --dash: 3deg;
     background: conic-gradient(#8a909c 0deg, #9aa0ab 90deg, #868c98 180deg, #9ea4af 270deg, #8a909c 360deg);
-    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t)));
-    mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t)));
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t))),
+      repeating-conic-gradient(#000 0 var(--dash), transparent var(--dash) calc(var(--dash) * 2));
+    -webkit-mask-composite: source-in;
+    mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t))),
+      repeating-conic-gradient(#000 0 var(--dash), transparent var(--dash) calc(var(--dash) * 2));
+    mask-composite: intersect;
     animation: wirespin 28s linear infinite;
   }
   .wire.outer { inset: 0; }
-  .wire.inner { inset: 13%; --t: .8px; animation-duration: 42s; animation-direction: reverse; }
+  .wire.inner { inset: 13%; --t: .8px; --dash: 4.5deg; animation-duration: 42s; animation-direction: reverse; }
   /* Both rings turn about the vertical axis, in opposite directions, seen in perspective. */
   /* Brightness follows the turn, softly: lightest face-on, darkest edge-on. */
   @keyframes wirespin {
