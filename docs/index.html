@@ -32,23 +32,39 @@ note: >
   /* Masthead: head inside its reticle, wordmark and verbs centred below, as in the key visual. */
   .masthead { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 0 3rem; padding-bottom: 1.75rem; border-bottom: 1px dotted var(--accent); }
   .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
+  /* Layers, back to front: the back halves of the rings, a head-sized plate in the colour of the
+     ground, the head, the front halves of the rings. Each ring exists twice (.wires.back and
+     .wires.front). While a ring turns about the vertical axis, a clip decides which half each copy
+     shows: the front copy the half nearer the viewer, the back copy the other. So one half passes
+     in front of the head, the other disappears behind it, and the head sits in the centre. */
   /* Two slowly turning concentric rings, each a string of small matte grey beads. The script at
      the end of the page draws them into .band (72 outside, 48 inside); a bead shrinks with its
      distance from the vertical centre line, so the ring thins out to almost nothing at top and
      bottom. */
-  .wires {
-    position: absolute; inset: 0; pointer-events: none; perspective: 1100px;
-    /* behind the head the rings are invisible: an elliptical hole the size of the head, soft edge */
-    -webkit-mask-image: radial-gradient(ellipse 38% 46% at 50% 50%, transparent 0, transparent 70%, #000 100%);
-    mask-image: radial-gradient(ellipse 38% 46% at 50% 50%, transparent 0, transparent 70%, #000 100%);
+  .wires { position: absolute; inset: 0; pointer-events: none; }
+  /* The head is a dot matrix, so ring parts behind it would show through the gaps. A head-sized plane
+     just behind the head, in the colour of the ground, hides them; its soft edge blends into the page. */
+  .occluder {
+    position: absolute; left: 50%; top: 50%; width: 50%; height: 62%; pointer-events: none;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse closest-side, #193053 0, #193053 70%, rgba(25, 48, 83, 0) 100%);
   }
-  .wire { position: absolute; --bead: 5px; animation: wirespin 28s linear infinite; }
+  .wire { position: absolute; --bead: 5px; animation-duration: 28s; animation-timing-function: linear; animation-iteration-count: infinite; }
+  .wires.front .wire { animation-name: wirespin, showfront; }
+  .wires.back .wire { animation-name: wirespin, showback; }
   .band { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
   .band circle { fill: #b4bbc6; }
   /* Beads on the rings at successive golden angles (137.5 deg): 0, 137.5, 275 on the outer ring,
      52.5 and 190 on the inner one. Diameter --bead (5 px outer, 4 px inner), centred on the ring.
      They sit inside the turning .wire, so they travel with their ring. */
-  .bead { position: absolute; inset: 0; transform: rotate(var(--a)); }
+  /* The beads also travel along their ring, at a steady pace, one direction per ring: the outer
+     ring clockwise (40 s a lap), the inner one counter-clockwise (28 s a lap). --a is the start angle. */
+  .bead { position: absolute; inset: 0; transform: rotate(var(--a)); animation: orbit 40s linear infinite; }
+  .wire.inner .bead { animation-duration: 28s; animation-direction: reverse; }
+  @keyframes orbit {
+    from { transform: rotate(var(--a)); }
+    to   { transform: rotate(calc(var(--a) + 360deg)); }
+  }
   .bead::after {
     content: ""; position: absolute; left: 50%; top: 1%;
     width: var(--bead); height: var(--bead);
@@ -62,18 +78,28 @@ note: >
   /* Both rings turn about the vertical axis, in opposite directions, seen in perspective. */
   /* Brightness follows the turn, softly: lightest face-on, darkest edge-on. */
   @keyframes wirespin {
-    0%   { transform: rotateY(0);      filter: brightness(1); }
-    25%  {                             filter: brightness(.82); }
-    50%  { transform: rotateY(180deg); filter: brightness(1.06); }
-    75%  {                             filter: brightness(.82); }
-    100% { transform: rotateY(360deg); filter: brightness(1); }
+    0%   { transform: perspective(1100px) rotateY(0);      filter: brightness(1); }
+    25%  {                                                 filter: brightness(.82); }
+    50%  { transform: perspective(1100px) rotateY(180deg); filter: brightness(1.06); }
+    75%  {                                                 filter: brightness(.82); }
+    100% { transform: perspective(1100px) rotateY(360deg); filter: brightness(1); }
   }
-  @media (prefers-reduced-motion: reduce) { .wire { animation: none; } }
+  /* CSS rotateY(a) puts the ring's left half toward the viewer for a in (0, 180) and its right half
+     for a in (180, 360). The clip is in the ring's own coordinates, so it turns with the ring. */
+  @keyframes showfront {
+    0%, 49.99% { clip-path: inset(-10px 50% -10px -10px); }
+    50%, 100%  { clip-path: inset(-10px -10px -10px 50%); }
+  }
+  @keyframes showback {
+    0%, 49.99% { clip-path: inset(-10px -10px -10px 50%); }
+    50%, 100%  { clip-path: inset(-10px 50% -10px -10px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .wire, .bead { animation: none; } }
   .wordmark { font: 500 1.6rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .06em; margin: 0; }
   .wordmark span { color: var(--accent); }
   .verbs { font: 500 .74rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: .9rem 0 0; }
   .head {
-    position: relative; z-index: 1; display: block; width: 56%; height: auto;
+    position: relative; display: block; width: 56%; height: auto;
     -webkit-mask-image: radial-gradient(ellipse 46% 48% at 50% 50%, #000 62%, transparent 88%);
     mask-image: radial-gradient(ellipse 46% 48% at 50% 50%, #000 62%, transparent 88%);
   }
@@ -150,11 +176,16 @@ note: >
 
 <header class="masthead">
   <div class="headwrap">
-    <div class="wires" aria-hidden="true">
+    <div class="wires back" aria-hidden="true">
       <span class="wire outer"><svg class="band" viewBox="0 0 100 100" data-n="72" data-d="1.2"></svg><i class="bead" style="--a:0deg"></i><i class="bead" style="--a:137.5deg"></i><i class="bead" style="--a:275deg"></i></span>
       <span class="wire inner"><svg class="band" viewBox="0 0 100 100" data-n="48" data-d="1.6"></svg><i class="bead" style="--a:52.5deg"></i><i class="bead" style="--a:190deg"></i></span>
     </div>
+    <i class="occluder" aria-hidden="true"></i>
     <img class="head" src="assets/mentalping-head.png" alt="mentalpinG-Ops dot-matrix head" width="150" height="170">
+    <div class="wires front" aria-hidden="true">
+      <span class="wire outer"><svg class="band" viewBox="0 0 100 100" data-n="72" data-d="1.2"></svg><i class="bead" style="--a:0deg"></i><i class="bead" style="--a:137.5deg"></i><i class="bead" style="--a:275deg"></i></span>
+      <span class="wire inner"><svg class="band" viewBox="0 0 100 100" data-n="48" data-d="1.6"></svg><i class="bead" style="--a:52.5deg"></i><i class="bead" style="--a:190deg"></i></span>
+    </div>
   </div>
   <p class="wordmark">mentalpin<span>GO</span>ps</p>
   <p class="verbs">Declare <span class="d">·</span> Read <span class="d">·</span> Audit</p>
