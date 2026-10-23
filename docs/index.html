@@ -32,16 +32,12 @@ note: >
   /* Masthead: head inside its reticle, wordmark and verbs centred below, as in the key visual. */
   .masthead { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 0 3rem; padding-bottom: 1.75rem; border-bottom: 1px dotted var(--accent); }
   .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
-  /* Two slowly turning concentric rings. Each is a conic gradient in the bone tones of the face dots,
-     with soft pale glints, cut to a thin ring by a mask; the turning moves the glints like light
-     on polished wire. The glow sits on the wrapper because a filter on the masked element itself
-     would be masked away. */
-  .wires { position: absolute; inset: 0; pointer-events: none; perspective: 1100px; filter: drop-shadow(0 0 1.5px rgba(233, 225, 207, .35)); }
+  /* Two slowly turning concentric rings. Each is a conic gradient of low-contrast
+     greys, cut to a thin ring by a mask. Matte on purpose: no glints, no glow. */
+  .wires { position: absolute; inset: 0; pointer-events: none; perspective: 1100px; }
   .wire {
     position: absolute; border-radius: 50%; --t: 1px;
-    background: conic-gradient(#bfb8a6 0deg, #d9d1bd 40deg, #efe9d8 72deg, #fbf8ee 80deg,
-      #efe9d8 88deg, #d9d1bd 120deg, #bfb8a6 180deg, #d9d1bd 222deg, #efe9d8 250deg, #fbf8ee 258deg,
-      #e3dcc8 282deg, #bfb8a6 330deg, #bfb8a6 360deg);
+    background: conic-gradient(#8a909c 0deg, #9aa0ab 90deg, #868c98 180deg, #9ea4af 270deg, #8a909c 360deg);
     -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t)));
     mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t)));
     animation: wirespin 28s linear infinite;
@@ -49,13 +45,13 @@ note: >
   .wire.outer { inset: 0; }
   .wire.inner { inset: 13%; --t: .8px; animation-duration: 42s; animation-direction: reverse; }
   /* Both rings turn about the vertical axis, in opposite directions, seen in perspective. */
-  /* Brightness follows the turn: brightest when a ring faces the viewer, dimmest edge-on. */
+  /* Brightness follows the turn, softly: lightest face-on, darkest edge-on. */
   @keyframes wirespin {
-    0%   { transform: rotateY(0);      filter: brightness(1.05); }
-    25%  {                             filter: brightness(.7); }
-    50%  { transform: rotateY(180deg); filter: brightness(1.15); }
-    75%  {                             filter: brightness(.7); }
-    100% { transform: rotateY(360deg); filter: brightness(1.05); }
+    0%   { transform: rotateY(0);      filter: brightness(1); }
+    25%  {                             filter: brightness(.82); }
+    50%  { transform: rotateY(180deg); filter: brightness(1.06); }
+    75%  {                             filter: brightness(.82); }
+    100% { transform: rotateY(360deg); filter: brightness(1); }
   }
   @media (prefers-reduced-motion: reduce) { .wire { animation: none; } }
   .wordmark { font: 500 1.6rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .06em; margin: 0; }
