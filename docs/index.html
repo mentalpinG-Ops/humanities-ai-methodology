@@ -32,7 +32,12 @@ note: >
   /* Masthead: head inside its reticle, wordmark and verbs centred below, as in the key visual. */
   .masthead { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 0 3rem; padding-bottom: 1.75rem; border-bottom: 1px dotted var(--accent); }
   .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
-  .reticle { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .reticle {
+    position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;
+    /* lines fade out before they reach the face */
+    -webkit-mask-image: radial-gradient(circle closest-side, transparent 0, transparent 34%, #000 62%);
+    mask-image: radial-gradient(circle closest-side, transparent 0, transparent 34%, #000 62%);
+  }
   .reticle * { fill: none; stroke: var(--accent); stroke-width: 1; vector-effect: non-scaling-stroke; }
   .reticle .dots { stroke-dasharray: 1 5; stroke-linecap: round; opacity: .7; }
   .reticle .ring { opacity: .3; }
