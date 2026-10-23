@@ -32,13 +32,19 @@ note: >
   /* Masthead: head inside its reticle, wordmark and verbs centred below, as in the key visual. */
   .masthead { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 0 3rem; padding-bottom: 1.75rem; border-bottom: 1px dotted var(--accent); }
   .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
-  /* Two slowly turning concentric rings, each a string of small matte grey beads: an SVG circle
-     whose stroke is a zero-length dash with round caps, so every dash is a dot. --sw is the dot
-     diameter and --gap the spacing, in the 100-unit box (72 dots outside, 48 inside). */
-  .wires { position: absolute; inset: 0; pointer-events: none; perspective: 1100px; }
-  .wire { position: absolute; --sw: .8; --gap: 4.2761; --bead: 5px; animation: wirespin 28s linear infinite; }
+  /* Two slowly turning concentric rings, each a string of small matte grey beads. The script at
+     the end of the page draws them into .band (72 outside, 48 inside); a bead shrinks with its
+     distance from the vertical centre line, so the ring thins out to almost nothing at top and
+     bottom. */
+  .wires {
+    position: absolute; inset: 0; pointer-events: none; perspective: 1100px;
+    /* behind the head the rings are invisible: an elliptical hole the size of the head, soft edge */
+    -webkit-mask-image: radial-gradient(ellipse 38% 46% at 50% 50%, transparent 0, transparent 70%, #000 100%);
+    mask-image: radial-gradient(ellipse 38% 46% at 50% 50%, transparent 0, transparent 70%, #000 100%);
+  }
+  .wire { position: absolute; --bead: 5px; animation: wirespin 28s linear infinite; }
   .band { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-  .band circle { fill: none; stroke: #98a0ab; stroke-width: var(--sw); stroke-linecap: round; stroke-dasharray: 0 var(--gap); }
+  .band circle { fill: #98a0ab; }
   /* Beads on the rings at successive golden angles (137.5 deg): 0, 137.5, 275 on the outer ring,
      52.5 and 190 on the inner one. Diameter --bead (5 px outer, 4 px inner), centred on the ring.
      They sit inside the turning .wire, so they travel with their ring. */
@@ -47,10 +53,12 @@ note: >
     content: ""; position: absolute; left: 50%; top: 1%;
     width: var(--bead); height: var(--bead);
     margin: calc(var(--bead) * -.5) 0 0 calc(var(--bead) * -.5); border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, #aeb3bd, #8a909c 60%, #6e7480);
+    /* gold, with a specular highlight and a soft glow */
+    background: radial-gradient(circle at 35% 30%, #fff6d0 0, #f0cb6b 28%, #d4a849 55%, #8a6a23 100%);
+    box-shadow: 0 0 3px rgba(232, 192, 99, .5);
   }
   .wire.outer { inset: 0; }
-  .wire.inner { inset: 13%; --sw: .85; --gap: 6.4141; --bead: 4px; animation-duration: 42s; animation-direction: reverse; }
+  .wire.inner { inset: 13%; --bead: 4px; animation-duration: 42s; animation-direction: reverse; }
   /* Both rings turn about the vertical axis, in opposite directions, seen in perspective. */
   /* Brightness follows the turn, softly: lightest face-on, darkest edge-on. */
   @keyframes wirespin {
@@ -143,8 +151,8 @@ note: >
 <header class="masthead">
   <div class="headwrap">
     <div class="wires" aria-hidden="true">
-      <span class="wire outer"><svg class="band" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49"/></svg><i class="bead" style="--a:0deg"></i><i class="bead" style="--a:137.5deg"></i><i class="bead" style="--a:275deg"></i></span>
-      <span class="wire inner"><svg class="band" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49"/></svg><i class="bead" style="--a:52.5deg"></i><i class="bead" style="--a:190deg"></i></span>
+      <span class="wire outer"><svg class="band" viewBox="0 0 100 100" data-n="72" data-d=".9"></svg><i class="bead" style="--a:0deg"></i><i class="bead" style="--a:137.5deg"></i><i class="bead" style="--a:275deg"></i></span>
+      <span class="wire inner"><svg class="band" viewBox="0 0 100 100" data-n="48" data-d=".95"></svg><i class="bead" style="--a:52.5deg"></i><i class="bead" style="--a:190deg"></i></span>
     </div>
     <img class="head" src="assets/mentalping-head.png" alt="mentalpinG-Ops dot-matrix head" width="150" height="170">
   </div>
@@ -470,6 +478,25 @@ the moves are the method. <span class="who">You</span> = the author,
     });
   });
   show('[data-step="1"]');
+})();
+</script>
+<script>
+// Draw the bead rings. A bead's radius follows |cos| of its angle: full size at the left and right
+// edge, shrinking toward the vertical centre line until it all but vanishes at top and bottom.
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  document.querySelectorAll('.band').forEach(function (svg) {
+    var n = +svg.getAttribute('data-n'), d = +svg.getAttribute('data-d');
+    for (var i = 0; i < n; i++) {
+      var a = 2 * Math.PI * i / n;
+      var k = Math.pow(Math.abs(Math.cos(a)), 1.6);
+      var c = document.createElementNS(NS, 'circle');
+      c.setAttribute('cx', (50 + 49 * Math.cos(a)).toFixed(3));
+      c.setAttribute('cy', (50 + 49 * Math.sin(a)).toFixed(3));
+      c.setAttribute('r', (d / 2 * Math.max(.05, k)).toFixed(3));
+      svg.appendChild(c);
+    }
+  });
 })();
 </script>
 </body>
