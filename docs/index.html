@@ -29,19 +29,19 @@ note: >
     font: 17px/1.65 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
   }
   main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
-  .wordmark { font: 500 1.35rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .06em; margin: 0; padding-bottom: 1rem; border-bottom: 1px dotted var(--accent); }
-  .wordmark span { color: var(--accent); }
-  .verbs { font: 500 .74rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: .9rem 0 0; }
-  .masthead { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin: 1.5rem 0 2.5rem; }
-  .masthead > div { flex: 1; min-width: 0; }
-  .headwrap { position: relative; flex: none; }
-  .reticle { position: absolute; left: 50%; top: 50%; width: 20rem; height: 20rem; transform: translate(-50%, -50%); pointer-events: none; overflow: visible; }
+  /* Masthead: head inside its reticle, wordmark and verbs centred below, as in the key visual. */
+  .masthead { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 0 3rem; padding-bottom: 1.75rem; border-bottom: 1px dotted var(--accent); }
+  .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
+  .reticle { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
   .reticle * { fill: none; stroke: var(--accent); stroke-width: 1; vector-effect: non-scaling-stroke; }
   .reticle .dots { stroke-dasharray: 1 5; stroke-linecap: round; opacity: .7; }
   .reticle .ring { opacity: .3; }
   .reticle .axis { opacity: .28; }
+  .wordmark { font: 500 1.6rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .06em; margin: 0; }
+  .wordmark span { color: var(--accent); }
+  .verbs { font: 500 .74rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: .9rem 0 0; }
   .head {
-    position: relative; z-index: 1; display: block; height: 13rem; width: auto;
+    position: relative; z-index: 1; display: block; width: 56%; height: auto;
     -webkit-mask-image: radial-gradient(ellipse 46% 48% at 50% 50%, #000 62%, transparent 88%);
     mask-image: radial-gradient(ellipse 46% 48% at 50% 50%, #000 62%, transparent 88%);
   }
@@ -117,21 +117,19 @@ note: >
 <main>
 
 <header class="masthead">
-  <div>
-    <p class="wordmark">mentalpin<span>GO</span>ps</p>
-    <p class="verbs">Declare <span class="d">·</span> Read <span class="d">·</span> Audit</p>
-  </div>
   <div class="headwrap">
     <svg class="reticle" viewBox="-100 -100 200 200" aria-hidden="true">
       <circle class="dots" r="96"/>
       <circle class="ring" r="78"/>
-      <line class="axis" x1="-100" y1="0" x2="100" y2="0"/>
-      <line class="axis" x1="0" y1="-100" x2="0" y2="100"/>
-      <line class="axis" x1="-70" y1="-70" x2="70" y2="70"/>
-      <line class="axis" x1="70" y1="-70" x2="-70" y2="70"/>
+      <line class="axis" x1="-96" y1="0" x2="96" y2="0"/>
+      <line class="axis" x1="0" y1="-96" x2="0" y2="96"/>
+      <line class="axis" x1="-68" y1="-68" x2="68" y2="68"/>
+      <line class="axis" x1="68" y1="-68" x2="-68" y2="68"/>
     </svg>
     <img class="head" src="assets/mentalping-head.png" alt="mentalpinG-Ops dot-matrix head" width="150" height="170">
   </div>
+  <p class="wordmark">mentalpin<span>GO</span>ps</p>
+  <p class="verbs">Declare <span class="d">·</span> Read <span class="d">·</span> Audit</p>
 </header>
 
 <h1>Working with an AI on your texts — without losing your sources, or your voice</h1>
