@@ -32,33 +32,25 @@ note: >
   /* Masthead: head inside its reticle, wordmark and verbs centred below, as in the key visual. */
   .masthead { display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 0 3rem; padding-bottom: 1.75rem; border-bottom: 1px dotted var(--accent); }
   .headwrap { position: relative; width: min(19rem, 100%); aspect-ratio: 1; display: grid; place-items: center; margin-bottom: .75rem; }
-  /* Two slowly turning concentric rings. Each is a conic gradient of low-contrast
-     greys, cut to a thin dashed ring by two masks (ring and dashes,
-     intersected). Matte on purpose: no glints, no glow. */
+  /* Two slowly turning concentric rings, each a string of small matte grey beads: an SVG circle
+     whose stroke is a zero-length dash with round caps, so every dash is a dot. --sw is the dot
+     diameter and --gap the spacing, in the 100-unit box (72 dots outside, 48 inside). */
   .wires { position: absolute; inset: 0; pointer-events: none; perspective: 1100px; }
-  .wire { position: absolute; --t: 1px; --bead: 5px; --dash: 3deg; animation: wirespin 28s linear infinite; }
-  .band {
-    position: absolute; inset: 0; border-radius: 50%;
-    background: conic-gradient(#8a909c 0deg, #9aa0ab 90deg, #868c98 180deg, #9ea4af 270deg, #8a909c 360deg);
-    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t))),
-      repeating-conic-gradient(#000 0 var(--dash), transparent var(--dash) calc(var(--dash) * 2));
-    -webkit-mask-composite: source-in;
-    mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t))),
-      repeating-conic-gradient(#000 0 var(--dash), transparent var(--dash) calc(var(--dash) * 2));
-    mask-composite: intersect;
-  }
+  .wire { position: absolute; --sw: .8; --gap: 4.2761; --bead: 5px; animation: wirespin 28s linear infinite; }
+  .band { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .band circle { fill: none; stroke: #98a0ab; stroke-width: var(--sw); stroke-linecap: round; stroke-dasharray: 0 var(--gap); }
   /* Beads on the rings at successive golden angles (137.5 deg): 0, 137.5, 275 on the outer ring,
      52.5 and 190 on the inner one. Diameter --bead (5 px outer, 4 px inner), centred on the ring.
      They sit inside the turning .wire, so they travel with their ring. */
   .bead { position: absolute; inset: 0; transform: rotate(var(--a)); }
   .bead::after {
-    content: ""; position: absolute; left: 50%; top: 0;
+    content: ""; position: absolute; left: 50%; top: 1%;
     width: var(--bead); height: var(--bead);
-    margin: calc(var(--t) * .5 - var(--bead) * .5) 0 0 calc(var(--bead) * -.5); border-radius: 50%;
+    margin: calc(var(--bead) * -.5) 0 0 calc(var(--bead) * -.5); border-radius: 50%;
     background: radial-gradient(circle at 35% 30%, #aeb3bd, #8a909c 60%, #6e7480);
   }
   .wire.outer { inset: 0; }
-  .wire.inner { inset: 13%; --t: .8px; --bead: 4px; --dash: 4.5deg; animation-duration: 42s; animation-direction: reverse; }
+  .wire.inner { inset: 13%; --sw: .85; --gap: 6.4141; --bead: 4px; animation-duration: 42s; animation-direction: reverse; }
   /* Both rings turn about the vertical axis, in opposite directions, seen in perspective. */
   /* Brightness follows the turn, softly: lightest face-on, darkest edge-on. */
   @keyframes wirespin {
@@ -151,8 +143,8 @@ note: >
 <header class="masthead">
   <div class="headwrap">
     <div class="wires" aria-hidden="true">
-      <span class="wire outer"><i class="band"></i><i class="bead" style="--a:0deg"></i><i class="bead" style="--a:137.5deg"></i><i class="bead" style="--a:275deg"></i></span>
-      <span class="wire inner"><i class="band"></i><i class="bead" style="--a:52.5deg"></i><i class="bead" style="--a:190deg"></i></span>
+      <span class="wire outer"><svg class="band" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49"/></svg><i class="bead" style="--a:0deg"></i><i class="bead" style="--a:137.5deg"></i><i class="bead" style="--a:275deg"></i></span>
+      <span class="wire inner"><svg class="band" viewBox="0 0 100 100"><circle cx="50" cy="50" r="49"/></svg><i class="bead" style="--a:52.5deg"></i><i class="bead" style="--a:190deg"></i></span>
     </div>
     <img class="head" src="assets/mentalping-head.png" alt="mentalpinG-Ops dot-matrix head" width="150" height="170">
   </div>
