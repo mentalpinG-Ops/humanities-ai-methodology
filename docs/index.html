@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 status: draft
-last_changed: 2026-08-20
+last_changed: 2026-10-23
 class: delivery
 note: >
   Frontmatter per GOVERNANCE.md § Document Classes and Currency (class Delivery).
@@ -15,27 +15,42 @@ note: >
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Humanities-AI Methodology — Get Started</title>
 <style>
+  /* mentalpinG-Ops blue-gold, navy ground on every system setting. */
   :root {
-    --bg: #faf9f6; --fg: #1e2228; --muted: #5b6470; --line: #d9d5cc;
-    --accent: #2f6b4f; --accent-fg: #ffffff; --card-bg: #ffffff;
-    --mono-bg: #f1efe9; --tag-human: #8a4b2f; --tag-both: #2f5b8a;
-    --step: #e8e4da; --step-built: #dcebe2;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #15181c; --fg: #e6e4de; --muted: #9aa3ad; --line: #333a42;
-      --accent: #6fb392; --accent-fg: #10201a; --card-bg: #1c2127;
-      --mono-bg: #21262d; --tag-human: #d99a76; --tag-both: #7fa8d9;
-      --step: #232931; --step-built: #21332a;
-    }
+    --bg: #0b1d36; --fg: #f1ece0; --muted: #bfc8d6; --line: #24497a;
+    --accent: #e8c063; --accent-fg: #0b1d36; --card-bg: #0f2e53;
+    --mono-bg: #14365c; --tag-human: #e08466; --tag-both: #9cc0ea;
+    --step: #14365c; --step-built: #3a3a2c;
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font: 17px/1.65 Georgia, 'Times New Roman', serif;
+    margin: 0; color: var(--fg); overflow-x: hidden;
+    background: var(--bg) url(assets/navy-ground.jpg) center / cover fixed no-repeat;
+    font: 17px/1.65 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
   }
   main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
-  h1, h2, h3 { line-height: 1.25; font-weight: 700; }
+  .wordmark { font: 500 1.35rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .06em; margin: 0; padding-bottom: 1rem; border-bottom: 1px dotted var(--accent); }
+  .wordmark span { color: var(--accent); }
+  .verbs { font: 500 .74rem/1 'IBM Plex Mono', ui-monospace, monospace; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin: .9rem 0 0; }
+  .masthead { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin: 1.5rem 0 2.5rem; }
+  .masthead > div { flex: 1; min-width: 0; }
+  .headwrap { position: relative; flex: none; }
+  .reticle { position: absolute; left: 50%; top: 50%; width: 20rem; height: 20rem; transform: translate(-50%, -50%); pointer-events: none; overflow: visible; }
+  .reticle * { fill: none; stroke: var(--accent); stroke-width: 1; vector-effect: non-scaling-stroke; }
+  .reticle .dots { stroke-dasharray: 1 5; stroke-linecap: round; opacity: .7; }
+  .reticle .ring { opacity: .3; }
+  .reticle .axis { opacity: .28; }
+  .head {
+    position: relative; z-index: 1; display: block; height: 13rem; width: auto;
+    -webkit-mask-image: radial-gradient(ellipse 46% 48% at 50% 50%, #000 62%, transparent 88%);
+    mask-image: radial-gradient(ellipse 46% 48% at 50% 50%, #000 62%, transparent 88%);
+  }
+  .verbs .d { color: var(--accent); }
+  .note { position: relative; }
+  .note::before, .note::after { content: ""; position: absolute; width: 14px; height: 14px; border: 1px solid var(--accent); pointer-events: none; }
+  .note::before { top: -6px; left: -6px; border-right: 0; border-bottom: 0; }
+  .note::after { bottom: -6px; right: -6px; border-left: 0; border-top: 0; }
+  h1, h2, h3 { line-height: 1.25; font-weight: 600; font-family: 'IBM Plex Mono', ui-monospace, Consolas, monospace; }
   h1 { font-size: 1.9rem; margin: 0 0 .4rem; }
   h2 { font-size: 1.4rem; margin: 3rem 0 .8rem; border-top: 1px solid var(--line); padding-top: 2rem; }
   h3 { font-size: 1.05rem; margin: 1.5rem 0 .5rem; }
@@ -43,7 +58,7 @@ note: >
   .lede { font-size: 1.1rem; color: var(--muted); margin-top: 0; }
   .note {
     border: 1px solid var(--line); border-left: 4px solid var(--accent);
-    padding: .7rem 1rem; border-radius: 6px; font-size: .92rem; background: var(--card-bg);
+    padding: .7rem 1rem; border-radius: 2px; font-size: .92rem; background: var(--card-bg);
   }
   .tag { font: 700 .78rem/1.6 ui-monospace, Consolas, monospace; padding: 0 .45em; border-radius: 4px; white-space: nowrap; }
   .tag.human { color: var(--tag-human); border: 1px solid var(--tag-human); }
@@ -51,7 +66,7 @@ note: >
   /* Ladder */
   .ladder { display: grid; gap: .6rem; margin: 1.5rem 0; padding: 0; list-style: none; }
   .rung {
-    background: var(--step); border: 1px solid var(--line); border-radius: 8px;
+    background: var(--step); border: 1px solid var(--line); border-radius: 4px;
     padding: .9rem 1.1rem; display: grid; gap: .15rem;
   }
   .rung.built { background: var(--step-built); border-color: var(--accent); }
@@ -64,11 +79,11 @@ note: >
     .rung { margin-left: calc(var(--i) * 2.2rem); }
   }
   /* Quiz */
-  .quiz { background: var(--card-bg); border: 1px solid var(--line); border-radius: 10px; padding: 1.2rem 1.3rem; }
+  .quiz { background: var(--card-bg); border: 1px solid var(--line); border-radius: 4px; padding: 1.2rem 1.3rem; }
   .quiz p.q { font-weight: 700; margin: .2rem 0 .8rem; }
   .quiz button {
     font: inherit; font-size: .95rem; margin: 0 .5rem .5rem 0; padding: .45rem 1rem;
-    border-radius: 7px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer;
+    border-radius: 2px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer;
   }
   .quiz button:hover, .quiz button:focus-visible { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 1px; }
   .quiz .result { display: none; border-top: 1px dashed var(--line); margin-top: 1rem; padding-top: 1rem; }
@@ -76,14 +91,14 @@ note: >
   .quiz .again { font-size: .85rem; color: var(--muted); background: none; border: none; text-decoration: underline; cursor: pointer; padding: 0; }
   /* Code / paste blocks */
   pre {
-    background: var(--mono-bg); border: 1px solid var(--line); border-radius: 8px;
+    background: var(--mono-bg); border: 1px solid var(--line); border-radius: 4px;
     padding: 1rem; overflow-x: auto; font: .82rem/1.55 ui-monospace, Consolas, 'Courier New', monospace;
     white-space: pre-wrap; overflow-wrap: anywhere;
   }
   .copywrap { position: relative; }
   .copybtn {
     position: absolute; top: .6rem; right: .6rem; font: 700 .78rem/1 ui-monospace, Consolas, monospace;
-    padding: .45rem .7rem; border-radius: 6px; border: 1px solid var(--accent);
+    padding: .45rem .7rem; border-radius: 2px; border: 1px solid var(--accent);
     background: var(--accent); color: var(--accent-fg); cursor: pointer;
   }
   .copybtn:focus-visible { outline: 2px solid var(--fg); }
@@ -100,6 +115,24 @@ note: >
 </head>
 <body>
 <main>
+
+<header class="masthead">
+  <div>
+    <p class="wordmark">mentalpin<span>GO</span>ps</p>
+    <p class="verbs">Declare <span class="d">·</span> Read <span class="d">·</span> Audit</p>
+  </div>
+  <div class="headwrap">
+    <svg class="reticle" viewBox="-100 -100 200 200" aria-hidden="true">
+      <circle class="dots" r="96"/>
+      <circle class="ring" r="78"/>
+      <line class="axis" x1="-100" y1="0" x2="100" y2="0"/>
+      <line class="axis" x1="0" y1="-100" x2="0" y2="100"/>
+      <line class="axis" x1="-70" y1="-70" x2="70" y2="70"/>
+      <line class="axis" x1="70" y1="-70" x2="-70" y2="70"/>
+    </svg>
+    <img class="head" src="assets/mentalping-head.png" alt="mentalpinG-Ops dot-matrix head" width="150" height="170">
+  </div>
+</header>
 
 <h1>Working with an AI on your texts — without losing your sources, or your voice</h1>
 <p class="lede">You probably know these moments: the AI cites a book nobody can find. A quote
