@@ -36,8 +36,9 @@ note: >
      greys, cut to a thin dashed ring by two masks (ring and dashes,
      intersected). Matte on purpose: no glints, no glow. */
   .wires { position: absolute; inset: 0; pointer-events: none; perspective: 1100px; }
-  .wire {
-    position: absolute; border-radius: 50%; --t: 1px; --dash: 3deg;
+  .wire { position: absolute; --t: 1px; --dash: 3deg; animation: wirespin 28s linear infinite; }
+  .band {
+    position: absolute; inset: 0; border-radius: 50%;
     background: conic-gradient(#8a909c 0deg, #9aa0ab 90deg, #868c98 180deg, #9ea4af 270deg, #8a909c 360deg);
     -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t))),
       repeating-conic-gradient(#000 0 var(--dash), transparent var(--dash) calc(var(--dash) * 2));
@@ -45,7 +46,16 @@ note: >
     mask: radial-gradient(farthest-side, transparent calc(100% - var(--t)), #000 calc(100% - var(--t))),
       repeating-conic-gradient(#000 0 var(--dash), transparent var(--dash) calc(var(--dash) * 2));
     mask-composite: intersect;
-    animation: wirespin 28s linear infinite;
+  }
+  /* Beads on the rings at successive golden angles (137.5 deg): 0, 137.5, 275 on the outer ring,
+     52.5 and 190 on the inner one. Diameter is twice the ring thickness (--t). They sit inside the
+     turning .wire, so they travel with their ring. */
+  .bead { position: absolute; inset: 0; transform: rotate(var(--a)); }
+  .bead::after {
+    content: ""; position: absolute; left: 50%; top: 0;
+    width: calc(var(--t) * 2); height: calc(var(--t) * 2);
+    margin: calc(var(--t) * -.5) 0 0 calc(var(--t) * -1); border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #aeb3bd, #8a909c 60%, #6e7480);
   }
   .wire.outer { inset: 0; }
   .wire.inner { inset: 13%; --t: .8px; --dash: 4.5deg; animation-duration: 42s; animation-direction: reverse; }
@@ -140,7 +150,10 @@ note: >
 
 <header class="masthead">
   <div class="headwrap">
-    <div class="wires" aria-hidden="true"><span class="wire outer"></span><span class="wire inner"></span></div>
+    <div class="wires" aria-hidden="true">
+      <span class="wire outer"><i class="band"></i><i class="bead" style="--a:0deg"></i><i class="bead" style="--a:137.5deg"></i><i class="bead" style="--a:275deg"></i></span>
+      <span class="wire inner"><i class="band"></i><i class="bead" style="--a:52.5deg"></i><i class="bead" style="--a:190deg"></i></span>
+    </div>
     <img class="head" src="assets/mentalping-head.png" alt="mentalpinG-Ops dot-matrix head" width="150" height="170">
   </div>
   <p class="wordmark">mentalpin<span>GO</span>ps</p>
